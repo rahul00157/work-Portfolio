@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rahul Gupta | Paid Media Consultant</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#f5f0e8;
+  --cream2:#ede7da;
+  --cream3:#e5dece;
+  --white:#ffffff;
+  --ink:#111008;
+  --ink2:#2a2416;
+  --ink3:#4a4030;
+  --gray:#7a7060;
+  --gray2:#a09080;
+  --gold:#8a6020;
+  --gold2:#a87830;
+  --gold-light:#f0e4c8;
+  --gold-border:rgba(138,96,32,0.2);
+  --shadow-sm:0 1px 8px rgba(0,0,0,0.06);
+  --shadow-md:0 4px 24px rgba(0,0,0,0.08);
+  --shadow-lg:0 8px 40px rgba(0,0,0,0.1);
+  --radius:10px;
+  --radius-lg:16px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--cream2)}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:4px}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1.2rem 5rem;
+  background:rgba(245,240,232,0.95);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(138,96,32,0.1);
+  box-shadow:0 1px 20px rgba(0,0,0,0.05);
+}
+.nav-logo{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:1.1rem;font-weight:800;
+  color:var(--ink);letter-spacing:-0.03em;
+}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{
+  font-size:0.78rem;font-weight:500;
+  color:var(--ink3);letter-spacing:0.05em;
+  text-transform:uppercase;
+  transition:color 0.2s;
+}
+.nav-links a:hover{color:var(--gold)}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-badge-wrap{display:flex;align-items:center;gap:8px}
+.nav-cta{
+  background:var(--gold);color:#fff;
+  padding:0.5rem 1.3rem;border-radius:6px;
+  font-size:0.75rem;font-weight:600;
+  letter-spacing:0.05em;text-transform:uppercase;
+  transition:background 0.2s;
+}
+.nav-cta:hover{background:var(--gold2)}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:8rem 5rem 5rem;
+  background:linear-gradient(160deg,#f5f0e8 0%,#ede7da 60%,#e5dece 100%);
+  position:relative;overflow:hidden;
+}
+.hero::after{
+  content:'';position:absolute;
+  top:0;right:0;bottom:0;width:40%;
+  background:radial-gradient(ellipse at 80% 40%,rgba(138,96,32,0.06) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--gold-light);border:1px solid var(--gold-border);
+  padding:0.35rem 1rem;border-radius:100px;
+  font-size:0.72rem;font-weight:600;color:var(--gold);
+  letter-spacing:0.06em;text-transform:uppercase;
+  margin-bottom:2rem;width:fit-content;
+}
+.hero-tag-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+.hero h1{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:clamp(3rem,6.5vw,6.5rem);
+  font-weight:800;line-height:1;
+  letter-spacing:-0.04em;
+  color:var(--ink);
+  max-width:860px;
+  margin-bottom:1.5rem;
+  position:relative;z-index:1;
+}
+.hero h1 .gold{color:var(--gold)}
+.hero h1 .light{color:var(--ink3)}
+.hero-sub{
+  font-size:1.05rem;font-weight:300;
+  color:var(--ink3);line-height:1.75;
+  max-width:480px;margin-bottom:3rem;
+}
+.hero-stats{
+  display:flex;gap:0;
+  border:1px solid var(--gold-border);
+  border-radius:var(--radius-lg);
+  background:var(--white);
+  overflow:hidden;
+  box-shadow:var(--shadow-md);
+  width:fit-content;
+}
+.hero-stat{padding:1.4rem 2.2rem;position:relative}
+.hero-stat+.hero-stat{border-left:1px solid var(--gold-border)}
+.hero-stat-num{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:2rem;font-weight:800;
+  color:var(--gold);line-height:1;
+  letter-spacing:-0.03em;
+}
+.hero-stat-label{
+  font-size:0.7rem;font-weight:500;
+  color:var(--gray);margin-top:0.35rem;
+  letter-spacing:0.04em;text-transform:uppercase;
+}
+.hero-cta-row{display:flex;gap:1rem;margin-top:3rem;align-items:center}
+.btn-primary{
+  background:var(--gold);color:#fff;
+  padding:0.85rem 2rem;border-radius:var(--radius);
+  font-size:0.85rem;font-weight:600;
+  transition:background 0.2s,transform 0.15s;
+  display:inline-block;
+}
+.btn-primary:hover{background:var(--gold2);transform:translateY(-1px)}
+.btn-secondary{
+  background:transparent;color:var(--ink);
+  border:1.5px solid rgba(138,96,32,0.3);
+  padding:0.85rem 2rem;border-radius:var(--radius);
+  font-size:0.85rem;font-weight:500;
+  transition:border-color 0.2s,color 0.2s;
+  display:inline-block;
+}
+.btn-secondary:hover{border-color:var(--gold);color:var(--gold)}
+
+/* BADGES BAR */
+.badges-bar{
+  background:var(--white);
+  border-top:1px solid rgba(138,96,32,0.1);
+  border-bottom:1px solid rgba(138,96,32,0.1);
+  padding:1.6rem 5rem;
+  display:flex;align-items:center;gap:2rem;flex-wrap:wrap;
+}
+.badges-label{
+  font-size:0.7rem;font-weight:600;
+  color:var(--gray2);letter-spacing:0.1em;
+  text-transform:uppercase;white-space:nowrap;flex-shrink:0;
+}
+.badges-list{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.pbadge{
+  display:flex;align-items:center;gap:0.75rem;
+  border:1px solid rgba(138,96,32,0.15);
+  border-radius:var(--radius);
+  padding:0.65rem 1.1rem;
+  background:var(--cream);
+  transition:box-shadow 0.2s,border-color 0.2s;
+}
+.pbadge:hover{box-shadow:var(--shadow-sm);border-color:var(--gold)}
+.pbadge-name{font-size:0.78rem;font-weight:600;color:var(--ink2)}
+.pbadge-sub{font-size:0.62rem;color:var(--gold);margin-top:0.1rem;font-weight:500}
+
+/* SECTIONS */
+section{padding:6rem 5rem}
+.sec-label{
+  font-size:0.7rem;font-weight:700;
+  letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:0.6rem;
+  display:flex;align-items:center;gap:0.6rem;
+}
+.sec-label::before{content:'';width:20px;height:2px;background:var(--gold);border-radius:2px}
+.sec-title{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:clamp(1.9rem,3.5vw,3rem);
+  font-weight:800;letter-spacing:-0.03em;
+  color:var(--ink);line-height:1.1;
+  margin-bottom:1rem;
+}
+.sec-desc{
+  font-size:0.95rem;color:var(--ink3);
+  line-height:1.8;font-weight:300;
+  max-width:540px;
+}
+
+/* ABOUT */
+.about-sec{background:var(--cream2)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;margin-top:3.5rem;align-items:start}
+.about-body{font-size:0.95rem;color:var(--ink3);line-height:1.85;font-weight:400}
+.about-body p+p{margin-top:1.1rem}
+.about-body strong{color:var(--ink);font-weight:600}
+.expertise-list{display:flex;flex-direction:column;gap:2px}
+.exp-item{
+  background:var(--white);border:1px solid rgba(138,96,32,0.1);
+  border-radius:var(--radius);
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1rem 1.4rem;
+  transition:background 0.15s,border-color 0.15s,transform 0.15s;
+}
+.exp-item:hover{background:var(--gold-light);border-color:var(--gold);transform:translateX(4px)}
+.exp-name{font-size:0.88rem;font-weight:600;color:var(--ink)}
+.exp-detail{font-size:0.72rem;color:var(--gray);font-weight:400}
+.exp-arrow{color:var(--gold);font-size:0.85rem;font-weight:600}
+
+/* PLATFORM SECTIONS */
+.platform-sec{padding:6rem 5rem;border-top:1px solid rgba(138,96,32,0.08)}
+.platform-sec:nth-child(even){background:var(--cream2)}
+.platform-sec:nth-child(odd){background:var(--cream)}
+.platform-grid{display:grid;grid-template-columns:280px 1fr;gap:5rem;align-items:start}
+.plat-left{}
+.plat-num{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:4rem;font-weight:800;
+  color:rgba(138,96,32,0.1);line-height:1;
+  margin-bottom:0.6rem;letter-spacing:-0.05em;
+}
+.plat-name{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:1.9rem;font-weight:800;
+  color:var(--ink);line-height:1.1;
+  margin-bottom:0.6rem;letter-spacing:-0.03em;
+}
+.plat-desc{font-size:0.8rem;color:var(--gray);line-height:1.7;margin-bottom:1.4rem}
+
+/* Credential badge */
+.plat-cred{
+  display:flex;align-items:center;gap:0.8rem;
+  background:var(--white);border:1px solid rgba(138,96,32,0.15);
+  border-radius:var(--radius);padding:0.7rem 1rem;
+  margin-bottom:1.4rem;box-shadow:var(--shadow-sm);
+}
+.plat-cred-title{font-size:0.76rem;font-weight:600;color:var(--ink2)}
+.plat-cred-sub{font-size:0.61rem;color:var(--gold);font-weight:500;margin-top:0.1rem}
+
+/* Ad types */
+.plat-types{display:flex;flex-direction:column;gap:0.4rem}
+.plat-type{
+  font-size:0.72rem;font-weight:500;color:var(--ink3);
+  display:flex;align-items:center;gap:0.5rem;
+}
+.plat-type::before{
+  content:'';width:12px;height:1.5px;
+  background:var(--gold);display:inline-block;flex-shrink:0;
+}
+
+/* Case card */
+.case-card{
+  background:var(--white);
+  border:1px solid rgba(138,96,32,0.12);
+  border-radius:var(--radius-lg);
+  padding:2.2rem;
+  box-shadow:var(--shadow-sm);
+  position:relative;overflow:hidden;
+  transition:box-shadow 0.25s,transform 0.2s;
+}
+.case-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
+.case-card::before{
+  content:'';position:absolute;top:0;left:0;
+  width:4px;height:100%;
+  background:linear-gradient(180deg,var(--gold),rgba(138,96,32,0.2));
+}
+.case-tag{
+  font-size:0.68rem;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:0.9rem;
+}
+.case-title{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:1.3rem;font-weight:700;
+  color:var(--ink);line-height:1.25;margin-bottom:0.8rem;
+  letter-spacing:-0.02em;
+}
+.case-body{
+  font-size:0.83rem;color:var(--ink3);
+  line-height:1.75;font-weight:400;margin-bottom:1.4rem;
+}
+.case-url{
+  font-size:0.72rem;color:var(--gold);font-weight:500;
+  display:inline-flex;align-items:center;gap:4px;
+  margin-bottom:1.4rem;
+  border-bottom:1px solid rgba(138,96,32,0.3);
+  padding-bottom:2px;
+  transition:color 0.2s;
+}
+.case-url:hover{color:var(--gold2)}
+.case-metrics{
+  display:grid;gap:1px;
+  background:rgba(138,96,32,0.1);
+  border-radius:var(--radius);overflow:hidden;
+}
+.cols-3{grid-template-columns:repeat(3,1fr)}
+.cols-4{grid-template-columns:repeat(4,1fr)}
+.metric-box{
+  background:var(--cream);
+  padding:1rem;text-align:center;
+}
+.metric-num{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:1.6rem;font-weight:800;
+  color:var(--gold);line-height:1;
+  letter-spacing:-0.02em;
+}
+.metric-label{
+  font-size:0.62rem;font-weight:600;
+  color:var(--gray);margin-top:0.3rem;
+  letter-spacing:0.06em;text-transform:uppercase;
+}
+
+/* Ad spend pill */
+.spend-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--gold-light);border:1px solid var(--gold-border);
+  border-radius:100px;padding:0.3rem 0.8rem;
+  font-size:0.7rem;font-weight:600;color:var(--gold);
+  margin-bottom:1rem;
+}
+
+/* Client logo strip under case card */
+.case-clients{
+  margin-top:1.4rem;padding-top:1.2rem;
+  border-top:1px solid rgba(138,96,32,0.1);
+}
+.case-clients-label{
+  font-size:0.62rem;font-weight:600;
+  color:var(--gray2);letter-spacing:0.1em;
+  text-transform:uppercase;margin-bottom:0.8rem;
+}
+.case-client-logos{display:flex;gap:0.6rem;flex-wrap:wrap;align-items:center}
+.client-logo-box{
+  display:inline-flex;align-items:center;justify-content:center;
+  background:var(--cream);border:1px solid rgba(138,96,32,0.12);
+  border-radius:8px;padding:0.5rem 0.9rem;height:46px;
+  transition:border-color 0.2s,background 0.2s;
+}
+.client-logo-box:hover{border-color:var(--gold);background:var(--gold-light)}
+.client-logo-box img{height:22px;width:auto;object-fit:contain;max-width:90px}
+
+/* FLOATING CLIENTS */
+.clients-sec{
+  background:var(--white);
+  border-top:1px solid rgba(138,96,32,0.1);
+  border-bottom:1px solid rgba(138,96,32,0.1);
+  padding:5rem 0;overflow:hidden;
+}
+.clients-header{text-align:center;padding:0 5rem 3rem}
+.scroll-wrap{position:relative;overflow:hidden}
+.scroll-wrap::before,.scroll-wrap::after{
+  content:'';position:absolute;top:0;bottom:0;
+  width:160px;z-index:2;pointer-events:none;
+}
+.scroll-wrap::before{left:0;background:linear-gradient(to right,var(--white),transparent)}
+.scroll-wrap::after{right:0;background:linear-gradient(to left,var(--white),transparent)}
+.scroll-track{
+  display:flex;gap:0;
+  animation:scrollLeft 28s linear infinite;
+  width:max-content;
+}
+.scroll-track:hover{animation-play-state:paused}
+.scroll-track.reverse{animation-direction:reverse;animation-duration:32s}
+@keyframes scrollLeft{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.scroll-card{
+  display:flex;align-items:center;justify-content:center;
+  background:var(--cream);
+  border:1px solid rgba(138,96,32,0.12);
+  border-radius:var(--radius);
+  padding:1rem 1.8rem;margin:0 0.5rem;
+  height:64px;min-width:150px;flex-shrink:0;
+  transition:border-color 0.2s,box-shadow 0.2s,transform 0.2s;
+}
+.scroll-card:hover{
+  border-color:var(--gold);
+  box-shadow:var(--shadow-sm);
+  transform:translateY(-3px);
+}
+.scroll-card img{height:24px;width:auto;object-fit:contain;max-width:110px}
+
+/* PROCESS */
+.process-sec{background:var(--cream2)}
+.process-steps{
+  display:grid;grid-template-columns:repeat(5,1fr);
+  gap:1.5rem;margin-top:4rem;position:relative;
+}
+.process-steps::before{
+  content:'';position:absolute;
+  top:24px;left:8%;right:8%;height:1px;
+  background:rgba(138,96,32,0.15);z-index:0;
+}
+.process-step{text-align:center;position:relative;z-index:1}
+.step-num{
+  width:48px;height:48px;border-radius:50%;
+  background:var(--white);
+  border:2px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 1.2rem;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:0.85rem;font-weight:800;color:var(--gold);
+  box-shadow:var(--shadow-sm);
+}
+.step-title{font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:0.4rem}
+.step-body{font-size:0.75rem;color:var(--gray);line-height:1.6}
+
+/* CERTIFICATIONS */
+.certs-sec{background:var(--cream)}
+.certs-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1rem;margin-top:3.5rem;
+}
+.cert-card{
+  background:var(--white);
+  border:1px solid rgba(138,96,32,0.1);
+  border-radius:var(--radius-lg);
+  padding:1.6rem;
+  box-shadow:var(--shadow-sm);
+  transition:box-shadow 0.2s,transform 0.2s,border-color 0.2s;
+}
+.cert-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px);border-color:var(--gold)}
+.cert-logo{height:24px;width:auto;object-fit:contain;margin-bottom:1rem;max-width:80px}
+.cert-title{font-size:0.83rem;font-weight:600;color:var(--ink);line-height:1.4}
+.cert-by{font-size:0.68rem;color:var(--gray);margin-top:0.3rem;font-weight:400}
+
+/* TESTIMONIALS */
+.testi-sec{background:var(--cream2)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
+.testi-card{
+  background:var(--white);border:1px solid rgba(138,96,32,0.1);
+  border-radius:var(--radius-lg);padding:2rem;
+  box-shadow:var(--shadow-sm);position:relative;
+}
+.testi-quote-mark{
+  font-size:4rem;color:var(--gold-light);
+  font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;
+  line-height:1;position:absolute;top:0.8rem;left:1.4rem;
+}
+.testi-text{
+  font-size:0.88rem;color:var(--ink3);
+  line-height:1.8;font-style:italic;
+  margin-bottom:1.4rem;padding-top:1.2rem;
+}
+.testi-author{display:flex;align-items:center;gap:0.8rem}
+.testi-avatar{
+  width:38px;height:38px;border-radius:50%;
+  background:var(--gold-light);border:1.5px solid var(--gold-border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.8rem;font-weight:700;color:var(--gold);flex-shrink:0;
+}
+.testi-name{font-size:0.85rem;font-weight:600;color:var(--ink)}
+.testi-role{font-size:0.72rem;color:var(--gray)}
+
+/* CTA */
+.cta-sec{
+  background:var(--ink);color:#fff;
+  text-align:center;padding:7rem 5rem;
+  position:relative;overflow:hidden;
+}
+.cta-sec::before{
+  content:'';position:absolute;
+  top:50%;left:50%;transform:translate(-50%,-50%);
+  width:600px;height:600px;
+  background:radial-gradient(ellipse,rgba(138,96,32,0.3) 0%,transparent 65%);
+  pointer-events:none;
+}
+.cta-sec .sec-label{color:var(--gold-light)}
+.cta-sec .sec-label::before{background:var(--gold-light)}
+.cta-sec .sec-title{color:#fff;position:relative;z-index:1}
+.cta-sec .sec-title em{font-style:normal;color:var(--gold-light)}
+.cta-sub{
+  font-size:1rem;color:rgba(255,255,255,0.65);
+  max-width:440px;margin:1rem auto 2.5rem;
+  line-height:1.75;font-weight:300;
+  position:relative;z-index:1;
+}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+.cta-btn-primary{
+  background:var(--gold-light);color:var(--ink);
+  padding:0.9rem 2.5rem;border-radius:var(--radius);
+  font-size:0.85rem;font-weight:700;
+  transition:background 0.2s;display:inline-block;
+}
+.cta-btn-primary:hover{background:#fff}
+.cta-btn-secondary{
+  background:transparent;color:#fff;
+  border:1.5px solid rgba(255,255,255,0.3);
+  padding:0.9rem 2.5rem;border-radius:var(--radius);
+  font-size:0.85rem;font-weight:500;
+  transition:border-color 0.2s;display:inline-block;
+}
+.cta-btn-secondary:hover{border-color:#fff}
+
+/* FOOTER */
+footer{
+  background:var(--cream2);
+  border-top:1px solid rgba(138,96,32,0.12);
+  padding:2rem 5rem;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1rem;
+}
+.footer-copy{font-size:0.75rem;color:var(--gray)}
+.footer-links{display:flex;gap:2rem}
+.footer-links a{font-size:0.75rem;color:var(--gray);transition:color 0.2s}
+.footer-links a:hover{color:var(--gold)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .contact-inner{grid-template-columns:1fr;gap:2.5rem}
+  .form-row{grid-template-columns:1fr}
+  .contact-sec{padding:4rem 1.5rem}
+
+  nav{padding:1rem 1.5rem}
+  .nav-links,.nav-badge-wrap{display:none}
+  section,.platform-sec,.badges-bar,.hero,.cta-sec{padding:4rem 1.5rem}
+  .hero{padding:7rem 1.5rem 4rem}
+  .hero h1{font-size:2.8rem}
+  .hero-stats{flex-wrap:wrap}
+  .about-grid,.platform-grid{grid-template-columns:1fr;gap:2.5rem}
+  .process-steps{grid-template-columns:1fr 1fr;gap:2rem}
+  .process-steps::before{display:none}
+  .certs-grid{grid-template-columns:1fr 1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .cols-4{grid-template-columns:1fr 1fr}
+  footer{padding:1.5rem;flex-direction:column;text-align:center}
+}
+
+/* CONTACT SECTION */
+.contact-sec{background:var(--cream);padding:6rem 5rem}
+.contact-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start}
+.contact-desc{font-size:0.95rem;color:var(--ink3);line-height:1.8;margin:1rem 0 2rem;font-weight:400}
+.contact-info-list{display:flex;flex-direction:column;gap:0.8rem;margin-bottom:2rem}
+.contact-info-item{display:flex;align-items:center;gap:1rem;padding:0.9rem 1.1rem;background:var(--white);border:1px solid rgba(138,96,32,0.1);border-radius:var(--radius);transition:border-color 0.2s,box-shadow 0.2s;text-decoration:none}
+.contact-info-item:hover{border-color:var(--gold);box-shadow:var(--shadow-sm)}
+.contact-info-icon{width:36px;height:36px;border-radius:8px;background:var(--gold-light);border:1px solid var(--gold-border);display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:800;color:var(--gold);flex-shrink:0}
+.contact-info-label{font-size:0.68rem;color:var(--gray);font-weight:500;text-transform:uppercase;letter-spacing:0.06em}
+.contact-info-val{font-size:0.85rem;font-weight:600;color:var(--ink);margin-top:0.1rem}
+.contact-badges{display:flex;flex-direction:column;gap:0.5rem}
+.contact-badge{font-size:0.78rem;font-weight:500;color:var(--ink3);display:flex;align-items:center;gap:0.5rem}
+.form-card{background:var(--white);border:1px solid rgba(138,96,32,0.12);border-radius:var(--radius-lg);padding:2.5rem;box-shadow:var(--shadow-md)}
+.form-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.3rem;font-weight:800;color:var(--ink);letter-spacing:-0.02em;margin-bottom:0.3rem}
+.form-subtitle{font-size:0.82rem;color:var(--gray);margin-bottom:1.8rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-group{display:flex;flex-direction:column;margin-bottom:1rem}
+.form-row .form-group{margin-bottom:0}
+.form-label{font-size:0.75rem;font-weight:600;color:var(--ink2);margin-bottom:0.4rem;letter-spacing:0.02em}
+.form-input{padding:0.75rem 1rem;border:1.5px solid rgba(138,96,32,0.15);border-radius:var(--radius);font-family:'DM Sans',sans-serif;font-size:0.88rem;color:var(--ink);background:var(--cream);transition:border-color 0.2s,box-shadow 0.2s;outline:none;width:100%}
+.form-input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(138,96,32,0.08);background:var(--white)}
+.form-input::placeholder{color:var(--gray2)}
+.form-select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238a6020' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center}
+.form-textarea{resize:vertical;min-height:110px;line-height:1.6}
+.form-checkboxes{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.4rem}
+.form-checkbox{display:flex;align-items:center;gap:0.4rem;background:var(--cream);border:1.5px solid rgba(138,96,32,0.15);border-radius:6px;padding:0.35rem 0.75rem;font-size:0.78rem;font-weight:500;color:var(--ink3);cursor:pointer;transition:border-color 0.2s,background 0.2s}
+.form-checkbox:hover{border-color:var(--gold);background:var(--gold-light)}
+.form-checkbox input{accent-color:var(--gold);cursor:pointer}
+.form-submit{width:100%;background:var(--gold);color:#fff;padding:0.9rem;border-radius:var(--radius);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.88rem;font-weight:700;border:none;cursor:pointer;transition:background 0.2s,transform 0.15s;margin-top:0.5rem;letter-spacing:0.02em}
+.form-submit:hover{background:var(--gold2);transform:translateY(-1px)}
+.form-submit:disabled{opacity:0.7;cursor:not-allowed;transform:none}
+.form-success{margin-top:1rem;padding:0.9rem 1rem;background:#f0fdf4;border:1px solid #86efac;border-radius:var(--radius);font-size:0.85rem;font-weight:500;color:#166534}
+.form-error{margin-top:1rem;padding:0.9rem 1rem;background:#fef2f2;border:1px solid #fca5a5;border-radius:var(--radius);font-size:0.85rem;font-weight:500;color:#991b1b}
+
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a href="#" class="nav-logo">Rahul <span>Gupta</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#platforms">Work</a></li>
+    <li><a href="#clients">Clients</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-badge-wrap">
+      <!-- Google Partner Badge -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 44" style="height:36px;width:auto">
+        <rect width="110" height="44" rx="6" fill="white" stroke="#e0e0e0" stroke-width="1"/>
+        <path fill="#4285F4" d="M31 22.3c0-.8-.07-1.6-.2-2.3H19.6v4.4h6.4c-.28 1.5-1.12 2.8-2.4 3.6v3h3.9c2.27-2.1 3.5-5.2 3.5-8.7z"/>
+        <path fill="#34A853" d="M19.6 34c3.24 0 5.96-1.07 7.94-2.9l-3.87-3c-1.07.72-2.44 1.14-4.07 1.14-3.13 0-5.78-2.11-6.73-4.95H8.88v3.1C10.86 30.64 14.94 34 19.6 34z"/>
+        <path fill="#FBBC04" d="M12.87 24.29a8.06 8.06 0 010-5.08V16.1H8.88a14.04 14.04 0 000 12.5l3.99-4.31z"/>
+        <path fill="#EA4335" d="M19.6 14.8c1.76 0 3.34.61 4.58 1.8l3.44-3.44C25.54 11.17 22.83 10 19.6 10c-4.66 0-8.74 2.66-10.72 6.1l3.99 3.1c.95-2.84 3.6-4.4 6.73-4.4z"/>
+        <text x="37" y="22" font-family="Arial" font-size="7.5" fill="#5f6368">Google</text>
+        <text x="37" y="33" font-family="Arial" font-size="8" font-weight="700" fill="#5f6368">Partner</text>
+      </svg>
+      <!-- Meta Business Partner -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 44" style="height:36px;width:auto">
+        <rect width="130" height="44" rx="6" fill="white" stroke="#e0e0e0" stroke-width="1"/>
+        <path d="M11 22c0-4.5 2.7-9 6.8-9 2.2 0 4 1.6 5.8 4.3 1.8-2.7 3.6-4.3 5.8-4.3 4 0 6.7 4.5 6.7 9s-2.2 7.6-4.9 7.6c-2.2 0-4-1.3-6.2-4.6-2.2 3.3-4 4.6-6.2 4.6C13.5 29.6 11 26.5 11 22z" fill="none" stroke="#0866FF" stroke-width="2"/>
+        <path d="M22.8 17.7c-1.8 2.7-2.7 4.5-2.7 5.7s.5 2.7 2.9 2.7 3.1-1.6 4.5-3.6-1-3.4-1-3.4" fill="none" stroke="#0866FF" stroke-width="2"/>
+        <text x="44" y="21" font-family="Arial Black,Arial" font-size="10" font-weight="900" fill="#0866FF">Meta</text>
+        <text x="44" y="33" font-family="Arial" font-size="7.5" font-weight="600" fill="#606770">Business Partner</text>
+      </svg>
+    </div>
+    <a href="#contact" class="nav-cta">Hire Me</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-tag"><span class="hero-tag-dot"></span> Open to freelance & retainer projects</div>
+  <h1>I Turn Ad Spend<br>Into <span class="gold">Real Revenue.</span></h1>
+  <p class="hero-sub">Hi, I'm Rahul — a paid media consultant with over 8 years running campaigns across Google, Meta, LinkedIn, Amazon, TikTok and DV360. I've managed $25M+ in ad spend and helped brands generate $60M+ in revenue.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-num">$25M+</div>
+      <div class="hero-stat-label">Ad Spend Managed</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">$60M+</div>
+      <div class="hero-stat-label">Revenue Generated</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">32x</div>
+      <div class="hero-stat-label">Best ROAS</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">6</div>
+      <div class="hero-stat-label">Platforms</div>
+    </div>
+  </div>
+  <div class="hero-cta-row">
+    <a href="#contact" class="btn-primary">Book a Free Strategy Call</a>
+    <a href="#platforms" class="btn-secondary">See My Work</a>
+  </div>
+</section>
+
+<!-- ══ PARTNER BADGES ══ -->
+<div class="badges-bar">
+  <span class="badges-label">Official Partner Badges</span>
+  <div class="badges-list">
+    <div class="pbadge">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 44" style="height:36px;width:auto">
+        <rect width="110" height="44" rx="6" fill="white" stroke="#e8e1d6" stroke-width="1"/>
+        <path fill="#4285F4" d="M31 22.3c0-.8-.07-1.6-.2-2.3H19.6v4.4h6.4c-.28 1.5-1.12 2.8-2.4 3.6v3h3.9c2.27-2.1 3.5-5.2 3.5-8.7z"/>
+        <path fill="#34A853" d="M19.6 34c3.24 0 5.96-1.07 7.94-2.9l-3.87-3c-1.07.72-2.44 1.14-4.07 1.14-3.13 0-5.78-2.11-6.73-4.95H8.88v3.1C10.86 30.64 14.94 34 19.6 34z"/>
+        <path fill="#FBBC04" d="M12.87 24.29a8.06 8.06 0 010-5.08V16.1H8.88a14.04 14.04 0 000 12.5l3.99-4.31z"/>
+        <path fill="#EA4335" d="M19.6 14.8c1.76 0 3.34.61 4.58 1.8l3.44-3.44C25.54 11.17 22.83 10 19.6 10c-4.66 0-8.74 2.66-10.72 6.1l3.99 3.1c.95-2.84 3.6-4.4 6.73-4.4z"/>
+        <text x="37" y="22" font-family="Arial" font-size="7.5" fill="#5f6368">Google</text>
+        <text x="37" y="33" font-family="Arial" font-size="8" font-weight="700" fill="#5f6368">Partner</text>
+      </svg>
+      <div><div class="pbadge-name">Google Partner</div><div class="pbadge-sub">Certified Partner Badge</div></div>
+    </div>
+    <div class="pbadge">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 44" style="height:36px;width:auto">
+        <rect width="130" height="44" rx="6" fill="white" stroke="#e8e1d6" stroke-width="1"/>
+        <path d="M11 22c0-4.5 2.7-9 6.8-9 2.2 0 4 1.6 5.8 4.3 1.8-2.7 3.6-4.3 5.8-4.3 4 0 6.7 4.5 6.7 9s-2.2 7.6-4.9 7.6c-2.2 0-4-1.3-6.2-4.6-2.2 3.3-4 4.6-6.2 4.6C13.5 29.6 11 26.5 11 22z" fill="none" stroke="#0866FF" stroke-width="2"/>
+        <path d="M22.8 17.7c-1.8 2.7-2.7 4.5-2.7 5.7s.5 2.7 2.9 2.7 3.1-1.6 4.5-3.6-1-3.4-1-3.4" fill="none" stroke="#0866FF" stroke-width="2"/>
+        <text x="44" y="21" font-family="Arial Black,Arial" font-size="10" font-weight="900" fill="#0866FF">Meta</text>
+        <text x="44" y="33" font-family="Arial" font-size="7.5" font-weight="600" fill="#606770">Business Partner</text>
+      </svg>
+      <div><div class="pbadge-name">Meta Business Partner</div><div class="pbadge-sub">Certified Partner Badge</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ABOUT ══ -->
+<section id="about" class="about-sec">
+  <div class="sec-label">About Me</div>
+  <div class="sec-title">A bit about<br>who I am</div>
+  <div class="about-grid">
+    <div>
+      <div class="about-body">
+        <p>I've spent the better part of a decade obsessing over one thing — making paid media actually work. Not just driving clicks, but building campaigns that create real business outcomes.</p>
+        <p>I've managed campaigns for brands ranging from local service businesses to global names like <strong>BMW, H&M and Godrej Properties</strong>. The budgets vary, but the approach is always the same — data first, results always.</p>
+        <p>Right now I'm taking on freelance projects and retainer clients. If you want someone who genuinely understands the platforms and can hit the ground running, let's talk.</p>
+      </div>
+    </div>
+    <div class="expertise-list">
+      <div class="exp-item"><span class="exp-name">Google Ads</span><span class="exp-detail">Search · Shopping · PMax · Display · YouTube</span><span class="exp-arrow">→</span></div>
+      <div class="exp-item"><span class="exp-name">Meta Ads</span><span class="exp-detail">Facebook · Instagram · Reels · Retargeting</span><span class="exp-arrow">→</span></div>
+      <div class="exp-item"><span class="exp-name">LinkedIn Ads</span><span class="exp-detail">Lead Gen · Sponsored Content · InMail</span><span class="exp-arrow">→</span></div>
+      <div class="exp-item"><span class="exp-name">Amazon Ads</span><span class="exp-detail">Sponsored Products · DSP · Brands · AMC</span><span class="exp-arrow">→</span></div>
+      <div class="exp-item"><span class="exp-name">TikTok Ads</span><span class="exp-detail">In-Feed · Spark Ads · TopView · Shopping</span><span class="exp-arrow">→</span></div>
+      <div class="exp-item"><span class="exp-name">Programmatic / DV360</span><span class="exp-detail">Display · Video · CTV · Trade Desk</span><span class="exp-arrow">→</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PLATFORMS ══ -->
+<div id="platforms">
+
+<!-- 01 GOOGLE ADS -->
+<div class="platform-sec">
+  <div class="platform-grid">
+    <div class="plat-left">
+      <div class="plat-num">01</div>
+      <div class="plat-name">Google<br>Ads</div>
+      <div class="plat-desc">Search, Shopping, Performance Max, Display, and YouTube — full coverage across the Google ecosystem.</div>
+      <div class="plat-cred">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 44" style="height:38px;width:auto;flex-shrink:0">
+          <rect width="110" height="44" rx="6" fill="white" stroke="#dadce0" stroke-width="1"/>
+          <path fill="#4285F4" d="M31 22.3c0-.8-.07-1.6-.2-2.3H19.6v4.4h6.4c-.28 1.5-1.12 2.8-2.4 3.6v3h3.9c2.27-2.1 3.5-5.2 3.5-8.7z"/>
+          <path fill="#34A853" d="M19.6 34c3.24 0 5.96-1.07 7.94-2.9l-3.87-3c-1.07.72-2.44 1.14-4.07 1.14-3.13 0-5.78-2.11-6.73-4.95H8.88v3.1C10.86 30.64 14.94 34 19.6 34z"/>
+          <path fill="#FBBC04" d="M12.87 24.29a8.06 8.06 0 010-5.08V16.1H8.88a14.04 14.04 0 000 12.5l3.99-4.31z"/>
+          <path fill="#EA4335" d="M19.6 14.8c1.76 0 3.34.61 4.58 1.8l3.44-3.44C25.54 11.17 22.83 10 19.6 10c-4.66 0-8.74 2.66-10.72 6.1l3.99 3.1c.95-2.84 3.6-4.4 6.73-4.4z"/>
+          <text x="37" y="22" font-family="Arial" font-size="7.5" fill="#5f6368">Google</text>
+          <text x="37" y="33" font-family="Arial" font-size="8" font-weight="700" fill="#5f6368">Partner</text>
+        </svg>
+        <div><div class="plat-cred-title">Google Partner Badge</div><div class="plat-cred-sub">Official Certified Partner</div></div>
+      </div>
+      <div class="plat-types">
+        <span class="plat-type">Search Campaigns</span>
+        <span class="plat-type">Google Shopping</span>
+        <span class="plat-type">Performance Max</span>
+        <span class="plat-type">Display & YouTube</span>
+        <span class="plat-type">Conversion Tracking</span>
+      </div>
+    </div>
+    <div>
+      <div class="case-card">
+        <div class="spend-pill">💰 Ad Spend: $2,710</div>
+        <div class="case-tag">eCommerce · Wrist Support Gloves · USA</div>
+        <div class="case-title">Turned $2,710 into $87,954 — 32x return for Wrist Assured Gloves</div>
+        <div class="case-body">WAGs came to me with an underperforming Google Ads account. I rebuilt the campaign structure from scratch — proper Shopping feed segmentation, fixed conversion tracking, and a tiered Smart Bidding strategy. Over 9 months we drove 1,274 orders and sold 1,517 products, maintaining a 32x ROAS consistently. The average CPC stayed at just $0.69 throughout.</div>
+        <a href="https://www.wristassuredgloves.com" target="_blank" class="case-url">wristassuredgloves.com ↗</a>
+        <div class="case-metrics cols-4">
+          <div class="metric-box"><div class="metric-num">$87,954</div><div class="metric-label">Revenue</div></div>
+          <div class="metric-box"><div class="metric-num">32x</div><div class="metric-label">ROAS</div></div>
+          <div class="metric-box"><div class="metric-num">1,274</div><div class="metric-label">Orders</div></div>
+          <div class="metric-box"><div class="metric-num">$0.69</div><div class="metric-label">Avg. CPC</div></div>
+        </div>
+        <div class="case-clients">
+          <div class="case-clients-label">Clients on Google Ads</div>
+          <div class="case-client-logos">
+            <a href="https://www.wristassuredgloves.com" target="_blank" class="client-logo-box"><img src="https://www.wristassuredgloves.com/wp-content/uploads/2016/06/logowags2016.png" alt="WAGs"></a>
+            <a href="https://roselschool.org" target="_blank" class="client-logo-box"><img src="https://roselschool.org/wp-content/uploads/2025/04/rosel_school_logo-824x1024.png.webp" alt="Rosel School"></a>
+            <a href="https://alhornlaw.com" target="_blank" class="client-logo-box"><img src="https://alhornlaw.com/wp-content/uploads/2024/11/ALH-Logo-temp1.png" alt="AL Horn Law"></a>
+            <a href="https://jonbragman.com" target="_blank" class="client-logo-box"><img src="https://jonbragman.com/wp-content/uploads/2024/03/jon-bragman-logo.png" alt="Jon Bragman"></a>
+            <a href="https://mosaicroofingcompany.com" target="_blank" class="client-logo-box"><img src="https://mosaicroofingcompany.com/wp-content/uploads/2024/09/435386634_803266091822348_7974137662534375980_n.webp" alt="Mosaic Roofing"></a>
+            <a href="http://tbnmidwest.com" target="_blank" class="client-logo-box"><img src="https://tbnmidwest.com/cdn/shop/files/EZ2DO_4_medium.png?v=1757665957" alt="TBN Midwest"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 02 META ADS -->
+<div class="platform-sec">
+  <div class="platform-grid">
+    <div class="plat-left">
+      <div class="plat-num">02</div>
+      <div class="plat-name">Meta<br>Ads</div>
+      <div class="plat-desc">Facebook and Instagram campaigns — from brand awareness right through to leads and sales.</div>
+      <div class="plat-cred">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 44" style="height:38px;width:auto;flex-shrink:0">
+          <rect width="130" height="44" rx="6" fill="white" stroke="#dadce0" stroke-width="1"/>
+          <path d="M11 22c0-4.5 2.7-9 6.8-9 2.2 0 4 1.6 5.8 4.3 1.8-2.7 3.6-4.3 5.8-4.3 4 0 6.7 4.5 6.7 9s-2.2 7.6-4.9 7.6c-2.2 0-4-1.3-6.2-4.6-2.2 3.3-4 4.6-6.2 4.6C13.5 29.6 11 26.5 11 22z" fill="none" stroke="#0866FF" stroke-width="2"/>
+          <path d="M22.8 17.7c-1.8 2.7-2.7 4.5-2.7 5.7s.5 2.7 2.9 2.7 3.1-1.6 4.5-3.6-1-3.4-1-3.4" fill="none" stroke="#0866FF" stroke-width="2"/>
+          <text x="44" y="21" font-family="Arial Black,Arial" font-size="10" font-weight="900" fill="#0866FF">Meta</text>
+          <text x="44" y="33" font-family="Arial" font-size="7.5" font-weight="600" fill="#606770">Business Partner</text>
+        </svg>
+        <div><div class="plat-cred-title">Meta Business Partner Badge</div><div class="plat-cred-sub">Official Certified Partner</div></div>
+      </div>
+      <div class="plat-types">
+        <span class="plat-type">Prospecting & TOF</span>
+        <span class="plat-type">Retargeting Funnels</span>
+        <span class="plat-type">Dynamic Product Ads</span>
+        <span class="plat-type">Lead Generation</span>
+        <span class="plat-type">Creative Testing</span>
+      </div>
+    </div>
+    <div>
+      <div class="case-card">
+        <div class="spend-pill">💰 Ad Spend: $15,000</div>
+        <div class="case-tag">Brand Awareness + Lead Generation · Q1 2024</div>
+        <div class="case-title">3,840 leads at $3.91 CPL — 15% under target across Facebook & Instagram</div>
+        <div class="case-body">We ran a full-funnel Meta campaign with a $15,000 budget — awareness at the top, retargeting in the middle, and lead gen forms at the bottom. Lookalike audiences drove 58% of total leads. Moving budget toward Reels placements cut our CPM by 42% vs feed. The bottom-funnel lead gen campaign hit $3.18 CPA — our best performer.</div>
+        <div class="case-metrics cols-4">
+          <div class="metric-box"><div class="metric-num">3,840</div><div class="metric-label">Leads</div></div>
+          <div class="metric-box"><div class="metric-num">$3.91</div><div class="metric-label">Cost Per Lead</div></div>
+          <div class="metric-box"><div class="metric-num">4.8M</div><div class="metric-label">Impressions</div></div>
+          <div class="metric-box"><div class="metric-num">2.97%</div><div class="metric-label">CTR</div></div>
+        </div>
+        <div class="case-clients">
+          <div class="case-clients-label">Featured Clients</div>
+          <div class="case-client-logos">
+            <a href="https://hirasweets.com" target="_blank" class="client-logo-box"><img src="https://hirasweets.com/wp-content/uploads/2023/10/Group-Logo-R-21.png" alt="Hira Sweets"></a>
+            <a href="https://www.godrejproperties.com" target="_blank" class="client-logo-box"><img src="https://www.godrejproperties.com/images/header/logo.png" alt="Godrej Properties"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 03 LINKEDIN ADS -->
+<div class="platform-sec">
+  <div class="platform-grid">
+    <div class="plat-left">
+      <div class="plat-num">03</div>
+      <div class="plat-name">LinkedIn<br>Ads</div>
+      <div class="plat-desc">B2B lead generation using LinkedIn's professional targeting — job title, seniority, company size.</div>
+      <div class="plat-cred">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="height:32px;width:32px;flex-shrink:0"><rect width="32" height="32" rx="6" fill="#0A66C2"/><path d="M8 13h4v11H8zm2-6a2 2 0 110 4 2 2 0 010-4zm6 6h3.8v1.5c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V24h-4v-5c0-1.2 0-2.7-1.65-2.7S21 17.6 21 19.1V24h-4V13z" fill="white"/></svg>
+        <div><div class="plat-cred-title">LinkedIn Marketing Labs Certified</div><div class="plat-cred-sub">Official Certification</div></div>
+      </div>
+      <div class="plat-types">
+        <span class="plat-type">Sponsored Content</span>
+        <span class="plat-type">Lead Gen Forms</span>
+        <span class="plat-type">Message / InMail Ads</span>
+        <span class="plat-type">Account-Based Marketing</span>
+      </div>
+    </div>
+    <div>
+      <div class="case-card">
+        <div class="spend-pill">💰 Ad Spend: $7,800</div>
+        <div class="case-tag">B2B Lead Generation · Q1 2024 · Godrej Properties</div>
+        <div class="case-title">684 qualified MQLs at $11.40 — 28% more leads than the previous quarter</div>
+        <div class="case-body">We built a LinkedIn strategy combining brand awareness, thought leadership video, lead gen forms, and message ads — all targeting decision makers by job title, seniority and company size. Lead gen forms converted 3.2x better than landing pages. Message ads to warm audiences hit a 5.1% open rate. C-suite targeting (VP+) brought in the highest-value deals despite slightly higher CPL.</div>
+        <div class="case-metrics cols-4">
+          <div class="metric-box"><div class="metric-num">684</div><div class="metric-label">MQLs</div></div>
+          <div class="metric-box"><div class="metric-num">$11.40</div><div class="metric-label">Cost Per Lead</div></div>
+          <div class="metric-box"><div class="metric-num">1.24M</div><div class="metric-label">Impressions</div></div>
+          <div class="metric-box"><div class="metric-num">1.50%</div><div class="metric-label">CTR</div></div>
+        </div>
+        <div class="case-clients">
+          <div class="case-clients-label">Featured Client</div>
+          <div class="case-client-logos">
+            <a href="https://www.godrejproperties.com" target="_blank" class="client-logo-box"><img src="https://www.godrejproperties.com/images/header/logo.png" alt="Godrej Properties"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 04 AMAZON ADS -->
+<div class="platform-sec">
+  <div class="platform-grid">
+    <div class="plat-left">
+      <div class="plat-num">04</div>
+      <div class="plat-name">Amazon<br>Ads</div>
+      <div class="plat-desc">Sponsored Products, Brands, Display and DSP — built to win on Amazon's search and boost organic rank.</div>
+      <div class="plat-cred">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 32" style="height:28px;width:auto;flex-shrink:0"><text x="0" y="22" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#FF9900" letter-spacing="-0.5">amazon</text><path d="M0 27 Q35 34 68 27" fill="none" stroke="#FF9900" stroke-width="2" stroke-linecap="round"/><path d="M65 24 L70 27 L65 29" fill="#FF9900"/></svg>
+        <div><div class="plat-cred-title">Amazon Ads Certified</div><div class="plat-cred-sub">Sponsored Ads Specialist</div></div>
+      </div>
+      <div class="plat-types">
+        <span class="plat-type">Sponsored Products</span>
+        <span class="plat-type">Sponsored Brands & Video</span>
+        <span class="plat-type">DSP Retargeting</span>
+        <span class="plat-type">AMC Attribution</span>
+      </div>
+    </div>
+    <div>
+      <div class="case-card">
+        <div class="spend-pill">💰 Ad Spend: $18,000</div>
+        <div class="case-tag">eCommerce · Sales Optimisation · Q1 2024 · H&M</div>
+        <div class="case-title">$63,360 revenue at 3.52x ROAS — 7,620 orders across Sponsored + DSP</div>
+        <div class="case-body">Managed the full Amazon Ads stack — Sponsored Products, Brands, Display and DSP retargeting. Exact match Sponsored Products hit the lowest ACoS at 23.5%. DSP retargeting of product detail page visitors delivered 4.1x ROAS compared to 2.8x for cold prospecting. Sponsored Brand Video drove 38% higher CTR than static banners. Revenue grew 24% over the previous period.</div>
+        <div class="case-metrics cols-4">
+          <div class="metric-box"><div class="metric-num">$63,360</div><div class="metric-label">Revenue</div></div>
+          <div class="metric-box"><div class="metric-num">3.52x</div><div class="metric-label">ROAS</div></div>
+          <div class="metric-box"><div class="metric-num">7,620</div><div class="metric-label">Orders</div></div>
+          <div class="metric-box"><div class="metric-num">28.4%</div><div class="metric-label">ACoS</div></div>
+        </div>
+        <div class="case-clients">
+          <div class="case-clients-label">Featured Client</div>
+          <div class="case-client-logos">
+            <a href="https://www2.hm.com" target="_blank" class="client-logo-box" style="background:#e50010;border-color:#e50010">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 32" style="height:22px;width:auto"><text x="2" y="24" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fff" letter-spacing="-1">H&amp;M</text></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 05 TIKTOK ADS -->
+<div class="platform-sec">
+  <div class="platform-grid">
+    <div class="plat-left">
+      <div class="plat-num">05</div>
+      <div class="plat-name">TikTok<br>Ads</div>
+      <div class="plat-desc">Short-form video that drives brand awareness, app installs and conversions for younger, high-intent audiences.</div>
+      <div class="plat-cred">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 32" style="height:28px;width:auto;flex-shrink:0"><path d="M20 5.5A4.5 4.5 0 0115.5 1h-3v18a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0v-4.5a6.5 6.5 0 106.5 6.5V9.5a8.5 8.5 0 005 1.6V8a4.5 4.5 0 01-3.5-2.5z" fill="#ff0050" opacity="0.5" transform="translate(-1,1)"/><path d="M20 5.5A4.5 4.5 0 0115.5 1h-3v18a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0v-4.5a6.5 6.5 0 106.5 6.5V9.5a8.5 8.5 0 005 1.6V8a4.5 4.5 0 01-3.5-2.5z" fill="#69C9D0" opacity="0.5" transform="translate(1,-1)"/><path d="M20 5.5A4.5 4.5 0 0115.5 1h-3v18a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0v-4.5a6.5 6.5 0 106.5 6.5V9.5a8.5 8.5 0 005 1.6V8a4.5 4.5 0 01-3.5-2.5z" fill="#111"/></svg>
+        <div><div class="plat-cred-title">TikTok Ads Certified</div><div class="plat-cred-sub">Performance Marketing</div></div>
+      </div>
+      <div class="plat-types">
+        <span class="plat-type">In-Feed Ads</span>
+        <span class="plat-type">Spark Ads (UGC)</span>
+        <span class="plat-type">TopView & Brand Takeover</span>
+        <span class="plat-type">TikTok Shopping</span>
+      </div>
+    </div>
+    <div>
+      <div class="case-card">
+        <div class="spend-pill">💰 Ad Spend: $10,500</div>
+        <div class="case-tag">Video Views + App Installs · Q1 2024 · Dance Academy USA</div>
+        <div class="case-title">9.2M video views and 6,840 app installs at just $1.53 per install</div>
+        <div class="case-body">We ran a four-format TikTok campaign — TopView for launch impact, In-Feed for performance, Spark Ads boosting organic UGC content, and a Hashtag Challenge. Spark Ads outperformed standard In-Feed by 2.3x on VTR. UGC videos under 15 seconds had 22% higher completion. App installs jumped 41% from the previous period while CPI dropped 18% to $1.53.</div>
+        <div class="case-metrics cols-4">
+          <div class="metric-box"><div class="metric-num">9.2M</div><div class="metric-label">Video Views</div></div>
+          <div class="metric-box"><div class="metric-num">6,840</div><div class="metric-label">App Installs</div></div>
+          <div class="metric-box"><div class="metric-num">$1.53</div><div class="metric-label">Cost Per Install</div></div>
+          <div class="metric-box"><div class="metric-num">68.4%</div><div class="metric-label">VTR</div></div>
+        </div>
+        <div class="case-clients">
+          <div class="case-clients-label">Featured Client</div>
+          <div class="case-client-logos">
+            <a href="https://www.danceacademyusa.com" target="_blank" class="client-logo-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 36" style="height:28px;width:auto"><text x="2" y="14" font-family="DM Sans,Arial" font-size="9" font-style="italic" fill="#8a6020">Dance Academy</text><text x="2" y="28" font-family="Plus Jakarta Sans,Arial Black" font-size="13" font-weight="800" fill="#111008">USA</text></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 06 DV360 + PROGRAMMATIC -->
+<div class="platform-sec">
+  <div class="platform-grid">
+    <div class="plat-left">
+      <div class="plat-num">06</div>
+      <div class="plat-name">DV360 &<br>Programmatic</div>
+      <div class="plat-desc">Full-funnel programmatic buying through Google DV360 — Display, Video, CTV, and Private Marketplace deals.</div>
+      <div class="plat-cred">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" style="height:32px;width:32px;flex-shrink:0"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        <div><div class="plat-cred-title">Google Display & Video 360 Certified</div><div class="plat-cred-sub">Programmatic Specialist</div></div>
+      </div>
+      <div class="plat-types">
+        <span class="plat-type">DV360 Campaigns</span>
+        <span class="plat-type">Private Marketplace Deals</span>
+        <span class="plat-type">Connected TV (CTV)</span>
+        <span class="plat-type">Audience Segmentation</span>
+      </div>
+    </div>
+    <div>
+      <div class="case-card">
+        <div class="spend-pill">💰 Ad Spend: $45,600 (DV360 + Programmatic)</div>
+        <div class="case-tag">Full-Funnel Programmatic · Q1 2024 · BMW India</div>
+        <div class="case-title">1.12 billion impressions, 12,480 conversions and +8.4% brand lift for BMW India</div>
+        <div class="case-body">We ran a full-funnel DV360 and Programmatic strategy combining YouTube TrueView, Display prospecting and retargeting, and programmatic Display/Video across 82.4M unique reach. First-party CRM audiences drove 3.8x conversion rate vs affinity targeting. CTV inventory hit 89% viewability. YouTube TrueView for Action achieved $0.46 CPL at the bottom funnel. PMP deals cut eCPM by 31% vs open exchange.</div>
+        <div class="case-metrics cols-4">
+          <div class="metric-box"><div class="metric-num">1.12B</div><div class="metric-label">Impressions</div></div>
+          <div class="metric-box"><div class="metric-num">12,480</div><div class="metric-label">Conversions</div></div>
+          <div class="metric-box"><div class="metric-num">$0.21</div><div class="metric-label">Avg. CPM</div></div>
+          <div class="metric-box"><div class="metric-num">+8.4%</div><div class="metric-label">Brand Lift</div></div>
+        </div>
+        <div class="case-clients">
+          <div class="case-clients-label">Featured Client</div>
+          <div class="case-client-logos">
+            <a href="https://www.bmw.in" target="_blank" class="client-logo-box" style="background:#1C69D4;border-color:#1C69D4;gap:8px">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="height:28px;width:28px;flex-shrink:0">
+                <circle cx="16" cy="16" r="15" fill="#1C69D4"/>
+                <circle cx="16" cy="16" r="15" fill="none" stroke="#fff" stroke-width="1.5"/>
+                <circle cx="16" cy="16" r="11" fill="none" stroke="#fff" stroke-width="1"/>
+                <path d="M16 5 L16 16 L5 16 Q5 9 10 7 Z" fill="#fff"/>
+                <path d="M16 16 L16 27 L27 16 Q27 23 22 25 Z" fill="#fff"/>
+              </svg>
+              <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:800;color:#fff;letter-spacing:1px">BMW</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /platforms -->
+
+<!-- ══ FLOATING CLIENTS ══ -->
+<section class="clients-sec" id="clients">
+  <div class="clients-header">
+    <div class="sec-label" style="justify-content:center">Trusted By</div>
+    <div class="sec-title">Brands I've worked with</div>
+    <p style="font-size:0.9rem;color:var(--gray);margin-top:0.5rem">From local businesses to global brands — here are some of the clients I've had the privilege of working with.</p>
+  </div>
+  <div class="scroll-wrap">
+    <div class="scroll-track">
+      <a href="https://www.wristassuredgloves.com" target="_blank" class="scroll-card"><img src="https://www.wristassuredgloves.com/wp-content/uploads/2016/06/logowags2016.png" alt="WAGs"></a>
+      <a href="https://roselschool.org" target="_blank" class="scroll-card"><img src="https://roselschool.org/wp-content/uploads/2025/04/rosel_school_logo-824x1024.png.webp" alt="Rosel School"></a>
+      <a href="https://alhornlaw.com" target="_blank" class="scroll-card"><img src="https://alhornlaw.com/wp-content/uploads/2024/11/ALH-Logo-temp1.png" alt="AL Horn Law"></a>
+      <a href="https://jonbragman.com" target="_blank" class="scroll-card"><img src="https://jonbragman.com/wp-content/uploads/2024/03/jon-bragman-logo.png" alt="Jon Bragman"></a>
+      <a href="https://mosaicroofingcompany.com" target="_blank" class="scroll-card"><img src="https://mosaicroofingcompany.com/wp-content/uploads/2024/09/435386634_803266091822348_7974137662534375980_n.webp" alt="Mosaic Roofing"></a>
+      <a href="https://hirasweets.com" target="_blank" class="scroll-card"><img src="https://hirasweets.com/wp-content/uploads/2023/10/Group-Logo-R-21.png" alt="Hira Sweets"></a>
+      <a href="https://www.godrejproperties.com" target="_blank" class="scroll-card"><img src="https://www.godrejproperties.com/images/header/logo.png" alt="Godrej Properties"></a>
+      <a href="http://tbnmidwest.com" target="_blank" class="scroll-card"><img src="https://tbnmidwest.com/cdn/shop/files/EZ2DO_4_medium.png?v=1757665957" alt="TBN Midwest"></a>
+      <div class="scroll-card" style="background:#e50010"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 32" style="height:22px"><text x="2" y="24" font-family="Arial Black" font-size="20" font-weight="900" fill="#fff">H&amp;M</text></svg></div>
+      <div class="scroll-card" style="background:#1C69D4;gap:8px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="height:26px;width:26px"><circle cx="16" cy="16" r="15" fill="#1C69D4"/><circle cx="16" cy="16" r="15" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="16" cy="16" r="11" fill="none" stroke="#fff" stroke-width="1"/><path d="M16 5 L16 16 L5 16 Q5 9 10 7 Z" fill="#fff"/><path d="M16 16 L16 27 L27 16 Q27 23 22 25 Z" fill="#fff"/></svg><span style="font-family:Arial Black;font-size:12px;font-weight:900;color:#fff">BMW</span></div>
+      <!-- duplicate for loop -->
+      <a href="https://www.wristassuredgloves.com" target="_blank" class="scroll-card"><img src="https://www.wristassuredgloves.com/wp-content/uploads/2016/06/logowags2016.png" alt="WAGs"></a>
+      <a href="https://roselschool.org" target="_blank" class="scroll-card"><img src="https://roselschool.org/wp-content/uploads/2025/04/rosel_school_logo-824x1024.png.webp" alt="Rosel School"></a>
+      <a href="https://alhornlaw.com" target="_blank" class="scroll-card"><img src="https://alhornlaw.com/wp-content/uploads/2024/11/ALH-Logo-temp1.png" alt="AL Horn Law"></a>
+      <a href="https://jonbragman.com" target="_blank" class="scroll-card"><img src="https://jonbragman.com/wp-content/uploads/2024/03/jon-bragman-logo.png" alt="Jon Bragman"></a>
+      <a href="https://mosaicroofingcompany.com" target="_blank" class="scroll-card"><img src="https://mosaicroofingcompany.com/wp-content/uploads/2024/09/435386634_803266091822348_7974137662534375980_n.webp" alt="Mosaic Roofing"></a>
+      <a href="https://hirasweets.com" target="_blank" class="scroll-card"><img src="https://hirasweets.com/wp-content/uploads/2023/10/Group-Logo-R-21.png" alt="Hira Sweets"></a>
+      <a href="https://www.godrejproperties.com" target="_blank" class="scroll-card"><img src="https://www.godrejproperties.com/images/header/logo.png" alt="Godrej Properties"></a>
+      <a href="http://tbnmidwest.com" target="_blank" class="scroll-card"><img src="https://tbnmidwest.com/cdn/shop/files/EZ2DO_4_medium.png?v=1757665957" alt="TBN Midwest"></a>
+      <div class="scroll-card" style="background:#e50010"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 32" style="height:22px"><text x="2" y="24" font-family="Arial Black" font-size="20" font-weight="900" fill="#fff">H&amp;M</text></svg></div>
+      <div class="scroll-card" style="background:#1C69D4;gap:8px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="height:26px;width:26px"><circle cx="16" cy="16" r="15" fill="#1C69D4"/><circle cx="16" cy="16" r="15" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="16" cy="16" r="11" fill="none" stroke="#fff" stroke-width="1"/><path d="M16 5 L16 16 L5 16 Q5 9 10 7 Z" fill="#fff"/><path d="M16 16 L16 27 L27 16 Q27 23 22 25 Z" fill="#fff"/></svg><span style="font-family:Arial Black;font-size:12px;font-weight:900;color:#fff">BMW</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROCESS ══ -->
+<section id="process" class="process-sec">
+  <div class="sec-label">How I Work</div>
+  <div class="sec-title">My process,<br>start to finish</div>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="step-num">1</div>
+      <div class="step-title">Discovery Call</div>
+      <div class="step-body">I learn your business, goals, current setup and what good looks like for you.</div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">2</div>
+      <div class="step-title">Audit & Plan</div>
+      <div class="step-body">Full account audit plus a written media strategy and budget allocation before I spend a rupee.</div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">3</div>
+      <div class="step-title">Build & Launch</div>
+      <div class="step-body">Campaigns built properly — structure, copy, tracking, audiences — ready to go live.</div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">4</div>
+      <div class="step-title">Optimise Weekly</div>
+      <div class="step-body">Bids, audiences, creatives — I review everything weekly and cut what isn't working.</div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">5</div>
+      <div class="step-title">Report & Scale</div>
+      <div class="step-body">Clear weekly reports. When something works, we scale it hard and fast.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CERTIFICATIONS ══ -->
+<section id="certifications" class="certs-sec">
+  <div class="sec-label">Credentials</div>
+  <div class="sec-title">Certifications &<br>Partner Badges</div>
+  <div class="certs-grid">
+    <div class="cert-card">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="cert-logo"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+      <div class="cert-title">Google Partner Badge</div><div class="cert-by">Official Google Partner</div>
+    </div>
+    <div class="cert-card">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 24" class="cert-logo"><text x="0" y="18" font-family="Arial Black" font-size="16" font-weight="900" fill="#0866FF">Meta</text></svg>
+      <div class="cert-title">Meta Business Partner Badge</div><div class="cert-by">Official Meta Partner</div>
+    </div>
+    <div class="cert-card">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="cert-logo"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+      <div class="cert-title">Google Ads Search Certified</div><div class="cert-by">Google</div>
+    </div>
+    <div class="cert-card">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="cert-logo"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+      <div class="cert-title">Google Shopping & PMax Certified</div><div class="cert-by">Google</div>
+    </div>
+    <div class="cert-card">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="cert-logo"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+      <div class="cert-title">Google Analytics 4 Certified</div><div class="cert-by">Google</div>
+    </div>
+    <div class="cert-card">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 24" class="cert-logo"><text x="0" y="18" font-family="Arial Black" font-size="16" font-weight="900" fill="#0866FF">Meta</text></svg>
+      <div class="cert-title">Meta Blueprint — Media Buying</div><div class="cert-by">Meta</div>
+    </div>
+    <div class="cert-card">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 24" class="cert-logo"><text x="0" y="17" font-family="Arial Black" font-size="14" font-weight="900" fill="#FF9900">amazon</text></svg>
+      <div class="cert-title">Amazon Ads Certified</div><div class="cert-by">Amazon Advertising</div>
+    </div>
+    <div class="cert-card">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="cert-logo"><rect width="32" height="32" rx="5" fill="#0A66C2"/><path d="M8 13h4v11H8zm2-6a2 2 0 110 4 2 2 0 010-4zm6 6h3.8v1.5c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V24h-4v-5c0-1.2 0-2.7-1.65-2.7S21 17.6 21 19.1V24h-4V13z" fill="white"/></svg>
+      <div class="cert-title">LinkedIn Marketing Labs</div><div class="cert-by">LinkedIn</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section class="testi-sec">
+  <div class="sec-label">What People Say</div>
+  <div class="sec-title">Clients, in their<br>own words</div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-quote-mark">"</div>
+      <div class="testi-text">The Google Ads numbers speak for themselves — but what really impressed us was how Rahul communicated throughout. Always clear, always proactive, never had to chase for updates.</div>
+      <div class="testi-author">
+        <div class="testi-avatar">WG</div>
+        <div><div class="testi-name">Wrist Assured Gloves</div><div class="testi-role">eCommerce — USA</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote-mark">"</div>
+      <div class="testi-text">Our Meta campaigns were bleeding money. Within 30 days of Rahul restructuring everything, our CPL dropped by over 55%. I wish we'd brought him in sooner.</div>
+      <div class="testi-author">
+        <div class="testi-avatar">SR</div>
+        <div><div class="testi-name">Sneha R.</div><div class="testi-role">Marketing Head, Real Estate</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote-mark">"</div>
+      <div class="testi-text">Most consultants know one platform well. Rahul genuinely understands the full paid media ecosystem. The LinkedIn pipeline he built for us was something our in-house team could never crack.</div>
+      <div class="testi-author">
+        <div class="testi-avatar">VP</div>
+        <div><div class="testi-name">Vikram P.</div><div class="testi-role">CEO, SaaS Startup</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT FORM ══ -->
+<section class="contact-sec" id="contact">
+  <div class="contact-inner">
+    <div class="contact-left">
+      <div class="sec-label">Let's Work Together</div>
+      <div class="sec-title">Got a project<br>in mind?</div>
+      <p class="contact-desc">Whether you need someone to take over your campaigns, do a full audit, or build something from scratch — drop me a message and I'll get back to you within 24 hours.</p>
+      <div class="contact-info-list">
+        <a href="mailto:YOUR_EMAIL@gmail.com" class="contact-info-item">
+          <div class="contact-info-icon">✉</div>
+          <div>
+            <div class="contact-info-label">Email</div>
+            <div class="contact-info-val">YOUR_EMAIL@gmail.com</div>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" class="contact-info-item">
+          <div class="contact-info-icon">in</div>
+          <div>
+            <div class="contact-info-label">LinkedIn</div>
+            <div class="contact-info-val">linkedin.com/in/YOUR_LINKEDIN</div>
+          </div>
+        </a>
+        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="contact-info-item">
+          <div class="contact-info-icon">📱</div>
+          <div>
+            <div class="contact-info-label">WhatsApp</div>
+            <div class="contact-info-val">+91 XXXXX XXXXX</div>
+          </div>
+        </a>
+      </div>
+      <div class="contact-badges">
+        <div class="contact-badge">🌍 Available for international projects</div>
+        <div class="contact-badge">⚡ Replies within 24 hours</div>
+        <div class="contact-badge">📞 Free strategy call first</div>
+      </div>
+    </div>
+    <div class="contact-right">
+      <div class="form-card">
+        <div class="form-title">Send me a message</div>
+        <div class="form-subtitle">I'll get back to you within 24 hours.</div>
+        <!-- Replace YOUR_FORMSPREE_ID with your actual Formspree endpoint -->
+        <!-- Get it free at formspree.io → New Form → copy the endpoint -->
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Your Name *</label>
+              <input type="text" name="name" class="form-input" placeholder="John Smith" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address *</label>
+              <input type="email" name="email" class="form-input" placeholder="john@company.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Company / Website</label>
+              <input type="text" name="company" class="form-input" placeholder="yourcompany.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Monthly Ad Budget</label>
+              <select name="budget" class="form-input form-select">
+                <option value="" disabled selected>Select range</option>
+                <option>Under $1,000/month</option>
+                <option>$1,000 – $5,000/month</option>
+                <option>$5,000 – $20,000/month</option>
+                <option>$20,000 – $100,000/month</option>
+                <option>$100,000+/month</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Which platforms do you need help with?</label>
+            <div class="form-checkboxes">
+              <label class="form-checkbox"><input type="checkbox" name="platform" value="Google Ads"> Google Ads</label>
+              <label class="form-checkbox"><input type="checkbox" name="platform" value="Meta Ads"> Meta Ads</label>
+              <label class="form-checkbox"><input type="checkbox" name="platform" value="LinkedIn Ads"> LinkedIn Ads</label>
+              <label class="form-checkbox"><input type="checkbox" name="platform" value="Amazon Ads"> Amazon Ads</label>
+              <label class="form-checkbox"><input type="checkbox" name="platform" value="TikTok Ads"> TikTok Ads</label>
+              <label class="form-checkbox"><input type="checkbox" name="platform" value="DV360/Programmatic"> DV360</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tell me about your project *</label>
+            <textarea name="message" class="form-input form-textarea" placeholder="What are you trying to achieve? What's not working right now? Any context helps..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="submitBtn">
+            <span id="submitText">Send Message →</span>
+          </button>
+          <div id="formSuccess" class="form-success" style="display:none">
+            ✅ Message sent! I'll get back to you within 24 hours.
+          </div>
+          <div id="formError" class="form-error" style="display:none">
+            ❌ Something went wrong. Please email me directly.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <p class="footer-copy">© 2026 Rahul Gupta — Paid Media Consultant</p>
+  <div class="footer-links">
+    <a href="mailto:YOUR_EMAIL@gmail.com">YOUR_EMAIL@gmail.com</a>
+    <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
+    <a href="https://wa.me/91XXXXXXXXXX" target="_blank">WhatsApp</a>
+  </div>
+</footer>
+
+<script>
+const form = document.getElementById('contactForm');
+if(form){
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    const txt = document.getElementById('submitText');
+    const ok = document.getElementById('formSuccess');
+    const err = document.getElementById('formError');
+    btn.disabled = true;
+    txt.textContent = 'Sending...';
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if(res.ok){
+        ok.style.display = 'block';
+        form.reset();
+        txt.textContent = 'Sent ✓';
+      } else {
+        throw new Error();
+      }
+    } catch {
+      err.style.display = 'block';
+      btn.disabled = false;
+      txt.textContent = 'Send Message →';
+    }
+  });
+}
+</script>
