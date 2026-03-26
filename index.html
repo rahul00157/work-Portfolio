@@ -1,1484 +1,786 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rahul Gupta | Paid Media Consultant</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Rahul Gupta — Paid Media &amp; Digital Marketing Consultant</title>
+<meta name="description" content="Rahul Gupta — Paid Media Consultant with 4+ years experience. Google Ads, Meta Ads, LinkedIn, Amazon. Serving Qatar, UAE, Saudi Arabia, Singapore, Australia, Canada &amp; more."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --cream:#f5f0e8;
-  --cream2:#ede7da;
-  --cream3:#e5dece;
-  --white:#ffffff;
-  --ink:#111008;
-  --ink2:#2a2416;
-  --ink3:#4a4030;
-  --gray:#7a7060;
-  --gray2:#a09080;
-  --gold:#8a6020;
-  --gold2:#a87830;
-  --gold-light:#f0e4c8;
-  --gold-border:rgba(138,96,32,0.2);
-  --shadow-sm:0 1px 8px rgba(0,0,0,0.06);
-  --shadow-md:0 4px 24px rgba(0,0,0,0.08);
-  --shadow-lg:0 8px 40px rgba(0,0,0,0.1);
-  --radius:10px;
-  --radius-lg:16px;
+  --bg:#06060a;--bg2:#0d0d14;--sf:#12121c;--sf2:#1a1a28;
+  --bd:rgba(255,255,255,.07);--bd2:rgba(255,255,255,.13);
+  --ac:#ff6b2b;--ac2:#ffb347;--gold:#f5a623;
+  --tx:#f0ede8;--mt:#7a7a8a;--gn:#22c55e;
 }
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-::-webkit-scrollbar{width:4px}
-::-webkit-scrollbar-track{background:var(--cream2)}
-::-webkit-scrollbar-thumb{background:var(--gold);border-radius:4px}
-a{color:inherit;text-decoration:none}
-img{max-width:100%;display:block}
-
+body{background:var(--bg);color:var(--tx);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  background-size:200px;pointer-events:none;opacity:.4}
+.cursor{width:10px;height:10px;background:var(--ac);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:.1s}
+.cursor-ring{width:36px;height:36px;border:1.5px solid var(--ac);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:.18s ease;opacity:.6}
 /* NAV */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  display:flex;justify-content:space-between;align-items:center;
-  padding:1.2rem 5rem;
-  background:rgba(245,240,232,0.95);
-  backdrop-filter:blur(16px);
-  border-bottom:1px solid rgba(138,96,32,0.1);
-  box-shadow:0 1px 20px rgba(0,0,0,0.05);
-}
-.nav-logo{
-  font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:1.1rem;font-weight:800;
-  color:var(--ink);letter-spacing:-0.03em;
-}
-.nav-logo span{color:var(--gold)}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{
-  font-size:0.78rem;font-weight:500;
-  color:var(--ink3);letter-spacing:0.05em;
-  text-transform:uppercase;
-  transition:color 0.2s;
-}
-.nav-links a:hover{color:var(--gold)}
-.nav-right{display:flex;align-items:center;gap:1rem}
-.nav-badge-wrap{display:flex;align-items:center;gap:8px}
-.nav-cta{
-  background:var(--gold);color:#fff;
-  padding:0.5rem 1.3rem;border-radius:6px;
-  font-size:0.75rem;font-weight:600;
-  letter-spacing:0.05em;text-transform:uppercase;
-  transition:background 0.2s;
-}
-.nav-cta:hover{background:var(--gold2)}
-
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:20px 60px;border-bottom:1px solid var(--bd);backdrop-filter:blur(20px);background:rgba(6,6,10,.85);transition:padding .3s}
+nav.scrolled{padding:12px 60px}
+.nlogo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.1rem;letter-spacing:-.02em;text-decoration:none;color:var(--tx)}
+.nlogo span{color:var(--ac)}
+.nlinks{display:flex;gap:30px;list-style:none}
+.nlinks a{color:var(--mt);text-decoration:none;font-size:.8rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:color .2s;position:relative}
+.nlinks a::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:1px;background:var(--ac);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nlinks a:hover{color:var(--tx)}
+.nlinks a:hover::after{transform:scaleX(1)}
+.ncta{background:var(--ac);color:#fff;padding:10px 22px;border-radius:5px;text-decoration:none;font-size:.82rem;font-weight:700;transition:background .2s,transform .2s}
+.ncta:hover{background:var(--ac2);transform:translateY(-1px)}
 /* HERO */
-.hero{
-  min-height:100vh;
-  display:flex;flex-direction:column;justify-content:center;
-  padding:8rem 5rem 5rem;
-  background:linear-gradient(160deg,#f5f0e8 0%,#ede7da 60%,#e5dece 100%);
-  position:relative;overflow:hidden;
-}
-.hero::after{
-  content:'';position:absolute;
-  top:0;right:0;bottom:0;width:40%;
-  background:radial-gradient(ellipse at 80% 40%,rgba(138,96,32,0.06) 0%,transparent 70%);
-  pointer-events:none;
-}
-.hero-tag{
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--gold-light);border:1px solid var(--gold-border);
-  padding:0.35rem 1rem;border-radius:100px;
-  font-size:0.72rem;font-weight:600;color:var(--gold);
-  letter-spacing:0.06em;text-transform:uppercase;
-  margin-bottom:2rem;width:fit-content;
-}
-.hero-tag-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:blink 2s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
-.hero h1{
-  font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:clamp(3rem,6.5vw,6.5rem);
-  font-weight:800;line-height:1;
-  letter-spacing:-0.04em;
-  color:var(--ink);
-  max-width:860px;
-  margin-bottom:1.5rem;
-  position:relative;z-index:1;
-}
-.hero h1 .gold{color:var(--gold)}
-.hero h1 .light{color:var(--ink3)}
-.hero-sub{
-  font-size:1.05rem;font-weight:300;
-  color:var(--ink3);line-height:1.75;
-  max-width:480px;margin-bottom:3rem;
-}
-.hero-stats{
-  display:flex;gap:0;
-  border:1px solid var(--gold-border);
-  border-radius:var(--radius-lg);
-  background:var(--white);
-  overflow:hidden;
-  box-shadow:var(--shadow-md);
-  width:fit-content;
-}
-.hero-stat{padding:1.4rem 2.2rem;position:relative}
-.hero-stat+.hero-stat{border-left:1px solid var(--gold-border)}
-.hero-stat-num{
-  font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:2rem;font-weight:800;
-  color:var(--gold);line-height:1;
-  letter-spacing:-0.03em;
-}
-.hero-stat-label{
-  font-size:0.7rem;font-weight:500;
-  color:var(--gray);margin-top:0.35rem;
-  letter-spacing:0.04em;text-transform:uppercase;
-}
-.hero-cta-row{display:flex;gap:1rem;margin-top:3rem;align-items:center}
-.btn-primary{
-  background:var(--gold);color:#fff;
-  padding:0.85rem 2rem;border-radius:var(--radius);
-  font-size:0.85rem;font-weight:600;
-  transition:background 0.2s,transform 0.15s;
-  display:inline-block;
-}
-.btn-primary:hover{background:var(--gold2);transform:translateY(-1px)}
-.btn-secondary{
-  background:transparent;color:var(--ink);
-  border:1.5px solid rgba(138,96,32,0.3);
-  padding:0.85rem 2rem;border-radius:var(--radius);
-  font-size:0.85rem;font-weight:500;
-  transition:border-color 0.2s,color 0.2s;
-  display:inline-block;
-}
-.btn-secondary:hover{border-color:var(--gold);color:var(--gold)}
-
-/* BADGES BAR */
-.badges-bar{
-  background:var(--white);
-  border-top:1px solid rgba(138,96,32,0.1);
-  border-bottom:1px solid rgba(138,96,32,0.1);
-  padding:1.6rem 5rem;
-  display:flex;align-items:center;gap:2rem;flex-wrap:wrap;
-}
-.badges-label{
-  font-size:0.7rem;font-weight:600;
-  color:var(--gray2);letter-spacing:0.1em;
-  text-transform:uppercase;white-space:nowrap;flex-shrink:0;
-}
-.badges-list{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
-.pbadge{
-  display:flex;align-items:center;gap:0.75rem;
-  border:1px solid rgba(138,96,32,0.15);
-  border-radius:var(--radius);
-  padding:0.65rem 1.1rem;
-  background:var(--cream);
-  transition:box-shadow 0.2s,border-color 0.2s;
-}
-.pbadge:hover{box-shadow:var(--shadow-sm);border-color:var(--gold)}
-.pbadge-name{font-size:0.78rem;font-weight:600;color:var(--ink2)}
-.pbadge-sub{font-size:0.62rem;color:var(--gold);margin-top:0.1rem;font-weight:500}
-
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:140px 60px 80px;position:relative;overflow:hidden}
+.hgrid{position:absolute;inset:0;z-index:0;background-image:linear-gradient(rgba(255,107,43,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,107,43,.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 70% at 50% 50%,black 40%,transparent 100%)}
+.hglow{position:absolute;width:800px;height:800px;background:radial-gradient(circle,rgba(255,107,43,.13) 0%,transparent 70%);top:-150px;right:-150px;pointer-events:none;animation:gp 5s ease-in-out infinite}
+.hglow2{position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(59,130,246,.07) 0%,transparent 70%);bottom:-100px;left:-100px;pointer-events:none;animation:gp 7s ease-in-out infinite reverse}
+@keyframes gp{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.1);opacity:.7}}
+.hbadge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(34,197,94,.3);background:rgba(34,197,94,.08);padding:6px 16px;border-radius:100px;font-size:.75rem;color:var(--gn);font-weight:600;margin-bottom:24px;position:relative;z-index:1;opacity:0;animation:fu .6s .2s ease forwards;letter-spacing:.04em;text-transform:uppercase}
+.dblk{width:7px;height:7px;background:var(--gn);border-radius:50%;animation:blk 1.5s infinite}
+@keyframes blk{0%,100%{opacity:1}50%{opacity:.2}}
+.hname{font-family:'Syne',sans-serif;font-size:clamp(3.8rem,9.5vw,9rem);font-weight:800;line-height:.92;letter-spacing:-.04em;position:relative;z-index:1;opacity:0;animation:fu .9s .35s ease forwards}
+.hname .l1{display:block;color:var(--tx)}
+.hname .l2{display:block;color:var(--ac);position:relative}
+.hname .l2::after{content:'';position:absolute;bottom:8px;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--ac),transparent);border-radius:2px}
+.hsub{margin-top:22px;font-size:clamp(.9rem,1.8vw,1.1rem);color:var(--mt);position:relative;z-index:1;opacity:0;animation:fu .8s .55s ease forwards}
+.hsub strong{color:var(--tx)}
+.htyp{margin-top:28px;font-family:'Syne',sans-serif;font-size:clamp(1.3rem,3vw,2rem);font-weight:700;line-height:1.3;max-width:700px;position:relative;z-index:1;opacity:0;animation:fu .8s .7s ease forwards}
+.htyp em{color:var(--ac);font-style:normal}
+#typed{border-right:3px solid var(--ac);padding-right:4px;animation:cblink .75s infinite}
+@keyframes cblink{0%,100%{border-color:var(--ac)}50%{border-color:transparent}}
+.hgeo{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px;position:relative;z-index:1;opacity:0;animation:fu .8s .85s ease forwards}
+.gflag{display:flex;align-items:center;gap:5px;background:var(--sf);border:1px solid var(--bd);padding:5px 12px;border-radius:100px;font-size:.72rem;color:var(--mt);font-weight:500;transition:border-color .2s,color .2s}
+.gflag:hover{border-color:var(--ac);color:var(--tx)}
+.hstats{display:flex;gap:44px;margin-top:42px;position:relative;z-index:1;opacity:0;animation:fu .8s 1s ease forwards;flex-wrap:wrap}
+.sitem{display:flex;flex-direction:column}
+.snum{font-family:'Syne',sans-serif;font-size:2.3rem;font-weight:800;color:var(--ac);letter-spacing:-.03em}
+.slbl{font-size:.73rem;color:var(--mt);margin-top:2px;text-transform:uppercase;letter-spacing:.05em}
+.hctas{display:flex;gap:14px;margin-top:38px;position:relative;z-index:1;opacity:0;animation:fu .8s 1.1s ease forwards;flex-wrap:wrap}
+.bp{background:var(--ac);color:#fff;padding:14px 30px;border-radius:6px;text-decoration:none;font-weight:700;font-size:.87rem;letter-spacing:.02em;transition:background .2s,transform .2s,box-shadow .2s}
+.bp:hover{background:var(--ac2);transform:translateY(-2px);box-shadow:0 10px 35px rgba(255,107,43,.35)}
+.bs{background:transparent;color:var(--tx);padding:14px 30px;border-radius:6px;text-decoration:none;font-weight:500;font-size:.87rem;border:1px solid var(--bd2);transition:border-color .2s,transform .2s}
+.bs:hover{border-color:var(--ac);transform:translateY(-2px)}
+.bwa{background:rgba(37,211,102,.12);color:#25d366;padding:14px 22px;border-radius:6px;text-decoration:none;font-weight:700;font-size:.87rem;border:1px solid rgba(37,211,102,.25);transition:background .2s,transform .2s;display:flex;align-items:center;gap:7px}
+.bwa:hover{background:rgba(37,211,102,.2);transform:translateY(-2px)}
+.scrl{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:7px;z-index:1;opacity:0;animation:fi 1s 1.6s ease forwards}
+.scrl span{font-size:.67rem;color:var(--mt);letter-spacing:.12em;text-transform:uppercase}
+.scrl-line{width:1px;height:46px;background:linear-gradient(var(--ac),transparent);animation:sl 2s ease-in-out infinite}
+@keyframes sl{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}50.01%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@keyframes fu{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fi{from{opacity:0}to{opacity:1}}
 /* SECTIONS */
-section{padding:6rem 5rem}
-.sec-label{
-  font-size:0.7rem;font-weight:700;
-  letter-spacing:0.15em;text-transform:uppercase;
-  color:var(--gold);margin-bottom:0.6rem;
-  display:flex;align-items:center;gap:0.6rem;
-}
-.sec-label::before{content:'';width:20px;height:2px;background:var(--gold);border-radius:2px}
-.sec-title{
-  font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:clamp(1.9rem,3.5vw,3rem);
-  font-weight:800;letter-spacing:-0.03em;
-  color:var(--ink);line-height:1.1;
-  margin-bottom:1rem;
-}
-.sec-desc{
-  font-size:0.95rem;color:var(--ink3);
-  line-height:1.8;font-weight:300;
-  max-width:540px;
-}
-
+section{position:relative;z-index:1}
+.si{max-width:1200px;margin:0 auto;padding:0 60px}
+.slabel{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ac);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.slabel::before{content:'';display:block;width:22px;height:1px;background:var(--ac)}
+.sh{font-family:'Syne',sans-serif;font-size:clamp(1.9rem,3.8vw,2.9rem);font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.dvdr{height:1px;background:var(--bd);margin:0 60px}
 /* ABOUT */
-.about-sec{background:var(--cream2)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;margin-top:3.5rem;align-items:start}
-.about-body{font-size:0.95rem;color:var(--ink3);line-height:1.85;font-weight:400}
-.about-body p+p{margin-top:1.1rem}
-.about-body strong{color:var(--ink);font-weight:600}
-.expertise-list{display:flex;flex-direction:column;gap:2px}
-.exp-item{
-  background:var(--white);border:1px solid rgba(138,96,32,0.1);
-  border-radius:var(--radius);
-  display:flex;justify-content:space-between;align-items:center;
-  padding:1rem 1.4rem;
-  transition:background 0.15s,border-color 0.15s,transform 0.15s;
-}
-.exp-item:hover{background:var(--gold-light);border-color:var(--gold);transform:translateX(4px)}
-.exp-name{font-size:0.88rem;font-weight:600;color:var(--ink)}
-.exp-detail{font-size:0.72rem;color:var(--gray);font-weight:400}
-.exp-arrow{color:var(--gold);font-size:0.85rem;font-weight:600}
-
-/* PLATFORM SECTIONS */
-.platform-sec{padding:6rem 5rem;border-top:1px solid rgba(138,96,32,0.08)}
-.platform-sec:nth-child(even){background:var(--cream2)}
-.platform-sec:nth-child(odd){background:var(--cream)}
-.platform-grid{display:grid;grid-template-columns:280px 1fr;gap:5rem;align-items:start}
-.plat-left{}
-.plat-num{
-  font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:4rem;font-weight:800;
-  color:rgba(138,96,32,0.1);line-height:1;
-  margin-bottom:0.6rem;letter-spacing:-0.05em;
-}
-.plat-name{
-  font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:1.9rem;font-weight:800;
-  color:var(--ink);line-height:1.1;
-  margin-bottom:0.6rem;letter-spacing:-0.03em;
-}
-.plat-desc{font-size:0.8rem;color:var(--gray);line-height:1.7;margin-bottom:1.4rem}
-
-/* Credential badge */
-.plat-cred{
-  display:flex;align-items:center;gap:0.8rem;
-  background:var(--white);border:1px solid rgba(138,96,32,0.15);
-  border-radius:var(--radius);padding:0.7rem 1rem;
-  margin-bottom:1.4rem;box-shadow:var(--shadow-sm);
-}
-.plat-cred-title{font-size:0.76rem;font-weight:600;color:var(--ink2)}
-.plat-cred-sub{font-size:0.61rem;color:var(--gold);font-weight:500;margin-top:0.1rem}
-
-/* Ad types */
-.plat-types{display:flex;flex-direction:column;gap:0.4rem}
-.plat-type{
-  font-size:0.72rem;font-weight:500;color:var(--ink3);
-  display:flex;align-items:center;gap:0.5rem;
-}
-.plat-type::before{
-  content:'';width:12px;height:1.5px;
-  background:var(--gold);display:inline-block;flex-shrink:0;
-}
-
-/* Case card */
-.case-card{
-  background:var(--white);
-  border:1px solid rgba(138,96,32,0.12);
-  border-radius:var(--radius-lg);
-  padding:2.2rem;
-  box-shadow:var(--shadow-sm);
-  position:relative;overflow:hidden;
-  transition:box-shadow 0.25s,transform 0.2s;
-}
-.case-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
-.case-card::before{
-  content:'';position:absolute;top:0;left:0;
-  width:4px;height:100%;
-  background:linear-gradient(180deg,var(--gold),rgba(138,96,32,0.2));
-}
-.case-tag{
-  font-size:0.68rem;font-weight:600;
-  letter-spacing:0.1em;text-transform:uppercase;
-  color:var(--gold);margin-bottom:0.9rem;
-}
-.case-title{
-  font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:1.3rem;font-weight:700;
-  color:var(--ink);line-height:1.25;margin-bottom:0.8rem;
-  letter-spacing:-0.02em;
-}
-.case-body{
-  font-size:0.83rem;color:var(--ink3);
-  line-height:1.75;font-weight:400;margin-bottom:1.4rem;
-}
-.case-url{
-  font-size:0.72rem;color:var(--gold);font-weight:500;
-  display:inline-flex;align-items:center;gap:4px;
-  margin-bottom:1.4rem;
-  border-bottom:1px solid rgba(138,96,32,0.3);
-  padding-bottom:2px;
-  transition:color 0.2s;
-}
-.case-url:hover{color:var(--gold2)}
-.case-metrics{
-  display:grid;gap:1px;
-  background:rgba(138,96,32,0.1);
-  border-radius:var(--radius);overflow:hidden;
-}
-.cols-3{grid-template-columns:repeat(3,1fr)}
-.cols-4{grid-template-columns:repeat(4,1fr)}
-.metric-box{
-  background:var(--cream);
-  padding:1rem;text-align:center;
-}
-.metric-num{
-  font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:1.6rem;font-weight:800;
-  color:var(--gold);line-height:1;
-  letter-spacing:-0.02em;
-}
-.metric-label{
-  font-size:0.62rem;font-weight:600;
-  color:var(--gray);margin-top:0.3rem;
-  letter-spacing:0.06em;text-transform:uppercase;
-}
-
-/* Ad spend pill */
-.spend-pill{
-  display:inline-flex;align-items:center;gap:6px;
-  background:var(--gold-light);border:1px solid var(--gold-border);
-  border-radius:100px;padding:0.3rem 0.8rem;
-  font-size:0.7rem;font-weight:600;color:var(--gold);
-  margin-bottom:1rem;
-}
-
-/* Client logo strip under case card */
-.case-clients{
-  margin-top:1.4rem;padding-top:1.2rem;
-  border-top:1px solid rgba(138,96,32,0.1);
-}
-.case-clients-label{
-  font-size:0.62rem;font-weight:600;
-  color:var(--gray2);letter-spacing:0.1em;
-  text-transform:uppercase;margin-bottom:0.8rem;
-}
-.case-client-logos{display:flex;gap:0.6rem;flex-wrap:wrap;align-items:center}
-.client-logo-box{
-  display:inline-flex;align-items:center;justify-content:center;
-  background:var(--cream);border:1px solid rgba(138,96,32,0.12);
-  border-radius:8px;padding:0.5rem 0.9rem;height:46px;
-  transition:border-color 0.2s,background 0.2s;
-}
-.client-logo-box:hover{border-color:var(--gold);background:var(--gold-light)}
-.client-logo-box img{height:22px;width:auto;object-fit:contain;max-width:90px}
-
-/* FLOATING CLIENTS */
-.clients-sec{
-  background:var(--white);
-  border-top:1px solid rgba(138,96,32,0.1);
-  border-bottom:1px solid rgba(138,96,32,0.1);
-  padding:5rem 0;overflow:hidden;
-}
-.clients-header{text-align:center;padding:0 5rem 3rem}
-.scroll-wrap{position:relative;overflow:hidden}
-.scroll-wrap::before,.scroll-wrap::after{
-  content:'';position:absolute;top:0;bottom:0;
-  width:160px;z-index:2;pointer-events:none;
-}
-.scroll-wrap::before{left:0;background:linear-gradient(to right,var(--white),transparent)}
-.scroll-wrap::after{right:0;background:linear-gradient(to left,var(--white),transparent)}
-.scroll-track{
-  display:flex;gap:0;
-  animation:scrollLeft 28s linear infinite;
-  width:max-content;
-}
-.scroll-track:hover{animation-play-state:paused}
-.scroll-track.reverse{animation-direction:reverse;animation-duration:32s}
-@keyframes scrollLeft{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.scroll-card{
-  display:flex;align-items:center;justify-content:center;
-  background:var(--cream);
-  border:1px solid rgba(138,96,32,0.12);
-  border-radius:var(--radius);
-  padding:1rem 1.8rem;margin:0 0.5rem;
-  height:64px;min-width:150px;flex-shrink:0;
-  transition:border-color 0.2s,box-shadow 0.2s,transform 0.2s;
-}
-.scroll-card:hover{
-  border-color:var(--gold);
-  box-shadow:var(--shadow-sm);
-  transform:translateY(-3px);
-}
-.scroll-card img{height:24px;width:auto;object-fit:contain;max-width:110px}
-
+#about{padding:120px 0}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:76px;align-items:start;margin-top:52px}
+.atext p{color:var(--mt);line-height:1.85;margin-bottom:17px;font-size:.92rem}
+.atext p strong{color:var(--tx)}
+.etl{margin-top:34px;display:flex;flex-direction:column}
+.ei{display:flex;gap:18px;padding-bottom:26px;position:relative}
+.ei::before{content:'';position:absolute;left:16px;top:34px;bottom:0;width:1px;background:var(--bd)}
+.ei:last-child::before{display:none}
+.edot{width:34px;height:34px;background:var(--sf2);border:2px solid var(--bd2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;flex-shrink:0;margin-top:2px;transition:border-color .3s}
+.ei:hover .edot{border-color:var(--ac)}
+.erole{font-weight:700;font-size:.88rem;margin-bottom:2px}
+.eco{color:var(--ac);font-size:.78rem;font-weight:600;margin-bottom:2px}
+.eperiod{color:var(--mt);font-size:.73rem;margin-bottom:5px;letter-spacing:.04em}
+.edesc{color:var(--mt);font-size:.78rem;line-height:1.6}
+.ar{display:flex;flex-direction:column;gap:18px}
+.mc{background:var(--sf);border:1px solid var(--bd);border-radius:12px;padding:24px 28px;transition:border-color .3s,transform .3s;cursor:default}
+.mc:hover{border-color:var(--ac);transform:translateX(4px)}
+.mc .num{font-family:'Syne',sans-serif;font-size:2.7rem;font-weight:800;color:var(--ac);letter-spacing:-.03em}
+.mc .lbl{color:var(--mt);font-size:.78rem;margin-top:3px}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:18px}
+.cb{background:var(--sf2);border:1px solid var(--bd);border-radius:7px;padding:9px 13px;font-size:.71rem;color:var(--mt);display:flex;align-items:center;gap:6px;transition:border-color .2s}
+.cb:hover{border-color:var(--ac)}
+/* SKILLS */
+#skills{padding:110px 0;background:var(--bg2)}
+.skh{text-align:center;margin-bottom:56px}
+.skh .slabel{justify-content:center}
+.skh .slabel::before{display:none}
+.skg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.skc{background:var(--sf);border:1px solid var(--bd);border-radius:12px;padding:28px 24px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s;cursor:default}
+.skc::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,107,43,.07),transparent);opacity:0;transition:opacity .3s}
+.skc:hover{border-color:var(--ac);transform:translateY(-5px)}
+.skc:hover::before{opacity:1}
+.skico{font-size:1.8rem;margin-bottom:13px}
+.skname{font-family:'Syne',sans-serif;font-weight:700;font-size:.98rem;margin-bottom:7px}
+.skdesc{font-size:.79rem;color:var(--mt);line-height:1.6;margin-bottom:15px}
+.sktags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{background:rgba(255,107,43,.1);border:1px solid rgba(255,107,43,.2);color:var(--ac2);font-size:.67rem;padding:3px 9px;border-radius:100px}
+.skbar{margin-top:15px;height:3px;background:rgba(255,255,255,.06);border-radius:100px;overflow:hidden}
+.skbf{height:100%;background:linear-gradient(90deg,var(--ac),var(--ac2));border-radius:100px;width:0;transition:width 1.3s ease}
+/* PROJECTS */
+#projects{padding:110px 0}
+.pg{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.pcard{background:var(--sf);border:1px solid var(--bd);border-radius:14px;overflow:hidden;transition:border-color .3s,transform .3s}
+.pcard:hover{border-color:var(--ac);transform:translateY(-5px)}
+.ptop{padding:24px 24px 17px;border-bottom:1px solid var(--bd);display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.pplat{font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ac);margin-bottom:5px}
+.ptitle{font-family:'Syne',sans-serif;font-weight:700;font-size:.97rem}
+.pbadge{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.25);color:var(--gn);font-size:.66rem;padding:4px 10px;border-radius:100px;white-space:nowrap;flex-shrink:0;margin-top:2px}
+.pbody{padding:19px 24px}
+.pdesc{font-size:.81rem;color:var(--mt);line-height:1.7;margin-bottom:17px}
+.pmets{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.pmet{text-align:center}
+.pmn{font-family:'Syne',sans-serif;font-weight:700;font-size:.97rem;color:var(--tx)}
+.pml{font-size:.63rem;color:var(--mt);margin-top:1px;text-transform:uppercase;letter-spacing:.04em}
+/* CLIENTS */
+#clients{padding:90px 0;background:var(--bg2)}
+.mwrap{overflow:hidden;position:relative;margin-top:44px}
+.mwrap::before,.mwrap::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2}
+.mwrap::before{left:0;background:linear-gradient(90deg,var(--bg2),transparent)}
+.mwrap::after{right:0;background:linear-gradient(-90deg,var(--bg2),transparent)}
+.mtrack{display:flex;gap:16px;width:max-content;animation:mq 26s linear infinite}
+.mtrack:hover{animation-play-state:paused}
+@keyframes mq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.cchip{display:flex;align-items:center;gap:8px;background:var(--sf);border:1px solid var(--bd);padding:12px 22px;border-radius:100px;white-space:nowrap;font-size:.81rem;font-weight:500;color:var(--mt);transition:border-color .3s,color .3s}
+.cchip:hover{border-color:var(--ac);color:var(--tx)}
+.ccdot{width:6px;height:6px;border-radius:50%;background:var(--ac)}
+/* MARKETS */
+#markets{padding:100px 0}
+.mktg{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:46px}
+.mktc{background:var(--sf);border:1px solid var(--bd);border-radius:12px;padding:24px 18px;text-align:center;transition:border-color .3s,transform .3s;cursor:default}
+.mktc:hover{border-color:var(--ac);transform:translateY(-4px)}
+.mktfl{font-size:2.2rem;margin-bottom:9px}
+.mktn{font-family:'Syne',sans-serif;font-weight:700;font-size:.88rem;margin-bottom:4px}
+.mktd{font-size:.71rem;color:var(--mt)}
 /* PROCESS */
-.process-sec{background:var(--cream2)}
-.process-steps{
-  display:grid;grid-template-columns:repeat(5,1fr);
-  gap:1.5rem;margin-top:4rem;position:relative;
-}
-.process-steps::before{
-  content:'';position:absolute;
-  top:24px;left:8%;right:8%;height:1px;
-  background:rgba(138,96,32,0.15);z-index:0;
-}
-.process-step{text-align:center;position:relative;z-index:1}
-.step-num{
-  width:48px;height:48px;border-radius:50%;
-  background:var(--white);
-  border:2px solid var(--gold);
-  display:flex;align-items:center;justify-content:center;
-  margin:0 auto 1.2rem;
-  font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:0.85rem;font-weight:800;color:var(--gold);
-  box-shadow:var(--shadow-sm);
-}
-.step-title{font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:0.4rem}
-.step-body{font-size:0.75rem;color:var(--gray);line-height:1.6}
-
-/* CERTIFICATIONS */
-.certs-sec{background:var(--cream)}
-.certs-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  gap:1rem;margin-top:3.5rem;
-}
-.cert-card{
-  background:var(--white);
-  border:1px solid rgba(138,96,32,0.1);
-  border-radius:var(--radius-lg);
-  padding:1.6rem;
-  box-shadow:var(--shadow-sm);
-  transition:box-shadow 0.2s,transform 0.2s,border-color 0.2s;
-}
-.cert-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px);border-color:var(--gold)}
-.cert-logo{height:24px;width:auto;object-fit:contain;margin-bottom:1rem;max-width:80px}
-.cert-title{font-size:0.83rem;font-weight:600;color:var(--ink);line-height:1.4}
-.cert-by{font-size:0.68rem;color:var(--gray);margin-top:0.3rem;font-weight:400}
-
+#process{padding:110px 0;background:var(--bg2)}
+.psteps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;margin-top:58px}
+.psteps::before{content:'';position:absolute;top:33px;left:10%;right:10%;height:1px;background:var(--bd);z-index:0}
+.step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 10px;position:relative;z-index:1}
+.stepn{width:66px;height:66px;background:var(--sf);border:2px solid var(--bd);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:1.15rem;color:var(--mt);margin-bottom:19px;transition:all .3s}
+.step:hover .stepn{border-color:var(--ac);color:var(--ac);background:rgba(255,107,43,.1)}
+.stept{font-weight:700;font-size:.86rem;margin-bottom:7px}
+.stepd{font-size:.74rem;color:var(--mt);line-height:1.6}
 /* TESTIMONIALS */
-.testi-sec{background:var(--cream2)}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
-.testi-card{
-  background:var(--white);border:1px solid rgba(138,96,32,0.1);
-  border-radius:var(--radius-lg);padding:2rem;
-  box-shadow:var(--shadow-sm);position:relative;
-}
-.testi-quote-mark{
-  font-size:4rem;color:var(--gold-light);
-  font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;
-  line-height:1;position:absolute;top:0.8rem;left:1.4rem;
-}
-.testi-text{
-  font-size:0.88rem;color:var(--ink3);
-  line-height:1.8;font-style:italic;
-  margin-bottom:1.4rem;padding-top:1.2rem;
-}
-.testi-author{display:flex;align-items:center;gap:0.8rem}
-.testi-avatar{
-  width:38px;height:38px;border-radius:50%;
-  background:var(--gold-light);border:1.5px solid var(--gold-border);
-  display:flex;align-items:center;justify-content:center;
-  font-size:0.8rem;font-weight:700;color:var(--gold);flex-shrink:0;
-}
-.testi-name{font-size:0.85rem;font-weight:600;color:var(--ink)}
-.testi-role{font-size:0.72rem;color:var(--gray)}
-
-/* CTA */
-.cta-sec{
-  background:var(--ink);color:#fff;
-  text-align:center;padding:7rem 5rem;
-  position:relative;overflow:hidden;
-}
-.cta-sec::before{
-  content:'';position:absolute;
-  top:50%;left:50%;transform:translate(-50%,-50%);
-  width:600px;height:600px;
-  background:radial-gradient(ellipse,rgba(138,96,32,0.3) 0%,transparent 65%);
-  pointer-events:none;
-}
-.cta-sec .sec-label{color:var(--gold-light)}
-.cta-sec .sec-label::before{background:var(--gold-light)}
-.cta-sec .sec-title{color:#fff;position:relative;z-index:1}
-.cta-sec .sec-title em{font-style:normal;color:var(--gold-light)}
-.cta-sub{
-  font-size:1rem;color:rgba(255,255,255,0.65);
-  max-width:440px;margin:1rem auto 2.5rem;
-  line-height:1.75;font-weight:300;
-  position:relative;z-index:1;
-}
-.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
-.cta-btn-primary{
-  background:var(--gold-light);color:var(--ink);
-  padding:0.9rem 2.5rem;border-radius:var(--radius);
-  font-size:0.85rem;font-weight:700;
-  transition:background 0.2s;display:inline-block;
-}
-.cta-btn-primary:hover{background:#fff}
-.cta-btn-secondary{
-  background:transparent;color:#fff;
-  border:1.5px solid rgba(255,255,255,0.3);
-  padding:0.9rem 2.5rem;border-radius:var(--radius);
-  font-size:0.85rem;font-weight:500;
-  transition:border-color 0.2s;display:inline-block;
-}
-.cta-btn-secondary:hover{border-color:#fff}
-
+#testimonials{padding:110px 0}
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:54px}
+.tc{background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:30px 26px;transition:border-color .3s,transform .3s}
+.tc:hover{border-color:var(--ac);transform:translateY(-4px)}
+.tst{color:var(--gold);font-size:.8rem;margin-bottom:10px}
+.tq{font-size:2.8rem;color:var(--ac);line-height:1;margin-bottom:13px;font-family:Georgia,serif}
+.ttxt{color:var(--mt);font-size:.83rem;line-height:1.75;margin-bottom:24px}
+.tau{display:flex;align-items:center;gap:11px}
+.tav{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--ac),var(--ac2));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.82rem;flex-shrink:0}
+.tan{font-weight:600;font-size:.83rem}
+.tar{font-size:.7rem;color:var(--mt);margin-top:1px}
+/* CONTACT */
+#contact{padding:110px 0;background:var(--bg2)}
+.cg{display:grid;grid-template-columns:1fr 1.4fr;gap:70px;margin-top:54px;align-items:start}
+.ci h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1.35rem;margin-bottom:13px}
+.ci p{color:var(--mt);font-size:.85rem;line-height:1.75;margin-bottom:28px}
+.clinks{display:flex;flex-direction:column;gap:11px}
+.clink{display:flex;align-items:center;gap:13px;padding:13px 17px;background:var(--sf);border:1px solid var(--bd);border-radius:10px;text-decoration:none;color:var(--tx);transition:border-color .2s,transform .2s}
+.clink:hover{border-color:var(--ac);transform:translateX(4px)}
+.clico{width:39px;height:39px;border-radius:7px;background:rgba(255,107,43,.12);display:flex;align-items:center;justify-content:center;font-size:.98rem;flex-shrink:0}
+.cllbl{font-size:.66rem;color:var(--mt);margin-bottom:1px;text-transform:uppercase;letter-spacing:.05em}
+.clval{font-size:.83rem;font-weight:500}
+.cperks{display:flex;flex-direction:column;gap:8px;margin-top:22px}
+.perk{display:flex;align-items:center;gap:7px;font-size:.79rem;color:var(--mt)}
+.pg{color:var(--gn);font-weight:700}
+.cf{background:var(--sf);border:1px solid var(--bd);border-radius:16px;padding:38px 34px}
+.ft{font-family:'Syne',sans-serif;font-weight:700;font-size:1.12rem;margin-bottom:5px}
+.fsb{font-size:.79rem;color:var(--mt);margin-bottom:26px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.fg{display:flex;flex-direction:column;gap:6px;margin-bottom:15px}
+.fg label{font-size:.7rem;font-weight:600;letter-spacing:.05em;color:var(--mt);text-transform:uppercase}
+.fg input,.fg select,.fg textarea{background:rgba(255,255,255,.04);border:1px solid var(--bd);border-radius:7px;padding:11px 13px;color:var(--tx);font-family:'DM Sans',sans-serif;font-size:.86rem;outline:none;transition:border-color .2s,background .2s;width:100%}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--ac);background:rgba(255,107,43,.05)}
+.fg select option{background:#1a1a26}
+.fg textarea{resize:vertical;min-height:105px}
+.pchk{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:5px}
+.chi{display:flex;align-items:center;gap:7px;cursor:pointer}
+.chi input[type="checkbox"]{display:none}
+.chbox{width:16px;height:16px;border:1.5px solid var(--bd);border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.chi input:checked~.chbox{background:var(--ac);border-color:var(--ac)}
+.chi input:checked~.chbox::after{content:'✓';color:#fff;font-size:.62rem}
+.chlbl{font-size:.79rem;color:var(--mt)}
+.fsub{width:100%;padding:14px;background:var(--ac);color:#fff;border:none;border-radius:7px;cursor:pointer;font-family:'Syne',sans-serif;font-weight:700;font-size:.9rem;letter-spacing:.02em;margin-top:8px;transition:background .2s,transform .2s,box-shadow .2s}
+.fsub:hover{background:var(--ac2);transform:translateY(-2px);box-shadow:0 8px 28px rgba(255,107,43,.35)}
+.fsuc{display:none;text-align:center;padding:20px;color:var(--gn);font-weight:600;font-size:.88rem}
+.fsuc.show{display:block}
 /* FOOTER */
-footer{
-  background:var(--cream2);
-  border-top:1px solid rgba(138,96,32,0.12);
-  padding:2rem 5rem;
-  display:flex;justify-content:space-between;align-items:center;
-  flex-wrap:wrap;gap:1rem;
-}
-.footer-copy{font-size:0.75rem;color:var(--gray)}
-.footer-links{display:flex;gap:2rem}
-.footer-links a{font-size:0.75rem;color:var(--gray);transition:color 0.2s}
-.footer-links a:hover{color:var(--gold)}
-
-/* RESPONSIVE */
+footer{border-top:1px solid var(--bd);padding:38px 60px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}
+.fleft{color:var(--mt);font-size:.78rem}
+.fleft strong{color:var(--tx)}
+.fright{display:flex;gap:20px}
+.flink{color:var(--mt);text-decoration:none;font-size:.78rem;transition:color .2s}
+.flink:hover{color:var(--ac)}
+/* REVEAL */
+.rv,.rvl,.rvr{opacity:0;transition:opacity .75s ease,transform .75s ease}
+.rv{transform:translateY(40px)}
+.rvl{transform:translateX(-40px)}
+.rvr{transform:translateX(40px)}
+.rv.vis,.rvl.vis,.rvr.vis{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   CHATBOT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.chat-btn{position:fixed;bottom:28px;right:28px;z-index:1000;width:62px;height:62px;background:linear-gradient(135deg,var(--ac),var(--ac2));border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 8px 30px rgba(255,107,43,.45);transition:transform .3s,box-shadow .3s;border:none}
+.chat-btn:hover{transform:scale(1.08);box-shadow:0 14px 44px rgba(255,107,43,.58)}
+.chat-btn .ico-chat{display:block}
+.chat-btn .ico-close{display:none}
+.chat-btn.open .ico-chat{display:none}
+.chat-btn.open .ico-close{display:block}
+.chat-notif{position:absolute;top:-2px;right:-2px;width:16px;height:16px;background:var(--gn);border-radius:50%;border:2px solid var(--bg);animation:blk 2s infinite;display:none}
+.chat-win{position:fixed;bottom:106px;right:28px;z-index:999;width:375px;max-height:570px;background:var(--bg2);border:1px solid var(--bd2);border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,.65);display:flex;flex-direction:column;overflow:hidden;transform:scale(.9) translateY(20px);opacity:0;pointer-events:none;transition:transform .3s ease,opacity .3s ease;transform-origin:bottom right}
+.chat-win.open{transform:scale(1) translateY(0);opacity:1;pointer-events:all}
+.ch{background:linear-gradient(135deg,rgba(255,107,43,.14),rgba(255,179,71,.07));padding:17px 20px;border-bottom:1px solid var(--bd);display:flex;align-items:center;gap:12px}
+.chav{width:40px;height:40px;background:linear-gradient(135deg,var(--ac),var(--ac2));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.chn{font-family:'Syne',sans-serif;font-weight:700;font-size:.93rem}
+.chs{font-size:.7rem;color:var(--gn);display:flex;align-items:center;gap:4px}
+.chs::before{content:'';width:6px;height:6px;background:var(--gn);border-radius:50%;display:inline-block}
+.chcls{margin-left:auto;background:none;border:none;color:var(--mt);cursor:pointer;font-size:1.2rem;padding:4px;transition:color .2s}
+.chcls:hover{color:var(--tx)}
+.msgs{flex:1;overflow-y:auto;padding:15px;display:flex;flex-direction:column;gap:11px;scroll-behavior:smooth}
+.msgs::-webkit-scrollbar{width:4px}
+.msgs::-webkit-scrollbar-thumb{background:var(--bd2);border-radius:2px}
+.msg{display:flex;gap:8px;align-items:flex-end;max-width:92%}
+.msg.bot{align-self:flex-start}
+.msg.user{align-self:flex-end;flex-direction:row-reverse}
+.mav{width:27px;height:27px;border-radius:50%;background:linear-gradient(135deg,var(--ac),var(--ac2));display:flex;align-items:center;justify-content:center;font-size:.62rem;flex-shrink:0;font-weight:700}
+.mb{padding:10px 13px;border-radius:14px;font-size:.82rem;line-height:1.55;max-width:260px}
+.msg.bot .mb{background:var(--sf2);border:1px solid var(--bd);border-bottom-left-radius:4px;color:var(--tx)}
+.msg.user .mb{background:var(--ac);color:#fff;border-bottom-right-radius:4px}
+.mb a{color:var(--ac2);text-decoration:underline}
+.msg.user .mb a{color:#fff}
+.tdots{display:flex;align-items:center;gap:5px;padding:10px 13px;background:var(--sf2);border:1px solid var(--bd);border-radius:14px;border-bottom-left-radius:4px;width:fit-content}
+.tdot{width:6px;height:6px;background:var(--mt);border-radius:50%;animation:tb .8s ease-in-out infinite}
+.tdot:nth-child(2){animation-delay:.15s}
+.tdot:nth-child(3){animation-delay:.3s}
+@keyframes tb{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-7px)}}
+.qrow{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px}
+.qbtn{background:var(--sf);border:1px solid var(--bd);color:var(--mt);font-size:.7rem;padding:5px 11px;border-radius:100px;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif}
+.qbtn:hover{border-color:var(--ac);color:var(--ac)}
+.cinput-row{display:flex;gap:8px;padding:11px 14px;border-top:1px solid var(--bd)}
+.cinput{flex:1;background:var(--sf);border:1px solid var(--bd);border-radius:10px;padding:10px 13px;color:var(--tx);font-family:'DM Sans',sans-serif;font-size:.83rem;outline:none;transition:border-color .2s;resize:none;max-height:100px}
+.cinput:focus{border-color:var(--ac)}
+.csend{width:38px;height:38px;background:var(--ac);border:none;border-radius:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;flex-shrink:0}
+.csend:hover{background:var(--ac2);transform:scale(1.06)}
 @media(max-width:900px){
-  .contact-inner{grid-template-columns:1fr!important;gap:2rem}
-  .form-row{grid-template-columns:1fr!important;gap:0.8rem}
-  .contact-sec{padding:3rem 1.2rem}
-  .form-card{padding:1.5rem 1.2rem}
-  .form-input{font-size:16px!important;padding:0.85rem 0.9rem}
-  .form-submit{padding:1rem;font-size:0.9rem}
-  .form-checkboxes{gap:0.4rem}
-  .form-checkbox{font-size:0.8rem;padding:0.4rem 0.7rem}
-  .contact-right{order:-1}
-
-  nav{padding:1rem 1.5rem}
-  .nav-links,.nav-badge-wrap{display:none}
-  section,.platform-sec,.badges-bar,.hero,.cta-sec{padding:4rem 1.5rem}
-  .hero{padding:7rem 1.5rem 4rem}
-  .hero h1{font-size:2.8rem}
-  .hero-stats{flex-wrap:wrap}
-  .about-grid,.platform-grid{grid-template-columns:1fr;gap:2.5rem}
-  .process-steps{grid-template-columns:1fr 1fr;gap:2rem}
-  .process-steps::before{display:none}
-  .certs-grid{grid-template-columns:1fr 1fr}
-  .testi-grid{grid-template-columns:1fr}
-  .cols-4{grid-template-columns:1fr 1fr}
-  footer{padding:1.5rem;flex-direction:column;text-align:center}
+  nav{padding:15px 18px}
+  .nlinks{display:none}
+  #hero{padding:108px 18px 66px}
+  .si{padding:0 18px}
+  .dvdr{margin:0 18px}
+  .ag,.cg{grid-template-columns:1fr;gap:34px}
+  .skg{grid-template-columns:1fr 1fr}
+  .pg{grid-template-columns:1fr}
+  .mktg{grid-template-columns:repeat(2,1fr)}
+  .psteps{grid-template-columns:1fr 1fr}
+  .psteps::before{display:none}
+  .tg{grid-template-columns:1fr}
+  .frow{grid-template-columns:1fr}
+  .hstats{gap:22px}
+  footer{flex-direction:column;gap:12px;text-align:center;padding:28px 18px}
+  .chat-win{width:calc(100vw - 20px);right:10px;bottom:88px}
 }
-
-/* CONTACT SECTION */
-.contact-sec{background:var(--cream);padding:6rem 5rem}
-.contact-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start;width:100%}
-.contact-desc{font-size:0.95rem;color:var(--ink3);line-height:1.8;margin:1rem 0 2rem;font-weight:400}
-.contact-info-list{display:flex;flex-direction:column;gap:0.8rem;margin-bottom:2rem}
-.contact-info-item{display:flex;align-items:center;gap:1rem;padding:0.9rem 1.1rem;background:var(--white);border:1px solid rgba(138,96,32,0.1);border-radius:var(--radius);transition:border-color 0.2s,box-shadow 0.2s;text-decoration:none}
-.contact-info-item:hover{border-color:var(--gold);box-shadow:var(--shadow-sm)}
-.contact-info-icon{width:36px;height:36px;border-radius:8px;background:var(--gold-light);border:1px solid var(--gold-border);display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:800;color:var(--gold);flex-shrink:0}
-.contact-info-label{font-size:0.68rem;color:var(--gray);font-weight:500;text-transform:uppercase;letter-spacing:0.06em}
-.contact-info-val{font-size:0.85rem;font-weight:600;color:var(--ink);margin-top:0.1rem}
-.contact-badges{display:flex;flex-direction:column;gap:0.5rem}
-.contact-badge{font-size:0.78rem;font-weight:500;color:var(--ink3);display:flex;align-items:center;gap:0.5rem}
-.form-card{background:var(--white);border:1px solid rgba(138,96,32,0.12);border-radius:var(--radius-lg);padding:2.5rem;box-shadow:var(--shadow-md)}
-.form-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.3rem;font-weight:800;color:var(--ink);letter-spacing:-0.02em;margin-bottom:0.3rem}
-.form-subtitle{font-size:0.82rem;color:var(--gray);margin-bottom:1.8rem}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;width:100%}
-.form-group{display:flex;flex-direction:column;margin-bottom:1rem}
-.form-row .form-group{margin-bottom:0}
-.form-label{font-size:0.75rem;font-weight:600;color:var(--ink2);margin-bottom:0.4rem;letter-spacing:0.02em}
-.form-input{padding:0.75rem 1rem;border:1.5px solid rgba(138,96,32,0.15);border-radius:var(--radius);font-family:'DM Sans',sans-serif;font-size:0.88rem;color:var(--ink);background:var(--cream);transition:border-color 0.2s,box-shadow 0.2s;outline:none;width:100%}
-.form-input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(138,96,32,0.08);background:var(--white)}
-.form-input::placeholder{color:var(--gray2)}
-.form-select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238a6020' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center}
-.form-textarea{resize:vertical;min-height:110px;line-height:1.6}
-.form-checkboxes{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.4rem}
-.form-checkbox{display:flex;align-items:center;gap:0.4rem;background:var(--cream);border:1.5px solid rgba(138,96,32,0.15);border-radius:6px;padding:0.35rem 0.75rem;font-size:0.78rem;font-weight:500;color:var(--ink3);cursor:pointer;transition:border-color 0.2s,background 0.2s}
-.form-checkbox:hover{border-color:var(--gold);background:var(--gold-light)}
-.form-checkbox input{accent-color:var(--gold);cursor:pointer}
-.form-submit{width:100%;background:var(--gold);color:#fff;padding:0.9rem;border-radius:var(--radius);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.88rem;font-weight:700;border:none;cursor:pointer;transition:background 0.2s,transform 0.15s;margin-top:0.5rem;letter-spacing:0.02em}
-.form-submit:hover{background:var(--gold2);transform:translateY(-1px)}
-.form-submit:disabled{opacity:0.7;cursor:not-allowed;transform:none}
-.form-success{margin-top:1rem;padding:0.9rem 1rem;background:#f0fdf4;border:1px solid #86efac;border-radius:var(--radius);font-size:0.85rem;font-weight:500;color:#166534}
-.form-error{margin-top:1rem;padding:0.9rem 1rem;background:#fef2f2;border:1px solid #fca5a5;border-radius:var(--radius);font-size:0.85rem;font-weight:500;color:#991b1b}
-
-
-/* ═══ MOBILE FORM FIX ═══ */
-@media(max-width:768px){
-  /* Contact section full width stack */
-  .contact-sec{padding:2.5rem 1rem!important}
-  .contact-inner{
-    display:flex!important;
-    flex-direction:column!important;
-    gap:2rem!important;
-  }
-  /* Form card full width */
-  .form-card{
-    width:100%!important;
-    padding:1.4rem 1rem!important;
-    box-sizing:border-box!important;
-  }
-  /* All form rows single column */
-  .form-row{
-    display:flex!important;
-    flex-direction:column!important;
-    gap:0.8rem!important;
-    margin-bottom:0.8rem!important;
-  }
-  /* Inputs full width and bigger touch targets */
-  .form-input{
-    width:100%!important;
-    font-size:16px!important;
-    padding:0.9rem 0.85rem!important;
-    box-sizing:border-box!important;
-  }
-  /* Checkboxes wrap nicely */
-  .form-checkboxes{
-    display:flex!important;
-    flex-wrap:wrap!important;
-    gap:0.5rem!important;
-  }
-  .form-checkbox{
-    font-size:0.78rem!important;
-    padding:0.4rem 0.7rem!important;
-  }
-  /* Submit button full width */
-  .form-submit{
-    width:100%!important;
-    padding:1rem!important;
-    font-size:0.9rem!important;
-  }
-  /* Contact info section */
-  .contact-left{width:100%!important}
-  .contact-right{width:100%!important}
-  .contact-info-item{padding:0.8rem!important}
-  .contact-info-val{font-size:0.8rem!important;word-break:break-all}
-  /* Form title */
-  .form-title{font-size:1.1rem!important}
-  /* Nav mobile */
-  nav{padding:1rem 1.2rem!important}
-  /* Hero mobile */
-  .hero{padding:6rem 1.2rem 3rem!important}
-  .hero h1{font-size:2.4rem!important;letter-spacing:-0.03em!important}
-  .hero-stats{flex-wrap:wrap!important;gap:0!important}
-  .hero-stat{padding:0.8rem 1.2rem!important}
-  /* Section padding */
-  section{padding:4rem 1.2rem!important}
-  .platform-sec{padding:4rem 1.2rem!important}
-  /* Platform grid stack */
-  .platform-grid{
-    display:flex!important;
-    flex-direction:column!important;
-    gap:2rem!important;
-  }
-  /* About grid stack */
-  .about-grid{
-    display:flex!important;
-    flex-direction:column!important;
-    gap:2rem!important;
-  }
-  /* Case metrics */
-  .cols-4{grid-template-columns:1fr 1fr!important}
-  .cols-3{grid-template-columns:1fr 1fr!important}
-  /* Process steps */
-  .process-steps{
-    grid-template-columns:1fr 1fr!important;
-    gap:1.5rem!important;
-  }
-  .process-steps::before{display:none!important}
-  /* Certs grid */
-  .certs-grid{grid-template-columns:1fr 1fr!important}
-  /* Testi grid */
-  .testi-grid{grid-template-columns:1fr!important}
-  /* Footer */
-  footer{
-    padding:1.5rem 1.2rem!important;
-    flex-direction:column!important;
-    text-align:center!important;
-    gap:0.8rem!important;
-  }
-  .footer-links{
-    flex-wrap:wrap!important;
-    justify-content:center!important;
-    gap:1rem!important;
-  }
-  /* Badges bar */
-  .badges-bar{padding:1.2rem!important;gap:1rem!important}
-  .badges-list{gap:0.8rem!important}
-  .pbadge{padding:0.6rem 0.9rem!important}
-  /* Clients section */
-  .clients-header{padding:0 1.2rem 2rem!important}
+@media(max-width:600px){
+  .skg,.mktg,.psteps{grid-template-columns:1fr}
+  .cf{padding:22px 16px}
+  .cgrid,.frow{grid-template-columns:1fr}
 }
-
-/* ═══ STICKY BUTTONS ═══ */
-.sticky-btns{
-  position:fixed;
-  right:20px;
-  bottom:30px;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  z-index:999;
-}
-.sticky-btn{
-  width:52px;height:52px;
-  border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 4px 20px rgba(0,0,0,0.2);
-  cursor:pointer;
-  text-decoration:none;
-  transition:transform 0.2s,box-shadow 0.2s;
-  position:relative;
-}
-.sticky-btn:hover{
-  transform:translateY(-3px) scale(1.08);
-  box-shadow:0 8px 28px rgba(0,0,0,0.25);
-}
-.sticky-btn.whatsapp{background:#25D366}
-.sticky-btn.email{background:#8a6020}
-.sticky-btn svg{width:26px;height:26px;flex-shrink:0}
-
-/* Tooltip */
-.sticky-btn::before{
-  content:attr(data-tip);
-  position:absolute;
-  right:62px;
-  background:var(--ink);
-  color:#fff;
-  padding:0.35rem 0.8rem;
-  border-radius:6px;
-  font-size:0.72rem;
-  font-weight:600;
-  white-space:nowrap;
-  opacity:0;
-  pointer-events:none;
-  transition:opacity 0.2s;
-  font-family:'DM Sans',sans-serif;
-}
-.sticky-btn:hover::before{opacity:1}
-
-/* Pulse animation on WhatsApp */
-.sticky-btn.whatsapp::after{
-  content:'';
-  position:absolute;
-  width:100%;height:100%;
-  border-radius:50%;
-  background:#25D366;
-  opacity:0.4;
-  animation:pulse-ring 2s infinite;
-}
-@keyframes pulse-ring{
-  0%{transform:scale(1);opacity:0.4}
-  70%{transform:scale(1.4);opacity:0}
-  100%{transform:scale(1.4);opacity:0}
-}
-
-@media(max-width:768px){
-  .sticky-btns{right:14px;bottom:20px}
-  .sticky-btn{width:48px;height:48px}
-  .sticky-btn::before{display:none}
-}
-
 </style>
 </head>
 <body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 
-<!-- ══ NAV ══ -->
-<nav>
-  <a href="#" class="nav-logo">Rahul <span>Gupta</span></a>
-  <ul class="nav-links">
+<!-- NAV -->
+<nav id="nb">
+  <a href="#" class="nlogo">Rahul<span>.</span></a>
+  <ul class="nlinks">
     <li><a href="#about">About</a></li>
-    <li><a href="#platforms">Work</a></li>
-    <li><a href="#clients">Clients</a></li>
-    <li><a href="#process">Process</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Work</a></li>
+    <li><a href="#markets">Markets</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <div class="nav-right">
-    <div class="nav-badge-wrap">
-      <!-- Google Partner Badge -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 44" style="height:36px;width:auto">
-        <rect width="110" height="44" rx="6" fill="white" stroke="#e0e0e0" stroke-width="1"/>
-        <path fill="#4285F4" d="M31 22.3c0-.8-.07-1.6-.2-2.3H19.6v4.4h6.4c-.28 1.5-1.12 2.8-2.4 3.6v3h3.9c2.27-2.1 3.5-5.2 3.5-8.7z"/>
-        <path fill="#34A853" d="M19.6 34c3.24 0 5.96-1.07 7.94-2.9l-3.87-3c-1.07.72-2.44 1.14-4.07 1.14-3.13 0-5.78-2.11-6.73-4.95H8.88v3.1C10.86 30.64 14.94 34 19.6 34z"/>
-        <path fill="#FBBC04" d="M12.87 24.29a8.06 8.06 0 010-5.08V16.1H8.88a14.04 14.04 0 000 12.5l3.99-4.31z"/>
-        <path fill="#EA4335" d="M19.6 14.8c1.76 0 3.34.61 4.58 1.8l3.44-3.44C25.54 11.17 22.83 10 19.6 10c-4.66 0-8.74 2.66-10.72 6.1l3.99 3.1c.95-2.84 3.6-4.4 6.73-4.4z"/>
-        <text x="37" y="22" font-family="Arial" font-size="7.5" fill="#5f6368">Google</text>
-        <text x="37" y="33" font-family="Arial" font-size="8" font-weight="700" fill="#5f6368">Partner</text>
-      </svg>
-      <!-- Meta Business Partner -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 44" style="height:36px;width:auto">
-        <rect width="130" height="44" rx="6" fill="white" stroke="#e0e0e0" stroke-width="1"/>
-        <path d="M11 22c0-4.5 2.7-9 6.8-9 2.2 0 4 1.6 5.8 4.3 1.8-2.7 3.6-4.3 5.8-4.3 4 0 6.7 4.5 6.7 9s-2.2 7.6-4.9 7.6c-2.2 0-4-1.3-6.2-4.6-2.2 3.3-4 4.6-6.2 4.6C13.5 29.6 11 26.5 11 22z" fill="none" stroke="#0866FF" stroke-width="2"/>
-        <path d="M22.8 17.7c-1.8 2.7-2.7 4.5-2.7 5.7s.5 2.7 2.9 2.7 3.1-1.6 4.5-3.6-1-3.4-1-3.4" fill="none" stroke="#0866FF" stroke-width="2"/>
-        <text x="44" y="21" font-family="Arial Black,Arial" font-size="10" font-weight="900" fill="#0866FF">Meta</text>
-        <text x="44" y="33" font-family="Arial" font-size="7.5" font-weight="600" fill="#606770">Business Partner</text>
-      </svg>
-    </div>
-    <a href="#contact" class="nav-cta">Hire Me</a>
-  </div>
+  <a href="#contact" class="ncta">Hire Me →</a>
 </nav>
 
-<!-- ══ HERO ══ -->
-<section class="hero">
-  <div class="hero-tag"><span class="hero-tag-dot"></span> Open to freelance & retainer projects</div>
-  <h1>I Turn Ad Spend<br>Into <span class="gold">Real Revenue.</span></h1>
-  <p class="hero-sub">Hi, I'm Rahul — a paid media consultant with over 8 years running campaigns across Google, Meta, LinkedIn, Amazon, TikTok and DV360. I've managed $25M+ in ad spend and helped brands generate $60M+ in revenue.</p>
-  <div class="hero-stats">
-    <div class="hero-stat">
-      <div class="hero-stat-num">$25M+</div>
-      <div class="hero-stat-label">Ad Spend Managed</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">$60M+</div>
-      <div class="hero-stat-label">Revenue Generated</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">32x</div>
-      <div class="hero-stat-label">Best ROAS</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">6</div>
-      <div class="hero-stat-label">Platforms</div>
-    </div>
+<!-- HERO -->
+<section id="hero">
+  <div class="hgrid"></div><div class="hglow"></div><div class="hglow2"></div>
+  <div class="hbadge"><span class="dblk"></span>Available for Freelance &amp; Retainer — Worldwide</div>
+  <h1 class="hname"><span class="l1">Rahul</span><span class="l2">Gupta.</span></h1>
+  <p class="hsub"><strong>Paid Media &amp; Digital Marketing Consultant</strong> &nbsp;·&nbsp; Google · Meta · LinkedIn · Amazon · TikTok · DV360 · AEM · GA4</p>
+  <div class="htyp">I Turn <em>Ad Spend</em> Into <span id="typed"></span></div>
+  <div class="hgeo">
+    <div class="gflag"><span>🇶🇦</span>Qatar</div><div class="gflag"><span>🇦🇪</span>Dubai / UAE</div>
+    <div class="gflag"><span>🇸🇦</span>Saudi Arabia</div><div class="gflag"><span>🇸🇬</span>Singapore</div>
+    <div class="gflag"><span>🇦🇺</span>Australia</div><div class="gflag"><span>🇨🇦</span>Canada</div>
+    <div class="gflag"><span>🇳🇿</span>New Zealand</div><div class="gflag"><span>🇵🇱</span>Poland</div>
   </div>
-  <div class="hero-cta-row">
-    <a href="#contact" class="btn-primary">Book a Free Strategy Call</a>
-    <a href="#platforms" class="btn-secondary">See My Work</a>
+  <div class="hstats">
+    <div class="sitem"><span class="snum" data-count="25" data-prefix="$" data-suffix="M+">$0</span><span class="slbl">Ad Spend Managed</span></div>
+    <div class="sitem"><span class="snum" data-count="60" data-prefix="$" data-suffix="M+">$0</span><span class="slbl">Revenue Generated</span></div>
+    <div class="sitem"><span class="snum" data-count="32" data-suffix="x">0</span><span class="slbl">Best ROAS</span></div>
+    <div class="sitem"><span class="snum" data-count="4" data-suffix="+ yrs">0</span><span class="slbl">Experience</span></div>
   </div>
+  <div class="hctas">
+    <a href="#contact" class="bp">🚀 Book Free Strategy Call</a>
+    <a href="https://wa.me/918756424538" target="_blank" class="bwa">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp Me
+    </a>
+    <a href="#projects" class="bs">See My Work ↓</a>
+  </div>
+  <div class="scrl"><span>Scroll</span><div class="scrl-line"></div></div>
 </section>
+<div class="dvdr"></div>
 
-<!-- ══ PARTNER BADGES ══ -->
-<div class="badges-bar">
-  <span class="badges-label">Official Partner Badges</span>
-  <div class="badges-list">
-    <div class="pbadge">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 44" style="height:36px;width:auto">
-        <rect width="110" height="44" rx="6" fill="white" stroke="#e8e1d6" stroke-width="1"/>
-        <path fill="#4285F4" d="M31 22.3c0-.8-.07-1.6-.2-2.3H19.6v4.4h6.4c-.28 1.5-1.12 2.8-2.4 3.6v3h3.9c2.27-2.1 3.5-5.2 3.5-8.7z"/>
-        <path fill="#34A853" d="M19.6 34c3.24 0 5.96-1.07 7.94-2.9l-3.87-3c-1.07.72-2.44 1.14-4.07 1.14-3.13 0-5.78-2.11-6.73-4.95H8.88v3.1C10.86 30.64 14.94 34 19.6 34z"/>
-        <path fill="#FBBC04" d="M12.87 24.29a8.06 8.06 0 010-5.08V16.1H8.88a14.04 14.04 0 000 12.5l3.99-4.31z"/>
-        <path fill="#EA4335" d="M19.6 14.8c1.76 0 3.34.61 4.58 1.8l3.44-3.44C25.54 11.17 22.83 10 19.6 10c-4.66 0-8.74 2.66-10.72 6.1l3.99 3.1c.95-2.84 3.6-4.4 6.73-4.4z"/>
-        <text x="37" y="22" font-family="Arial" font-size="7.5" fill="#5f6368">Google</text>
-        <text x="37" y="33" font-family="Arial" font-size="8" font-weight="700" fill="#5f6368">Partner</text>
-      </svg>
-      <div><div class="pbadge-name">Google Partner</div><div class="pbadge-sub">Certified Partner Badge</div></div>
-    </div>
-    <div class="pbadge">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 44" style="height:36px;width:auto">
-        <rect width="130" height="44" rx="6" fill="white" stroke="#e8e1d6" stroke-width="1"/>
-        <path d="M11 22c0-4.5 2.7-9 6.8-9 2.2 0 4 1.6 5.8 4.3 1.8-2.7 3.6-4.3 5.8-4.3 4 0 6.7 4.5 6.7 9s-2.2 7.6-4.9 7.6c-2.2 0-4-1.3-6.2-4.6-2.2 3.3-4 4.6-6.2 4.6C13.5 29.6 11 26.5 11 22z" fill="none" stroke="#0866FF" stroke-width="2"/>
-        <path d="M22.8 17.7c-1.8 2.7-2.7 4.5-2.7 5.7s.5 2.7 2.9 2.7 3.1-1.6 4.5-3.6-1-3.4-1-3.4" fill="none" stroke="#0866FF" stroke-width="2"/>
-        <text x="44" y="21" font-family="Arial Black,Arial" font-size="10" font-weight="900" fill="#0866FF">Meta</text>
-        <text x="44" y="33" font-family="Arial" font-size="7.5" font-weight="600" fill="#606770">Business Partner</text>
-      </svg>
-      <div><div class="pbadge-name">Meta Business Partner</div><div class="pbadge-sub">Certified Partner Badge</div></div>
-    </div>
-  </div>
-</div>
-
-<!-- ══ ABOUT ══ -->
-<section id="about" class="about-sec">
-  <div class="sec-label">About Me</div>
-  <div class="sec-title">A bit about<br>who I am</div>
-  <div class="about-grid">
-    <div>
-      <div class="about-body">
-        <p>I've spent the better part of a decade obsessing over one thing — making paid media actually work. Not just driving clicks, but building campaigns that create real business outcomes.</p>
-        <p>I've managed campaigns for brands ranging from local service businesses to global names like <strong>BMW, H&M and Godrej Properties</strong>. The budgets vary, but the approach is always the same — data first, results always.</p>
-        <p>Right now I'm taking on freelance projects and retainer clients. If you want someone who genuinely understands the platforms and can hit the ground running, let's talk.</p>
-      </div>
-    </div>
-    <div class="expertise-list">
-      <div class="exp-item"><span class="exp-name">Google Ads</span><span class="exp-detail">Search · Shopping · PMax · Display · YouTube</span><span class="exp-arrow">→</span></div>
-      <div class="exp-item"><span class="exp-name">Meta Ads</span><span class="exp-detail">Facebook · Instagram · Reels · Retargeting</span><span class="exp-arrow">→</span></div>
-      <div class="exp-item"><span class="exp-name">LinkedIn Ads</span><span class="exp-detail">Lead Gen · Sponsored Content · InMail</span><span class="exp-arrow">→</span></div>
-      <div class="exp-item"><span class="exp-name">Amazon Ads</span><span class="exp-detail">Sponsored Products · DSP · Brands · AMC</span><span class="exp-arrow">→</span></div>
-      <div class="exp-item"><span class="exp-name">TikTok Ads</span><span class="exp-detail">In-Feed · Spark Ads · TopView · Shopping</span><span class="exp-arrow">→</span></div>
-      <div class="exp-item"><span class="exp-name">Programmatic / DV360</span><span class="exp-detail">Display · Video · CTV · Trade Desk</span><span class="exp-arrow">→</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ PLATFORMS ══ -->
-<div id="platforms">
-
-<!-- 01 GOOGLE ADS -->
-<div class="platform-sec">
-  <div class="platform-grid">
-    <div class="plat-left">
-      <div class="plat-num">01</div>
-      <div class="plat-name">Google<br>Ads</div>
-      <div class="plat-desc">Search, Shopping, Performance Max, Display, and YouTube — full coverage across the Google ecosystem.</div>
-      <div class="plat-cred">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 44" style="height:38px;width:auto;flex-shrink:0">
-          <rect width="110" height="44" rx="6" fill="white" stroke="#dadce0" stroke-width="1"/>
-          <path fill="#4285F4" d="M31 22.3c0-.8-.07-1.6-.2-2.3H19.6v4.4h6.4c-.28 1.5-1.12 2.8-2.4 3.6v3h3.9c2.27-2.1 3.5-5.2 3.5-8.7z"/>
-          <path fill="#34A853" d="M19.6 34c3.24 0 5.96-1.07 7.94-2.9l-3.87-3c-1.07.72-2.44 1.14-4.07 1.14-3.13 0-5.78-2.11-6.73-4.95H8.88v3.1C10.86 30.64 14.94 34 19.6 34z"/>
-          <path fill="#FBBC04" d="M12.87 24.29a8.06 8.06 0 010-5.08V16.1H8.88a14.04 14.04 0 000 12.5l3.99-4.31z"/>
-          <path fill="#EA4335" d="M19.6 14.8c1.76 0 3.34.61 4.58 1.8l3.44-3.44C25.54 11.17 22.83 10 19.6 10c-4.66 0-8.74 2.66-10.72 6.1l3.99 3.1c.95-2.84 3.6-4.4 6.73-4.4z"/>
-          <text x="37" y="22" font-family="Arial" font-size="7.5" fill="#5f6368">Google</text>
-          <text x="37" y="33" font-family="Arial" font-size="8" font-weight="700" fill="#5f6368">Partner</text>
-        </svg>
-        <div><div class="plat-cred-title">Google Partner Badge</div><div class="plat-cred-sub">Official Certified Partner</div></div>
-      </div>
-      <div class="plat-types">
-        <span class="plat-type">Search Campaigns</span>
-        <span class="plat-type">Google Shopping</span>
-        <span class="plat-type">Performance Max</span>
-        <span class="plat-type">Display & YouTube</span>
-        <span class="plat-type">Conversion Tracking</span>
-      </div>
-    </div>
-    <div>
-      <div class="case-card">
-        <div class="spend-pill">💰 Ad Spend: $2,710</div>
-        <div class="case-tag">eCommerce · Wrist Support Gloves · USA</div>
-        <div class="case-title">Turned $2,710 into $87,954 — 32x return for Wrist Assured Gloves</div>
-        <div class="case-body">WAGs came to me with an underperforming Google Ads account. I rebuilt the campaign structure from scratch — proper Shopping feed segmentation, fixed conversion tracking, and a tiered Smart Bidding strategy. Over 9 months we drove 1,274 orders and sold 1,517 products, maintaining a 32x ROAS consistently. The average CPC stayed at just $0.69 throughout.</div>
-        <a href="https://www.wristassuredgloves.com" target="_blank" class="case-url">wristassuredgloves.com ↗</a>
-        <div class="case-metrics cols-4">
-          <div class="metric-box"><div class="metric-num">$87,954</div><div class="metric-label">Revenue</div></div>
-          <div class="metric-box"><div class="metric-num">32x</div><div class="metric-label">ROAS</div></div>
-          <div class="metric-box"><div class="metric-num">1,274</div><div class="metric-label">Orders</div></div>
-          <div class="metric-box"><div class="metric-num">$0.69</div><div class="metric-label">Avg. CPC</div></div>
+<!-- ABOUT -->
+<section id="about">
+  <div class="si">
+    <div class="ag">
+      <div class="rvl">
+        <div class="slabel">About Me</div>
+        <h2 class="sh" style="margin-bottom:22px">4+ Years. Real Results.<br/>Global Clients.</h2>
+        <p>I'm <strong>Rahul Gupta</strong>, a results-driven Paid Media &amp; Digital Marketing Consultant from Kanpur, India — currently working with brands across the <strong>Middle East, Asia-Pacific, Europe, and North America</strong>.</p>
+        <p>From managing <strong>$50K+/month PPC budgets</strong> at Jovial Digital Services to leading multi-channel campaigns at <strong>IndiaMART, K2 Technologies &amp; BMW India</strong>, I bring enterprise-level strategy to every project — regardless of budget size.</p>
+        <p>My approach is simple: <strong>data first, results always.</strong> I don't just run ads — I build performance systems that generate consistent, scalable revenue.</p>
+        <div class="etl">
+          <div class="ei"><div class="edot">💼</div><div><div class="erole">Asst. Manager – Digital Marketing</div><div class="eco">K2 Technologies LLC</div><div class="eperiod">Sep 2024 – Present</div><div class="edesc">Google, Meta, LinkedIn campaigns + AEM content ops, Power BI reporting, team leadership.</div></div></div>
+          <div class="ei"><div class="edot">📈</div><div><div class="erole">Sr. Digital Marketing Expert &amp; Campaign Manager</div><div class="eco">Jovial Digital Services</div><div class="eperiod">Aug 2023 – Jun 2024</div><div class="edesc">$50K+/month PPC budgets — improved ROAS by 40%. A/B testing, GA4, Power BI insights.</div></div></div>
+          <div class="ei"><div class="edot">🏢</div><div><div class="erole">Sr. Executive – Digital Marketing</div><div class="eco">IndiaMART InterMESH Ltd.</div><div class="eperiod">Oct 2022 – Jun 2023</div><div class="edesc">End-to-end PPC &amp; SEO for B2B lead gen. GA4, Tag Manager, content optimisation.</div></div></div>
+          <div class="ei"><div class="edot">🚀</div><div><div class="erole">Digital Marketing Executive</div><div class="eco">Digital Rubix</div><div class="eperiod">Aug 2019 – Aug 2022</div><div class="edesc">SEO, PPC &amp; social campaigns for multiple clients. Content strategy &amp; ad creatives.</div></div></div>
         </div>
-        <div class="case-clients">
-          <div class="case-clients-label">Clients on Google Ads</div>
-          <div class="case-client-logos">
-            <a href="https://www.wristassuredgloves.com" target="_blank" class="client-logo-box"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2050%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2718%27%20font-weight%3D%27900%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3EWAGs%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2738%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%278%27%20font-weight%3D%27600%27%20fill%3D%27%238a6020%27%20letter-spacing%3D%27-0.3%27%3EWrist%20Assured%20Gloves%3C/text%3E%3C/svg%3E" alt="WAGs"></a>
-            <a href="https://roselschool.org" target="_blank" class="client-logo-box"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2047%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2714%27%20font-weight%3D%27900%27%20fill%3D%27%238a6020%27%20letter-spacing%3D%27-0.3%27%3EROSEL%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2734%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27600%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3ESchool%20of%20Beauty%3C/text%3E%3C/svg%3E" alt="Rosel School"></a>
-            <a href="https://alhornlaw.com" target="_blank" class="client-logo-box"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2051%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2718%27%20font-weight%3D%27900%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3EALH%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2738%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27600%27%20fill%3D%27%238a6020%27%20letter-spacing%3D%27-0.3%27%3ELaw%20Office%3C/text%3E%3C/svg%3E" alt="AL Horn Law"></a>
-            <a href="https://jonbragman.com" target="_blank" class="client-logo-box"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2044%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2712%27%20font-weight%3D%27700%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3EJon%20Bragman%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2732%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%278%27%20font-weight%3D%27400%27%20fill%3D%27%238a6020%27%20letter-spacing%3D%27-0.3%27%3EJewelry%20Appraisal%3C/text%3E%3C/svg%3E" alt="Jon Bragman"></a>
-            <a href="https://mosaicroofingcompany.com" target="_blank" class="client-logo-box"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2046%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2713%27%20font-weight%3D%27900%27%20fill%3D%27%238a6020%27%20letter-spacing%3D%27-0.3%27%3EMOSAIC%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2733%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27600%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3ERoofing%20Co.%3C/text%3E%3C/svg%3E" alt="Mosaic Roofing"></a>
-            <a href="http://tbnmidwest.com" target="_blank" class="client-logo-box"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2051%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2718%27%20font-weight%3D%27900%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3ETBN%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2738%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27600%27%20fill%3D%27%238a6020%27%20letter-spacing%3D%27-0.3%27%3EMidwest%3C/text%3E%3C/svg%3E" alt="TBN Midwest"></a>
+      </div>
+      <div class="ar rvr">
+        <div class="mc"><div class="num" data-count="25" data-prefix="$" data-suffix="M+">$0</div><div class="lbl">Ad Spend Managed Across 6 Platforms</div></div>
+        <div class="mc"><div class="num" data-count="40" data-suffix="%">0</div><div class="lbl">Average ROAS Improvement for Clients</div></div>
+        <div class="mc"><div class="num" data-count="30" data-suffix="+">0</div><div class="lbl">Brands &amp; International Clients Served</div></div>
+        <div>
+          <div class="slabel" style="margin-bottom:13px">Certifications</div>
+          <div class="cgrid">
+            <div class="cb"><span>🔵</span>Google Ads Search</div>
+            <div class="cb"><span>🔵</span>Google Display</div>
+            <div class="cb"><span>🔷</span>Meta Blueprint</div>
+            <div class="cb"><span>📊</span>GA4 Analytics</div>
+            <div class="cb"><span>⚡</span>Adobe AEM</div>
+            <div class="cb"><span>📈</span>Power BI</div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 02 META ADS -->
-<div class="platform-sec">
-  <div class="platform-grid">
-    <div class="plat-left">
-      <div class="plat-num">02</div>
-      <div class="plat-name">Meta<br>Ads</div>
-      <div class="plat-desc">Facebook and Instagram campaigns — from brand awareness right through to leads and sales.</div>
-      <div class="plat-cred">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 44" style="height:38px;width:auto;flex-shrink:0">
-          <rect width="130" height="44" rx="6" fill="white" stroke="#dadce0" stroke-width="1"/>
-          <path d="M11 22c0-4.5 2.7-9 6.8-9 2.2 0 4 1.6 5.8 4.3 1.8-2.7 3.6-4.3 5.8-4.3 4 0 6.7 4.5 6.7 9s-2.2 7.6-4.9 7.6c-2.2 0-4-1.3-6.2-4.6-2.2 3.3-4 4.6-6.2 4.6C13.5 29.6 11 26.5 11 22z" fill="none" stroke="#0866FF" stroke-width="2"/>
-          <path d="M22.8 17.7c-1.8 2.7-2.7 4.5-2.7 5.7s.5 2.7 2.9 2.7 3.1-1.6 4.5-3.6-1-3.4-1-3.4" fill="none" stroke="#0866FF" stroke-width="2"/>
-          <text x="44" y="21" font-family="Arial Black,Arial" font-size="10" font-weight="900" fill="#0866FF">Meta</text>
-          <text x="44" y="33" font-family="Arial" font-size="7.5" font-weight="600" fill="#606770">Business Partner</text>
-        </svg>
-        <div><div class="plat-cred-title">Meta Business Partner Badge</div><div class="plat-cred-sub">Official Certified Partner</div></div>
-      </div>
-      <div class="plat-types">
-        <span class="plat-type">Prospecting & TOF</span>
-        <span class="plat-type">Retargeting Funnels</span>
-        <span class="plat-type">Dynamic Product Ads</span>
-        <span class="plat-type">Lead Generation</span>
-        <span class="plat-type">Creative Testing</span>
-      </div>
-    </div>
-    <div>
-      <div class="case-card">
-        <div class="spend-pill">💰 Ad Spend: $15,000</div>
-        <div class="case-tag">Brand Awareness + Lead Generation · Q1 2024</div>
-        <div class="case-title">3,840 leads at $3.91 CPL — 15% under target across Facebook & Instagram</div>
-        <div class="case-body">We ran a full-funnel Meta campaign with a $15,000 budget — awareness at the top, retargeting in the middle, and lead gen forms at the bottom. Lookalike audiences drove 58% of total leads. Moving budget toward Reels placements cut our CPM by 42% vs feed. The bottom-funnel lead gen campaign hit $3.18 CPA — our best performer.</div>
-        <div class="case-metrics cols-4">
-          <div class="metric-box"><div class="metric-num">3,840</div><div class="metric-label">Leads</div></div>
-          <div class="metric-box"><div class="metric-num">$3.91</div><div class="metric-label">Cost Per Lead</div></div>
-          <div class="metric-box"><div class="metric-num">4.8M</div><div class="metric-label">Impressions</div></div>
-          <div class="metric-box"><div class="metric-num">2.97%</div><div class="metric-label">CTR</div></div>
+        <div style="background:var(--sf);border:1px solid rgba(34,197,94,.2);border-radius:11px;padding:18px 20px">
+          <div style="font-size:.69rem;color:var(--gn);font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:9px">Education</div>
+          <div style="font-size:.83rem;font-weight:600;margin-bottom:3px">BCA — CSJM Kanpur University (2022)</div>
+          <div style="font-size:.78rem;color:var(--mt)">Data Science &amp; AI Program — Boston Institute of Analytics (2024)</div>
         </div>
-        <div class="case-clients">
-          <div class="case-clients-label">Featured Clients</div>
-          <div class="case-client-logos">
-            <a href="https://hirasweets.com" target="_blank" class="client-logo-box"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2050%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2716%27%20font-weight%3D%27900%27%20fill%3D%27%23c0392b%27%20letter-spacing%3D%27-0.3%27%3EHira%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2736%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2710%27%20font-weight%3D%27700%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3ESweets%3C/text%3E%3C/svg%3E" alt="Hira Sweets"></a>
-            <a href="https://www.godrejproperties.com" target="_blank" class="client-logo-box"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 40'%3E%3Ccircle cx='16' cy='20' r='12' fill='none' stroke='%23006341' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='20' r='6' fill='%23006341'/%3E%3Ctext x='34' y='16' font-family='Arial Black,Arial' font-size='10' font-weight='900' fill='%23006341' letter-spacing='-0.3'%3EGodrej%3C/text%3E%3Ctext x='34' y='30' font-family='Arial' font-size='8' font-weight='600' fill='%23555' letter-spacing='0.5'%3EProperties%3C/text%3E%3C/svg%3E" alt="Godrej Properties"></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 03 LINKEDIN ADS -->
-<div class="platform-sec">
-  <div class="platform-grid">
-    <div class="plat-left">
-      <div class="plat-num">03</div>
-      <div class="plat-name">LinkedIn<br>Ads</div>
-      <div class="plat-desc">B2B lead generation using LinkedIn's professional targeting — job title, seniority, company size.</div>
-      <div class="plat-cred">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="height:32px;width:32px;flex-shrink:0"><rect width="32" height="32" rx="6" fill="#0A66C2"/><path d="M8 13h4v11H8zm2-6a2 2 0 110 4 2 2 0 010-4zm6 6h3.8v1.5c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V24h-4v-5c0-1.2 0-2.7-1.65-2.7S21 17.6 21 19.1V24h-4V13z" fill="white"/></svg>
-        <div><div class="plat-cred-title">LinkedIn Marketing Labs Certified</div><div class="plat-cred-sub">Official Certification</div></div>
-      </div>
-      <div class="plat-types">
-        <span class="plat-type">Sponsored Content</span>
-        <span class="plat-type">Lead Gen Forms</span>
-        <span class="plat-type">Message / InMail Ads</span>
-        <span class="plat-type">Account-Based Marketing</span>
-      </div>
-    </div>
-    <div>
-      <div class="case-card">
-        <div class="spend-pill">💰 Ad Spend: $7,800</div>
-        <div class="case-tag">B2B Lead Generation · Q1 2024 · Godrej Properties</div>
-        <div class="case-title">684 qualified MQLs at $11.40 — 28% more leads than the previous quarter</div>
-        <div class="case-body">We built a LinkedIn strategy combining brand awareness, thought leadership video, lead gen forms, and message ads — all targeting decision makers by job title, seniority and company size. Lead gen forms converted 3.2x better than landing pages. Message ads to warm audiences hit a 5.1% open rate. C-suite targeting (VP+) brought in the highest-value deals despite slightly higher CPL.</div>
-        <div class="case-metrics cols-4">
-          <div class="metric-box"><div class="metric-num">684</div><div class="metric-label">MQLs</div></div>
-          <div class="metric-box"><div class="metric-num">$11.40</div><div class="metric-label">Cost Per Lead</div></div>
-          <div class="metric-box"><div class="metric-num">1.24M</div><div class="metric-label">Impressions</div></div>
-          <div class="metric-box"><div class="metric-num">1.50%</div><div class="metric-label">CTR</div></div>
-        </div>
-        <div class="case-clients">
-          <div class="case-clients-label">Featured Client</div>
-          <div class="case-client-logos">
-            <a href="https://www.godrejproperties.com" target="_blank" class="client-logo-box"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 40'%3E%3Ccircle cx='16' cy='20' r='12' fill='none' stroke='%23006341' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='20' r='6' fill='%23006341'/%3E%3Ctext x='34' y='16' font-family='Arial Black,Arial' font-size='10' font-weight='900' fill='%23006341' letter-spacing='-0.3'%3EGodrej%3C/text%3E%3Ctext x='34' y='30' font-family='Arial' font-size='8' font-weight='600' fill='%23555' letter-spacing='0.5'%3EProperties%3C/text%3E%3C/svg%3E" alt="Godrej Properties"></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 04 AMAZON ADS -->
-<div class="platform-sec">
-  <div class="platform-grid">
-    <div class="plat-left">
-      <div class="plat-num">04</div>
-      <div class="plat-name">Amazon<br>Ads</div>
-      <div class="plat-desc">Sponsored Products, Brands, Display and DSP — built to win on Amazon's search and boost organic rank.</div>
-      <div class="plat-cred">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 32" style="height:28px;width:auto;flex-shrink:0"><text x="0" y="22" font-family="Arial Black,Arial" font-size="18" font-weight="900" fill="#FF9900" letter-spacing="-0.5">amazon</text><path d="M0 27 Q35 34 68 27" fill="none" stroke="#FF9900" stroke-width="2" stroke-linecap="round"/><path d="M65 24 L70 27 L65 29" fill="#FF9900"/></svg>
-        <div><div class="plat-cred-title">Amazon Ads Certified</div><div class="plat-cred-sub">Sponsored Ads Specialist</div></div>
-      </div>
-      <div class="plat-types">
-        <span class="plat-type">Sponsored Products</span>
-        <span class="plat-type">Sponsored Brands & Video</span>
-        <span class="plat-type">DSP Retargeting</span>
-        <span class="plat-type">AMC Attribution</span>
-      </div>
-    </div>
-    <div>
-      <div class="case-card">
-        <div class="spend-pill">💰 Ad Spend: $18,000</div>
-        <div class="case-tag">eCommerce · Sales Optimisation · Q1 2024 · H&M</div>
-        <div class="case-title">$63,360 revenue at 3.52x ROAS — 7,620 orders across Sponsored + DSP</div>
-        <div class="case-body">Managed the full Amazon Ads stack — Sponsored Products, Brands, Display and DSP retargeting. Exact match Sponsored Products hit the lowest ACoS at 23.5%. DSP retargeting of product detail page visitors delivered 4.1x ROAS compared to 2.8x for cold prospecting. Sponsored Brand Video drove 38% higher CTR than static banners. Revenue grew 24% over the previous period.</div>
-        <div class="case-metrics cols-4">
-          <div class="metric-box"><div class="metric-num">$63,360</div><div class="metric-label">Revenue</div></div>
-          <div class="metric-box"><div class="metric-num">3.52x</div><div class="metric-label">ROAS</div></div>
-          <div class="metric-box"><div class="metric-num">7,620</div><div class="metric-label">Orders</div></div>
-          <div class="metric-box"><div class="metric-num">28.4%</div><div class="metric-label">ACoS</div></div>
-        </div>
-        <div class="case-clients">
-          <div class="case-clients-label">Featured Client</div>
-          <div class="case-client-logos">
-            <a href="https://www2.hm.com" target="_blank" class="client-logo-box" style="background:#e50010;border-color:#e50010">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 32" style="height:22px;width:auto"><text x="2" y="24" font-family="Arial Black,Arial" font-size="20" font-weight="900" fill="#fff" letter-spacing="-1">H&amp;M</text></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 05 TIKTOK ADS -->
-<div class="platform-sec">
-  <div class="platform-grid">
-    <div class="plat-left">
-      <div class="plat-num">05</div>
-      <div class="plat-name">TikTok<br>Ads</div>
-      <div class="plat-desc">Short-form video that drives brand awareness, app installs and conversions for younger, high-intent audiences.</div>
-      <div class="plat-cred">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 32" style="height:28px;width:auto;flex-shrink:0"><path d="M20 5.5A4.5 4.5 0 0115.5 1h-3v18a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0v-4.5a6.5 6.5 0 106.5 6.5V9.5a8.5 8.5 0 005 1.6V8a4.5 4.5 0 01-3.5-2.5z" fill="#ff0050" opacity="0.5" transform="translate(-1,1)"/><path d="M20 5.5A4.5 4.5 0 0115.5 1h-3v18a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0v-4.5a6.5 6.5 0 106.5 6.5V9.5a8.5 8.5 0 005 1.6V8a4.5 4.5 0 01-3.5-2.5z" fill="#69C9D0" opacity="0.5" transform="translate(1,-1)"/><path d="M20 5.5A4.5 4.5 0 0115.5 1h-3v18a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0v-4.5a6.5 6.5 0 106.5 6.5V9.5a8.5 8.5 0 005 1.6V8a4.5 4.5 0 01-3.5-2.5z" fill="#111"/></svg>
-        <div><div class="plat-cred-title">TikTok Ads Certified</div><div class="plat-cred-sub">Performance Marketing</div></div>
-      </div>
-      <div class="plat-types">
-        <span class="plat-type">In-Feed Ads</span>
-        <span class="plat-type">Spark Ads (UGC)</span>
-        <span class="plat-type">TopView & Brand Takeover</span>
-        <span class="plat-type">TikTok Shopping</span>
-      </div>
-    </div>
-    <div>
-      <div class="case-card">
-        <div class="spend-pill">💰 Ad Spend: $10,500</div>
-        <div class="case-tag">Video Views + App Installs · Q1 2024 · Dance Academy USA</div>
-        <div class="case-title">9.2M video views and 6,840 app installs at just $1.53 per install</div>
-        <div class="case-body">We ran a four-format TikTok campaign — TopView for launch impact, In-Feed for performance, Spark Ads boosting organic UGC content, and a Hashtag Challenge. Spark Ads outperformed standard In-Feed by 2.3x on VTR. UGC videos under 15 seconds had 22% higher completion. App installs jumped 41% from the previous period while CPI dropped 18% to $1.53.</div>
-        <div class="case-metrics cols-4">
-          <div class="metric-box"><div class="metric-num">9.2M</div><div class="metric-label">Video Views</div></div>
-          <div class="metric-box"><div class="metric-num">6,840</div><div class="metric-label">App Installs</div></div>
-          <div class="metric-box"><div class="metric-num">$1.53</div><div class="metric-label">Cost Per Install</div></div>
-          <div class="metric-box"><div class="metric-num">68.4%</div><div class="metric-label">VTR</div></div>
-        </div>
-        <div class="case-clients">
-          <div class="case-clients-label">Featured Client</div>
-          <div class="case-client-logos">
-            <a href="https://www.danceacademyusa.com" target="_blank" class="client-logo-box">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 36" style="height:28px;width:auto"><text x="2" y="14" font-family="DM Sans,Arial" font-size="9" font-style="italic" fill="#8a6020">Dance Academy</text><text x="2" y="28" font-family="Plus Jakarta Sans,Arial Black" font-size="13" font-weight="800" fill="#111008">USA</text></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 06 DV360 + PROGRAMMATIC -->
-<div class="platform-sec">
-  <div class="platform-grid">
-    <div class="plat-left">
-      <div class="plat-num">06</div>
-      <div class="plat-name">DV360 &<br>Programmatic</div>
-      <div class="plat-desc">Full-funnel programmatic buying through Google DV360 — Display, Video, CTV, and Private Marketplace deals.</div>
-      <div class="plat-cred">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" style="height:32px;width:32px;flex-shrink:0"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-        <div><div class="plat-cred-title">Google Display & Video 360 Certified</div><div class="plat-cred-sub">Programmatic Specialist</div></div>
-      </div>
-      <div class="plat-types">
-        <span class="plat-type">DV360 Campaigns</span>
-        <span class="plat-type">Private Marketplace Deals</span>
-        <span class="plat-type">Connected TV (CTV)</span>
-        <span class="plat-type">Audience Segmentation</span>
-      </div>
-    </div>
-    <div>
-      <div class="case-card">
-        <div class="spend-pill">💰 Ad Spend: $45,600 (DV360 + Programmatic)</div>
-        <div class="case-tag">Full-Funnel Programmatic · Q1 2024 · BMW India</div>
-        <div class="case-title">1.12 billion impressions, 12,480 conversions and +8.4% brand lift for BMW India</div>
-        <div class="case-body">We ran a full-funnel DV360 and Programmatic strategy combining YouTube TrueView, Display prospecting and retargeting, and programmatic Display/Video across 82.4M unique reach. First-party CRM audiences drove 3.8x conversion rate vs affinity targeting. CTV inventory hit 89% viewability. YouTube TrueView for Action achieved $0.46 CPL at the bottom funnel. PMP deals cut eCPM by 31% vs open exchange.</div>
-        <div class="case-metrics cols-4">
-          <div class="metric-box"><div class="metric-num">1.12B</div><div class="metric-label">Impressions</div></div>
-          <div class="metric-box"><div class="metric-num">12,480</div><div class="metric-label">Conversions</div></div>
-          <div class="metric-box"><div class="metric-num">$0.21</div><div class="metric-label">Avg. CPM</div></div>
-          <div class="metric-box"><div class="metric-num">+8.4%</div><div class="metric-label">Brand Lift</div></div>
-        </div>
-        <div class="case-clients">
-          <div class="case-clients-label">Featured Client</div>
-          <div class="case-client-logos">
-            <a href="https://www.bmw.in" target="_blank" class="client-logo-box" style="background:#1C69D4;border-color:#1C69D4;gap:8px">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="height:28px;width:28px;flex-shrink:0">
-                <circle cx="16" cy="16" r="15" fill="#1C69D4"/>
-                <circle cx="16" cy="16" r="15" fill="none" stroke="#fff" stroke-width="1.5"/>
-                <circle cx="16" cy="16" r="11" fill="none" stroke="#fff" stroke-width="1"/>
-                <path d="M16 5 L16 16 L5 16 Q5 9 10 7 Z" fill="#fff"/>
-                <path d="M16 16 L16 27 L27 16 Q27 23 22 25 Z" fill="#fff"/>
-              </svg>
-              <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:800;color:#fff;letter-spacing:1px">BMW</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-</div><!-- /platforms -->
-
-<!-- ══ FLOATING CLIENTS ══ -->
-<section class="clients-sec" id="clients">
-  <div class="clients-header">
-    <div class="sec-label" style="justify-content:center">Trusted By</div>
-    <div class="sec-title">Brands I've worked with</div>
-    <p style="font-size:0.9rem;color:var(--gray);margin-top:0.5rem">From local businesses to global brands across USA, Canada, Australia, India and UAE.</p>
-  </div>
-  <div class="scroll-wrap">
-    <div class="scroll-track">
-      <a href="https://www.wristassuredgloves.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2050%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2718%27%20font-weight%3D%27900%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3EWAGs%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2738%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%278%27%20font-weight%3D%27600%27%20fill%3D%27%238a6020%27%20letter-spacing%3D%27-0.3%27%3EWrist%20Assured%20Gloves%3C/text%3E%3C/svg%3E" alt="Wrist Assured Gloves" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Wrist Assured Gloves</span>'"></a>
-      <a href="https://roselschool.org" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2047%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2714%27%20font-weight%3D%27900%27%20fill%3D%27%238a6020%27%20letter-spacing%3D%27-0.3%27%3EROSEL%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2734%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27600%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3ESchool%20of%20Beauty%3C/text%3E%3C/svg%3E" alt="Rosel School" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Rosel School</span>'"></a>
-      <a href="https://alhornlaw.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2051%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2718%27%20font-weight%3D%27900%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3EALH%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2738%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27600%27%20fill%3D%27%238a6020%27%20letter-spacing%3D%27-0.3%27%3ELaw%20Office%3C/text%3E%3C/svg%3E" alt="AL Horn Law" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>AL Horn Law</span>'"></a>
-      <a href="https://jonbragman.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2044%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2712%27%20font-weight%3D%27700%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3EJon%20Bragman%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2732%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%278%27%20font-weight%3D%27400%27%20fill%3D%27%238a6020%27%20letter-spacing%3D%27-0.3%27%3EJewelry%20Appraisal%3C/text%3E%3C/svg%3E" alt="Jon Bragman" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Jon Bragman</span>'"></a>
-      <a href="https://mosaicroofingcompany.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2046%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2713%27%20font-weight%3D%27900%27%20fill%3D%27%238a6020%27%20letter-spacing%3D%27-0.3%27%3EMOSAIC%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2733%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27600%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3ERoofing%20Co.%3C/text%3E%3C/svg%3E" alt="Mosaic Roofing" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Mosaic Roofing</span>'"></a>
-      <a href="http://tbnmidwest.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2051%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2718%27%20font-weight%3D%27900%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3ETBN%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2738%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27600%27%20fill%3D%27%238a6020%27%20letter-spacing%3D%27-0.3%27%3EMidwest%3C/text%3E%3C/svg%3E" alt="TBN Midwest" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>TBN Midwest</span>'"></a>
-      <a href="https://hirasweets.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2050%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2716%27%20font-weight%3D%27900%27%20fill%3D%27%23c0392b%27%20letter-spacing%3D%27-0.3%27%3EHira%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2736%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2710%27%20font-weight%3D%27700%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3ESweets%3C/text%3E%3C/svg%3E" alt="Hira Sweets" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Hira Sweets</span>'"></a>
-      <a href="https://www.godrejproperties.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 40'%3E%3Ccircle cx='16' cy='20' r='12' fill='none' stroke='%23006341' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='20' r='6' fill='%23006341'/%3E%3Ctext x='34' y='16' font-family='Arial Black,Arial' font-size='10' font-weight='900' fill='%23006341' letter-spacing='-0.3'%3EGodrej%3C/text%3E%3Ctext x='34' y='30' font-family='Arial' font-size='8' font-weight='600' fill='%23555' letter-spacing='0.5'%3EProperties%3C/text%3E%3C/svg%3E" alt="Godrej Properties" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Godrej Properties</span>'"></a>
-      <a href="https://eliteprotectiondogs.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 40'%3E%3Ctext x='4' y='14' font-family='Arial Black,Arial' font-size='8' font-weight='900' fill='%238a6020' letter-spacing='1'%3EELITE%3C/text%3E%3Ctext x='4' y='30' font-family='Arial Black,Arial' font-size='11' font-weight='900' fill='%23111008' letter-spacing='-0.3'%3EProtection Dogs%3C/text%3E%3C/svg%3E" alt="Elite Protection Dogs" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Elite Protection Dogs</span>'"></a>
-      <a href="https://kidzjunction.ca" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2049%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2716%27%20font-weight%3D%27900%27%20fill%3D%27%23e67e22%27%20letter-spacing%3D%27-0.3%27%3EKIDZ%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2736%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27700%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3EJunction%3C/text%3E%3C/svg%3E" alt="Kidz Junction" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Kidz Junction</span>'"></a>
-      <a href="https://soultosoulcounselling.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2044%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2711%27%20font-weight%3D%27700%27%20fill%3D%27%238a6020%27%20letter-spacing%3D%27-0.3%27%3ESoul%20to%20Soul%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2731%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27400%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3ECounselling%3C/text%3E%3C/svg%3E" alt="Soul to Soul Counselling" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Soul to Soul Counselling</span>'"></a>
-      <a href="https://makeupandhairbyelinor.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2043%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2710%27%20font-weight%3D%27700%27%20fill%3D%27%23c0392b%27%20letter-spacing%3D%27-0.3%27%3EMakeup%20%26%20Hair%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2730%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27400%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3Eby%20Elinor%3C/text%3E%3C/svg%3E" alt="Makeup & Hair by Elinor" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Makeup & Hair by Elinor</span>'"></a>
-      <a href="https://www.samco.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Crect x='0' y='8' width='30' height='24' rx='4' fill='%238a6020'/%3E%3Ctext x='7' y='25' font-family='Arial Black' font-size='13' font-weight='900' fill='%23fff'%3ES%3C/text%3E%3Ctext x='36' y='27' font-family='Arial Black,Arial' font-size='16' font-weight='900' fill='%23111008' letter-spacing='-0.5'%3EAMCO%3C/text%3E%3C/svg%3E" alt="Samco" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Samco</span>'"></a>
-      <a href="https://www.oakhillpuppies.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 40'%3E%3Ctext x='4' y='15' font-family='Georgia,serif' font-size='9' font-weight='700' fill='%238a6020' letter-spacing='0.5'%3EOAK HILL%3C/text%3E%3Ctext x='4' y='30' font-family='Georgia,serif' font-size='11' font-weight='700' fill='%23111008'%3EPuppies%3C/text%3E%3C/svg%3E" alt="Oak Hill Puppies" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Oak Hill Puppies</span>'"></a>
-      <a href="https://www.cleanlinessjan.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2044%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2711%27%20font-weight%3D%27700%27%20fill%3D%27%232980b9%27%20letter-spacing%3D%27-0.3%27%3ECleanliness%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2731%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27400%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3EJanitorial%3C/text%3E%3C/svg%3E" alt="Cleanliness Jan" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Cleanliness Jan</span>'"></a>
-      <a href="https://sharons-desserts.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2046%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2713%27%20font-weight%3D%27700%27%20fill%3D%27%23c0392b%27%20letter-spacing%3D%27-0.3%27%3ESharon%27s%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2733%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27600%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3EDesserts%3C/text%3E%3C/svg%3E" alt="Sharon's Desserts" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Sharon's Desserts</span>'"></a>
-      <a href="https://winterparkhoney.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 40'%3E%3Ctext x='4' y='14' font-family='Georgia,serif' font-size='8' fill='%238a6020' letter-spacing='0.5'%3EWINTER PARK%3C/text%3E%3Ctext x='4' y='30' font-family='Georgia,serif' font-size='13' font-weight='700' fill='%23111008'%3EHoney%3C/text%3E%3C/svg%3E" alt="Winter Park Honey" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Winter Park Honey</span>'"></a>
-      <a href="https://www2.hm.com" target="_blank" class="scroll-card" style="background:#e50010"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 32" style="height:22px"><text x="2" y="24" font-family="Arial Black" font-size="20" font-weight="900" fill="#fff">H&amp;M</text></svg></a>
-      <a href="https://www.bmw.in" target="_blank" class="scroll-card" style="background:#1C69D4;gap:8px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="height:26px;width:26px"><circle cx="16" cy="16" r="15" fill="#1C69D4"/><circle cx="16" cy="16" r="15" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="16" cy="16" r="11" fill="none" stroke="#fff" stroke-width="1"/><path d="M16 5 L16 16 L5 16 Q5 9 10 7 Z" fill="#fff"/><path d="M16 16 L16 27 L27 16 Q27 23 22 25 Z" fill="#fff"/></svg><span style="font-family:Arial Black;font-size:12px;font-weight:900;color:#fff">BMW</span></a>
-      <a href="https://www.danceacademyusa.com" target="_blank" class="scroll-card"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 36" style="height:28px;width:auto"><text x="2" y="14" font-family="DM Sans,Arial" font-size="9" font-style="italic" fill="#8a6020">Dance Academy</text><text x="2" y="28" font-family="Plus Jakarta Sans,Arial Black" font-size="13" font-weight="800" fill="#111008">USA</text></svg></a>
-      <a href="https://www.wristassuredgloves.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2050%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2718%27%20font-weight%3D%27900%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3EWAGs%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2738%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%278%27%20font-weight%3D%27600%27%20fill%3D%27%238a6020%27%20letter-spacing%3D%27-0.3%27%3EWrist%20Assured%20Gloves%3C/text%3E%3C/svg%3E" alt="Wrist Assured Gloves" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Wrist Assured Gloves</span>'"></a>
-      <a href="https://roselschool.org" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2047%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2714%27%20font-weight%3D%27900%27%20fill%3D%27%238a6020%27%20letter-spacing%3D%27-0.3%27%3EROSEL%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2734%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27600%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3ESchool%20of%20Beauty%3C/text%3E%3C/svg%3E" alt="Rosel School" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Rosel School</span>'"></a>
-      <a href="https://alhornlaw.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2051%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2718%27%20font-weight%3D%27900%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3EALH%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2738%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27600%27%20fill%3D%27%238a6020%27%20letter-spacing%3D%27-0.3%27%3ELaw%20Office%3C/text%3E%3C/svg%3E" alt="AL Horn Law" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>AL Horn Law</span>'"></a>
-      <a href="https://jonbragman.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2044%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2712%27%20font-weight%3D%27700%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3EJon%20Bragman%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2732%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%278%27%20font-weight%3D%27400%27%20fill%3D%27%238a6020%27%20letter-spacing%3D%27-0.3%27%3EJewelry%20Appraisal%3C/text%3E%3C/svg%3E" alt="Jon Bragman" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Jon Bragman</span>'"></a>
-      <a href="https://mosaicroofingcompany.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2046%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2713%27%20font-weight%3D%27900%27%20fill%3D%27%238a6020%27%20letter-spacing%3D%27-0.3%27%3EMOSAIC%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2733%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27600%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3ERoofing%20Co.%3C/text%3E%3C/svg%3E" alt="Mosaic Roofing" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Mosaic Roofing</span>'"></a>
-      <a href="http://tbnmidwest.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2051%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2718%27%20font-weight%3D%27900%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3ETBN%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2738%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27600%27%20fill%3D%27%238a6020%27%20letter-spacing%3D%27-0.3%27%3EMidwest%3C/text%3E%3C/svg%3E" alt="TBN Midwest" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>TBN Midwest</span>'"></a>
-      <a href="https://hirasweets.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2050%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2716%27%20font-weight%3D%27900%27%20fill%3D%27%23c0392b%27%20letter-spacing%3D%27-0.3%27%3EHira%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2736%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2710%27%20font-weight%3D%27700%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3ESweets%3C/text%3E%3C/svg%3E" alt="Hira Sweets" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Hira Sweets</span>'"></a>
-      <a href="https://www.godrejproperties.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 40'%3E%3Ccircle cx='16' cy='20' r='12' fill='none' stroke='%23006341' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='20' r='6' fill='%23006341'/%3E%3Ctext x='34' y='16' font-family='Arial Black,Arial' font-size='10' font-weight='900' fill='%23006341' letter-spacing='-0.3'%3EGodrej%3C/text%3E%3Ctext x='34' y='30' font-family='Arial' font-size='8' font-weight='600' fill='%23555' letter-spacing='0.5'%3EProperties%3C/text%3E%3C/svg%3E" alt="Godrej Properties" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Godrej Properties</span>'"></a>
-      <a href="https://eliteprotectiondogs.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 40'%3E%3Ctext x='4' y='14' font-family='Arial Black,Arial' font-size='8' font-weight='900' fill='%238a6020' letter-spacing='1'%3EELITE%3C/text%3E%3Ctext x='4' y='30' font-family='Arial Black,Arial' font-size='11' font-weight='900' fill='%23111008' letter-spacing='-0.3'%3EProtection Dogs%3C/text%3E%3C/svg%3E" alt="Elite Protection Dogs" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Elite Protection Dogs</span>'"></a>
-      <a href="https://kidzjunction.ca" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2049%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2716%27%20font-weight%3D%27900%27%20fill%3D%27%23e67e22%27%20letter-spacing%3D%27-0.3%27%3EKIDZ%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2736%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27700%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3EJunction%3C/text%3E%3C/svg%3E" alt="Kidz Junction" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Kidz Junction</span>'"></a>
-      <a href="https://soultosoulcounselling.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2044%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2711%27%20font-weight%3D%27700%27%20fill%3D%27%238a6020%27%20letter-spacing%3D%27-0.3%27%3ESoul%20to%20Soul%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2731%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27400%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3ECounselling%3C/text%3E%3C/svg%3E" alt="Soul to Soul Counselling" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Soul to Soul Counselling</span>'"></a>
-      <a href="https://makeupandhairbyelinor.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2043%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2710%27%20font-weight%3D%27700%27%20fill%3D%27%23c0392b%27%20letter-spacing%3D%27-0.3%27%3EMakeup%20%26%20Hair%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2730%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27400%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3Eby%20Elinor%3C/text%3E%3C/svg%3E" alt="Makeup & Hair by Elinor" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Makeup & Hair by Elinor</span>'"></a>
-      <a href="https://www.samco.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'%3E%3Crect x='0' y='8' width='30' height='24' rx='4' fill='%238a6020'/%3E%3Ctext x='7' y='25' font-family='Arial Black' font-size='13' font-weight='900' fill='%23fff'%3ES%3C/text%3E%3Ctext x='36' y='27' font-family='Arial Black,Arial' font-size='16' font-weight='900' fill='%23111008' letter-spacing='-0.5'%3EAMCO%3C/text%3E%3C/svg%3E" alt="Samco" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Samco</span>'"></a>
-      <a href="https://www.oakhillpuppies.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 40'%3E%3Ctext x='4' y='15' font-family='Georgia,serif' font-size='9' font-weight='700' fill='%238a6020' letter-spacing='0.5'%3EOAK HILL%3C/text%3E%3Ctext x='4' y='30' font-family='Georgia,serif' font-size='11' font-weight='700' fill='%23111008'%3EPuppies%3C/text%3E%3C/svg%3E" alt="Oak Hill Puppies" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Oak Hill Puppies</span>'"></a>
-      <a href="https://www.cleanlinessjan.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2044%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2711%27%20font-weight%3D%27700%27%20fill%3D%27%232980b9%27%20letter-spacing%3D%27-0.3%27%3ECleanliness%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2731%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27400%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3EJanitorial%3C/text%3E%3C/svg%3E" alt="Cleanliness Jan" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Cleanliness Jan</span>'"></a>
-      <a href="https://sharons-desserts.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20200%2046%27%3E%3Ctext%20x%3D%274%27%20y%3D%2716%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%2713%27%20font-weight%3D%27700%27%20fill%3D%27%23c0392b%27%20letter-spacing%3D%27-0.3%27%3ESharon%27s%3C/text%3E%3Ctext%20x%3D%274%27%20y%3D%2733%27%20font-family%3D%27Arial%20Black%2CArial%27%20font-size%3D%279%27%20font-weight%3D%27600%27%20fill%3D%27%23111008%27%20letter-spacing%3D%27-0.3%27%3EDesserts%3C/text%3E%3C/svg%3E" alt="Sharon's Desserts" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Sharon's Desserts</span>'"></a>
-      <a href="https://winterparkhoney.com" target="_blank" class="scroll-card"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 40'%3E%3Ctext x='4' y='14' font-family='Georgia,serif' font-size='8' fill='%238a6020' letter-spacing='0.5'%3EWINTER PARK%3C/text%3E%3Ctext x='4' y='30' font-family='Georgia,serif' font-size='13' font-weight='700' fill='%23111008'%3EHoney%3C/text%3E%3C/svg%3E" alt="Winter Park Honey" onerror="this.parentElement.innerHTML='<span style=\'font-size:0.8rem;font-weight:600;color:var(--ink3);text-align:center;padding:0 0.5rem\'>Winter Park Honey</span>'"></a>
-      <a href="https://www2.hm.com" target="_blank" class="scroll-card" style="background:#e50010"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 32" style="height:22px"><text x="2" y="24" font-family="Arial Black" font-size="20" font-weight="900" fill="#fff">H&amp;M</text></svg></a>
-      <a href="https://www.bmw.in" target="_blank" class="scroll-card" style="background:#1C69D4;gap:8px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="height:26px;width:26px"><circle cx="16" cy="16" r="15" fill="#1C69D4"/><circle cx="16" cy="16" r="15" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="16" cy="16" r="11" fill="none" stroke="#fff" stroke-width="1"/><path d="M16 5 L16 16 L5 16 Q5 9 10 7 Z" fill="#fff"/><path d="M16 16 L16 27 L27 16 Q27 23 22 25 Z" fill="#fff"/></svg><span style="font-family:Arial Black;font-size:12px;font-weight:900;color:#fff">BMW</span></a>
-      <a href="https://www.danceacademyusa.com" target="_blank" class="scroll-card"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 36" style="height:28px;width:auto"><text x="2" y="14" font-family="DM Sans,Arial" font-size="9" font-style="italic" fill="#8a6020">Dance Academy</text><text x="2" y="28" font-family="Plus Jakarta Sans,Arial Black" font-size="13" font-weight="800" fill="#111008">USA</text></svg></a>
-      
-    </div>
-  </div>
-</section>
-
-<!-- ══ PROCESS ══ -->
-<section id="process" class="process-sec">
-  <div class="sec-label">How I Work</div>
-  <div class="sec-title">My process,<br>start to finish</div>
-  <div class="process-steps">
-    <div class="process-step">
-      <div class="step-num">1</div>
-      <div class="step-title">Discovery Call</div>
-      <div class="step-body">I learn your business, goals, current setup and what good looks like for you.</div>
-    </div>
-    <div class="process-step">
-      <div class="step-num">2</div>
-      <div class="step-title">Audit & Plan</div>
-      <div class="step-body">Full account audit plus a written media strategy and budget allocation before I spend a rupee.</div>
-    </div>
-    <div class="process-step">
-      <div class="step-num">3</div>
-      <div class="step-title">Build & Launch</div>
-      <div class="step-body">Campaigns built properly — structure, copy, tracking, audiences — ready to go live.</div>
-    </div>
-    <div class="process-step">
-      <div class="step-num">4</div>
-      <div class="step-title">Optimise Weekly</div>
-      <div class="step-body">Bids, audiences, creatives — I review everything weekly and cut what isn't working.</div>
-    </div>
-    <div class="process-step">
-      <div class="step-num">5</div>
-      <div class="step-title">Report & Scale</div>
-      <div class="step-body">Clear weekly reports. When something works, we scale it hard and fast.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ CERTIFICATIONS ══ -->
-<section id="certifications" class="certs-sec">
-  <div class="sec-label">Credentials</div>
-  <div class="sec-title">Certifications &<br>Partner Badges</div>
-  <div class="certs-grid">
-    <div class="cert-card">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="cert-logo"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-      <div class="cert-title">Google Partner Badge</div><div class="cert-by">Official Google Partner</div>
-    </div>
-    <div class="cert-card">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 24" class="cert-logo"><text x="0" y="18" font-family="Arial Black" font-size="16" font-weight="900" fill="#0866FF">Meta</text></svg>
-      <div class="cert-title">Meta Business Partner Badge</div><div class="cert-by">Official Meta Partner</div>
-    </div>
-    <div class="cert-card">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="cert-logo"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-      <div class="cert-title">Google Ads Search Certified</div><div class="cert-by">Google</div>
-    </div>
-    <div class="cert-card">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="cert-logo"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-      <div class="cert-title">Google Shopping & PMax Certified</div><div class="cert-by">Google</div>
-    </div>
-    <div class="cert-card">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="cert-logo"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
-      <div class="cert-title">Google Analytics 4 Certified</div><div class="cert-by">Google</div>
-    </div>
-    <div class="cert-card">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 24" class="cert-logo"><text x="0" y="18" font-family="Arial Black" font-size="16" font-weight="900" fill="#0866FF">Meta</text></svg>
-      <div class="cert-title">Meta Blueprint — Media Buying</div><div class="cert-by">Meta</div>
-    </div>
-    <div class="cert-card">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 24" class="cert-logo"><text x="0" y="17" font-family="Arial Black" font-size="14" font-weight="900" fill="#FF9900">amazon</text></svg>
-      <div class="cert-title">Amazon Ads Certified</div><div class="cert-by">Amazon Advertising</div>
-    </div>
-    <div class="cert-card">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="cert-logo"><rect width="32" height="32" rx="5" fill="#0A66C2"/><path d="M8 13h4v11H8zm2-6a2 2 0 110 4 2 2 0 010-4zm6 6h3.8v1.5c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V24h-4v-5c0-1.2 0-2.7-1.65-2.7S21 17.6 21 19.1V24h-4V13z" fill="white"/></svg>
-      <div class="cert-title">LinkedIn Marketing Labs</div><div class="cert-by">LinkedIn</div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ TESTIMONIALS ══ -->
-<section class="testi-sec">
-  <div class="sec-label">What People Say</div>
-  <div class="sec-title">Clients, in their<br>own words</div>
-  <div class="testi-grid">
-    <div class="testi-card">
-      <div class="testi-quote-mark">"</div>
-      <div class="testi-text">The Google Ads numbers speak for themselves — but what really impressed us was how Rahul communicated throughout. Always clear, always proactive, never had to chase for updates.</div>
-      <div class="testi-author">
-        <div class="testi-avatar">WG</div>
-        <div><div class="testi-name">Wrist Assured Gloves</div><div class="testi-role">eCommerce — USA</div></div>
-      </div>
-    </div>
-    <div class="testi-card">
-      <div class="testi-quote-mark">"</div>
-      <div class="testi-text">Our Meta campaigns were bleeding money. Within 30 days of Rahul restructuring everything, our CPL dropped by over 55%. I wish we'd brought him in sooner.</div>
-      <div class="testi-author">
-        <div class="testi-avatar">SR</div>
-        <div><div class="testi-name">Sneha R.</div><div class="testi-role">Marketing Head, Real Estate</div></div>
-      </div>
-    </div>
-    <div class="testi-card">
-      <div class="testi-quote-mark">"</div>
-      <div class="testi-text">Most consultants know one platform well. Rahul genuinely understands the full paid media ecosystem. The LinkedIn pipeline he built for us was something our in-house team could never crack.</div>
-      <div class="testi-author">
-        <div class="testi-avatar">VP</div>
-        <div><div class="testi-name">Vikram P.</div><div class="testi-role">CEO, SaaS Startup</div></div>
       </div>
     </div>
   </div>
 </section>
+<div class="dvdr"></div>
 
-<!-- ══ CONTACT FORM ══ -->
-<section class="contact-sec" id="contact">
-  <div class="contact-inner">
-    <div class="contact-left">
-      <div class="sec-label">Let's Work Together</div>
-      <div class="sec-title">Got a project<br>in mind?</div>
-      <p class="contact-desc">Whether you need someone to take over your campaigns, do a full audit, or build something from scratch — drop me a message and I'll get back to you within 24 hours.</p>
-      <div class="contact-info-list">
-        <a href="/cdn-cgi/l/email-protection#1a687b707d6f6a6e7b2f2f2a2a2b5a7d777b737634797577" class="contact-info-item">
-          <div class="contact-info-icon">✉</div>
-          <div>
-            <div class="contact-info-label">Email</div>
-            <div class="contact-info-val"><span class="__cf_email__" data-cfemail="a1d3c0cbc6d4d1d5c09494919190e1c6ccc0c8cd8fc2cecc">[email&#160;protected]</span></div>
-          </div>
-        </a>
-        <a href="https://linkedin.com/in/rahul-gupta-9034a422b" target="_blank" class="contact-info-item">
-          <div class="contact-info-icon">in</div>
-          <div>
-            <div class="contact-info-label">LinkedIn</div>
-            <div class="contact-info-val">linkedin.com/in/rahul-gupta-9034a422b</div>
-          </div>
-        </a>
-        <a href="https://wa.me/918756424538" target="_blank" class="contact-info-item">
-          <div class="contact-info-icon">📱</div>
-          <div>
-            <div class="contact-info-label">WhatsApp</div>
-            <div class="contact-info-val">+91 87564 24538</div>
-          </div>
-        </a>
-      </div>
-      <div class="contact-badges">
-        <div class="contact-badge">🌍 Available for international projects</div>
-        <div class="contact-badge">⚡ Replies within 24 hours</div>
-        <div class="contact-badge">📞 Free strategy call first</div>
-      </div>
+<!-- SKILLS -->
+<section id="skills">
+  <div class="si">
+    <div class="skh rv">
+      <div class="slabel">Expertise</div>
+      <h2 class="sh">Skills &amp; Platforms</h2>
+      <p style="color:var(--mt);margin-top:11px;font-size:.87rem">Certified. Battle-tested. Results-driven.</p>
     </div>
-    <div class="contact-right">
-      <div class="form-card">
-        <div class="form-title">Send me a message</div>
-        <div class="form-subtitle">I'll get back to you within 24 hours.</div>
-        <!-- Replace xyknnwpk with your actual Formspree endpoint -->
-        <!-- Get it free at formspree.io → New Form → copy the endpoint -->
-        <form action="https://formspree.io/f/xyknnwpk" method="POST" id="contactForm">
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label">Your Name *</label>
-              <input type="text" name="name" class="form-input" placeholder="John Smith" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Email Address *</label>
-              <input type="email" name="email" class="form-input" placeholder="john@company.com" required>
+    <div class="skg">
+      <div class="skc rv d1"><div class="skico">🔵</div><div class="skname">Google Ads</div><div class="skdesc">Search, Shopping, Performance Max, Display &amp; YouTube — complete ecosystem coverage.</div><div class="sktags"><span class="tag">Search</span><span class="tag">Shopping</span><span class="tag">PMax</span><span class="tag">YouTube</span><span class="tag">Display</span></div><div class="skbar"><div class="skbf" data-width="97"></div></div></div>
+      <div class="skc rv d2"><div class="skico">🔷</div><div class="skname">Meta Ads</div><div class="skdesc">Facebook &amp; Instagram — prospecting, retargeting funnels, DPA and lead gen at scale.</div><div class="sktags"><span class="tag">Facebook</span><span class="tag">Instagram</span><span class="tag">Retargeting</span><span class="tag">DPA</span></div><div class="skbar"><div class="skbf" data-width="95"></div></div></div>
+      <div class="skc rv d3"><div class="skico">💼</div><div class="skname">LinkedIn Ads</div><div class="skdesc">B2B lead gen — targeting by job title, seniority, company size and ABM strategies.</div><div class="sktags"><span class="tag">Lead Gen</span><span class="tag">ABM</span><span class="tag">Sponsored</span><span class="tag">InMail</span></div><div class="skbar"><div class="skbf" data-width="88"></div></div></div>
+      <div class="skc rv d1"><div class="skico">⚡</div><div class="skname">Adobe AEM &amp; CMS</div><div class="skdesc">Content operations, DAM, metadata optimisation and publishing workflow management.</div><div class="sktags"><span class="tag">AEM</span><span class="tag">CMS</span><span class="tag">DAM</span><span class="tag">Publishing</span></div><div class="skbar"><div class="skbf" data-width="85"></div></div></div>
+      <div class="skc rv d2"><div class="skico">📊</div><div class="skname">Analytics &amp; BI</div><div class="skdesc">GA4, Adobe Analytics, Power BI — building dashboards and actionable campaign insights.</div><div class="sktags"><span class="tag">GA4</span><span class="tag">Power BI</span><span class="tag">Adobe Analytics</span><span class="tag">GTM</span></div><div class="skbar"><div class="skbf" data-width="92"></div></div></div>
+      <div class="skc rv d3"><div class="skico">🔍</div><div class="skname">SEO &amp; Content</div><div class="skdesc">On-page SEO, keyword strategy, ad copywriting and content strategies that convert.</div><div class="sktags"><span class="tag">SEO</span><span class="tag">Copywriting</span><span class="tag">Strategy</span><span class="tag">Canva</span></div><div class="skbar"><div class="skbf" data-width="83"></div></div></div>
+    </div>
+  </div>
+</section>
+<div class="dvdr"></div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="si">
+    <div class="rv" style="margin-bottom:48px">
+      <div class="slabel">Case Studies</div>
+      <h2 class="sh">Featured Projects</h2>
+      <p style="color:var(--mt);margin-top:11px;font-size:.87rem">Real campaigns. Real numbers. Real impact.</p>
+    </div>
+    <div class="pg">
+      <div class="pcard rv d1"><div class="ptop"><div><div class="pplat">Google Ads</div><div class="ptitle">Wrist Assured Gloves — eCommerce USA</div></div><span class="pbadge">32x ROAS</span></div><div class="pbody"><p class="pdesc">Rebuilt the entire campaign from scratch — Shopping feed segmentation, conversion tracking fix, tiered Smart Bidding. Maintained 32x ROAS consistently over 9 months with $0.69 avg CPC.</p><div class="pmets"><div class="pmet"><div class="pmn">$87,954</div><div class="pml">Revenue</div></div><div class="pmet"><div class="pmn">32x</div><div class="pml">ROAS</div></div><div class="pmet"><div class="pmn">1,274</div><div class="pml">Orders</div></div><div class="pmet"><div class="pmn">$0.69</div><div class="pml">Avg CPC</div></div></div></div></div>
+      <div class="pcard rv d2"><div class="ptop"><div><div class="pplat">Meta Ads</div><div class="ptitle">Full-Funnel Lead Gen — Real Estate</div></div><span class="pbadge">–55% CPL</span></div><div class="pbody"><p class="pdesc">Full-funnel Facebook &amp; Instagram campaign. Lookalike audiences drove 58% of leads. Shifted to Reels cutting CPM 42%. Managed $50K+/month, improved ROAS by 40% at Jovial Digital.</p><div class="pmets"><div class="pmet"><div class="pmn">3,840</div><div class="pml">Leads</div></div><div class="pmet"><div class="pmn">$3.91</div><div class="pml">CPL</div></div><div class="pmet"><div class="pmn">4.8M</div><div class="pml">Impressions</div></div><div class="pmet"><div class="pmn">2.97%</div><div class="pml">CTR</div></div></div></div></div>
+      <div class="pcard rv d1"><div class="ptop"><div><div class="pplat">LinkedIn Ads</div><div class="ptitle">Godrej Properties — B2B Lead Gen</div></div><span class="pbadge">+28% MQLs</span></div><div class="pbody"><p class="pdesc">LinkedIn strategy combining brand awareness, thought leadership video and lead gen forms targeting C-suite decision makers. Lead gen forms converted 3.2x better than landing pages.</p><div class="pmets"><div class="pmet"><div class="pmn">684</div><div class="pml">MQLs</div></div><div class="pmet"><div class="pmn">$11.40</div><div class="pml">CPL</div></div><div class="pmet"><div class="pmn">1.24M</div><div class="pml">Impressions</div></div><div class="pmet"><div class="pmn">1.5%</div><div class="pml">CTR</div></div></div></div></div>
+      <div class="pcard rv d2"><div class="ptop"><div><div class="pplat">DV360 + Programmatic</div><div class="ptitle">BMW India — Full-Funnel Programmatic</div></div><span class="pbadge">+8.4% Brand Lift</span></div><div class="pbody"><p class="pdesc">Full-funnel DV360 strategy with YouTube TrueView, Display, CTV and programmatic. PMP deals cut eCPM 31%. First-party CRM audiences drove 3.8x conversion vs affinity targeting.</p><div class="pmets"><div class="pmet"><div class="pmn">1.12B</div><div class="pml">Impressions</div></div><div class="pmet"><div class="pmn">12,480</div><div class="pml">Conversions</div></div><div class="pmet"><div class="pmn">$0.21</div><div class="pml">Avg CPM</div></div><div class="pmet"><div class="pmn">89%</div><div class="pml">Viewability</div></div></div></div></div>
+    </div>
+  </div>
+</section>
+<div class="dvdr"></div>
+
+<!-- CLIENTS -->
+<section id="clients">
+  <div class="si">
+    <div class="rv" style="text-align:center">
+      <div class="slabel" style="justify-content:center"><span style="display:none"></span>Trusted By</div>
+      <h2 class="sh">Brands I've Worked With</h2>
+    </div>
+  </div>
+  <div class="mwrap"><div class="mtrack">
+    <div class="cchip"><span class="ccdot"></span>BMW India</div><div class="cchip"><span class="ccdot"></span>H&amp;M</div><div class="cchip"><span class="ccdot"></span>Godrej Properties</div><div class="cchip"><span class="ccdot"></span>Wrist Assured Gloves</div><div class="cchip"><span class="ccdot"></span>IndiaMART</div><div class="cchip"><span class="ccdot"></span>Hira Sweets</div><div class="cchip"><span class="ccdot"></span>Dance Academy USA</div><div class="cchip"><span class="ccdot"></span>Rosel School</div><div class="cchip"><span class="ccdot"></span>AL Horn Law</div><div class="cchip"><span class="ccdot"></span>Mosaic Roofing</div><div class="cchip"><span class="ccdot"></span>K2 Technologies</div>
+    <div class="cchip"><span class="ccdot"></span>BMW India</div><div class="cchip"><span class="ccdot"></span>H&amp;M</div><div class="cchip"><span class="ccdot"></span>Godrej Properties</div><div class="cchip"><span class="ccdot"></span>Wrist Assured Gloves</div><div class="cchip"><span class="ccdot"></span>IndiaMART</div><div class="cchip"><span class="ccdot"></span>Hira Sweets</div><div class="cchip"><span class="ccdot"></span>Dance Academy USA</div><div class="cchip"><span class="ccdot"></span>Rosel School</div><div class="cchip"><span class="ccdot"></span>AL Horn Law</div><div class="cchip"><span class="ccdot"></span>Mosaic Roofing</div><div class="cchip"><span class="ccdot"></span>K2 Technologies</div>
+  </div></div>
+</section>
+<div class="dvdr"></div>
+
+<!-- MARKETS -->
+<section id="markets">
+  <div class="si">
+    <div class="rv" style="margin-bottom:0">
+      <div class="slabel">Global Reach</div>
+      <h2 class="sh">Markets I Actively Serve</h2>
+      <p style="color:var(--mt);margin-top:11px;font-size:.87rem">Based in India. Trusted by clients in the Middle East, Asia-Pacific, Europe &amp; beyond.</p>
+    </div>
+    <div class="mktg">
+      <div class="mktc rv d1"><div class="mktfl">🇶🇦</div><div class="mktn">Qatar</div><div class="mktd">Doha · Real Estate · Retail</div></div>
+      <div class="mktc rv d2"><div class="mktfl">🇦🇪</div><div class="mktn">Dubai / UAE</div><div class="mktd">eCommerce · Finance · Tourism</div></div>
+      <div class="mktc rv d3"><div class="mktfl">🇸🇦</div><div class="mktn">Saudi Arabia</div><div class="mktd">B2B · Retail · Vision 2030</div></div>
+      <div class="mktc rv d4"><div class="mktfl">🇸🇬</div><div class="mktn">Singapore</div><div class="mktd">SaaS · Finance · Tech</div></div>
+      <div class="mktc rv d1"><div class="mktfl">🇦🇺</div><div class="mktn">Australia</div><div class="mktd">eCommerce · Services · SMBs</div></div>
+      <div class="mktc rv d2"><div class="mktfl">🇨🇦</div><div class="mktn">Canada</div><div class="mktd">Lead Gen · B2B · Local Biz</div></div>
+      <div class="mktc rv d3"><div class="mktfl">🇳🇿</div><div class="mktn">New Zealand</div><div class="mktd">SMBs · Tourism · Retail</div></div>
+      <div class="mktc rv d4"><div class="mktfl">🇵🇱</div><div class="mktn">Poland</div><div class="mktd">eCommerce · Tech · B2B</div></div>
+    </div>
+  </div>
+</section>
+<div class="dvdr"></div>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="si">
+    <div class="rv" style="margin-bottom:0">
+      <div class="slabel">How I Work</div>
+      <h2 class="sh">My Process, Start to Finish</h2>
+    </div>
+    <div class="psteps">
+      <div class="step rv d1"><div class="stepn">01</div><div class="stept">Discovery Call</div><div class="stepd">I learn your business, goals, setup and what success looks like for you.</div></div>
+      <div class="step rv d2"><div class="stepn">02</div><div class="stept">Audit &amp; Plan</div><div class="stepd">Full account audit + written media strategy and budget allocation before spending.</div></div>
+      <div class="step rv d3"><div class="stepn">03</div><div class="stept">Build &amp; Launch</div><div class="stepd">Campaigns built properly — structure, copy, tracking, audiences — then launched.</div></div>
+      <div class="step rv d4"><div class="stepn">04</div><div class="stept">Optimise Weekly</div><div class="stepd">Bids, audiences, creatives — I review everything weekly and cut what isn't working.</div></div>
+      <div class="step rv d5"><div class="stepn">05</div><div class="stept">Report &amp; Scale</div><div class="stepd">Clear weekly reports. When something works, we scale it hard and fast.</div></div>
+    </div>
+  </div>
+</section>
+<div class="dvdr"></div>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="si">
+    <div class="rv" style="text-align:center;margin-bottom:0">
+      <div class="slabel" style="justify-content:center"><span style="display:none"></span>Social Proof</div>
+      <h2 class="sh">Clients, In Their Own Words</h2>
+    </div>
+    <div class="tg">
+      <div class="tc rv d1"><div class="tst">★★★★★</div><div class="tq">"</div><p class="ttxt">The Google Ads numbers speak for themselves — but what really impressed us was how Rahul communicated throughout. Always clear, always proactive, never had to chase for updates.</p><div class="tau"><div class="tav">WG</div><div><div class="tan">Wrist Assured Gloves</div><div class="tar">eCommerce — USA</div></div></div></div>
+      <div class="tc rv d2"><div class="tst">★★★★★</div><div class="tq">"</div><p class="ttxt">Our Meta campaigns were bleeding money. Within 30 days of Rahul restructuring everything, our CPL dropped by over 55%. I wish we'd brought him in sooner.</p><div class="tau"><div class="tav">SR</div><div><div class="tan">Sneha R.</div><div class="tar">Marketing Head, Real Estate</div></div></div></div>
+      <div class="tc rv d3"><div class="tst">★★★★★</div><div class="tq">"</div><p class="ttxt">Most consultants know one platform well. Rahul genuinely understands the full paid media ecosystem. The LinkedIn pipeline he built for us was something our in-house team could never crack.</p><div class="tau"><div class="tav">VP</div><div><div class="tan">Vikram P.</div><div class="tar">CEO, SaaS Startup</div></div></div></div>
+    </div>
+  </div>
+</section>
+<div class="dvdr"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="si">
+    <div class="rv">
+      <div class="slabel">Let's Work Together</div>
+      <h2 class="sh">Got a Project In Mind?</h2>
+    </div>
+    <div class="cg">
+      <div class="rvl">
+        <div class="ci">
+          <h3>Available for Freelance &amp; Retainer</h3>
+          <p>Whether you need someone to take over campaigns, run a full audit, or build from scratch — drop me a message and I'll reply within 24 hours. Actively working with clients in the Middle East, APAC, Europe &amp; Americas.</p>
+        </div>
+        <div class="clinks">
+          <a href="mailto:rajgupta55001@gmail.com" class="clink"><div class="clico">✉️</div><div><div class="cllbl">Email</div><div class="clval">rajgupta55001@gmail.com</div></div></a>
+          <a href="https://www.linkedin.com/in/rahul-gupta-9034a422b" class="clink" target="_blank"><div class="clico">💼</div><div><div class="cllbl">LinkedIn</div><div class="clval">rahul-gupta-9034a422b</div></div></a>
+          <a href="https://wa.me/918756424538" class="clink" target="_blank"><div class="clico">📱</div><div><div class="cllbl">WhatsApp / Call</div><div class="clval">+91 87564 24538</div></div></a>
+        </div>
+        <div class="cperks">
+          <div class="perk"><span class="pg">✓</span>Free strategy call — no commitment</div>
+          <div class="perk"><span class="pg">✓</span>Reply guaranteed within 24 hours</div>
+          <div class="perk"><span class="pg">✓</span>Middle East, APAC, Europe, Americas</div>
+          <div class="perk"><span class="pg">✓</span>Freelance &amp; long-term retainer available</div>
+          <div class="perk"><span class="pg">✓</span>Transparent reporting &amp; weekly updates</div>
+        </div>
+      </div>
+      <div class="cf rvr">
+        <div class="ft">Send Me a Message</div>
+        <div class="fsb">I'll respond within 24 hours — usually much faster.</div>
+        <div id="fsuc" class="fsuc">✅ Message sent! I'll be in touch within 24 hours.</div>
+        <div id="cform">
+          <div class="frow">
+            <div class="fg"><label>Your Name *</label><input type="text" id="fn" placeholder="John Smith" required/></div>
+            <div class="fg"><label>Email *</label><input type="email" id="fe" placeholder="you@company.com" required/></div>
+          </div>
+          <div class="frow">
+            <div class="fg"><label>Company / Website</label><input type="text" id="fc" placeholder="yourcompany.com"/></div>
+            <div class="fg"><label>Monthly Budget</label><select id="fb"><option value="">Select range</option><option>Under $1,000/mo</option><option>$1,000–$5,000/mo</option><option>$5,000–$20,000/mo</option><option>$20,000–$100,000/mo</option><option>$100,000+/mo</option></select></div>
+          </div>
+          <div class="frow">
+            <div class="fg"><label>Country / Region</label><select id="fcc"><option value="">Select</option><option>Qatar</option><option>UAE / Dubai</option><option>Saudi Arabia</option><option>Singapore</option><option>Australia</option><option>Canada</option><option>New Zealand</option><option>Poland</option><option>India</option><option>Other</option></select></div>
+            <div class="fg"><label>Service Needed</label><select id="fsv"><option value="">Select</option><option>Paid Media / PPC</option><option>SEO</option><option>AEM / Content Ops</option><option>Analytics / BI</option><option>Full Digital Strategy</option><option>Account Audit</option></select></div>
+          </div>
+          <div class="fg"><label>Platforms</label>
+            <div class="pchk">
+              <label class="chi"><input type="checkbox"/><span class="chbox"></span><span class="chlbl">Google Ads</span></label>
+              <label class="chi"><input type="checkbox"/><span class="chbox"></span><span class="chlbl">Meta Ads</span></label>
+              <label class="chi"><input type="checkbox"/><span class="chbox"></span><span class="chlbl">LinkedIn Ads</span></label>
+              <label class="chi"><input type="checkbox"/><span class="chbox"></span><span class="chlbl">Amazon Ads</span></label>
+              <label class="chi"><input type="checkbox"/><span class="chbox"></span><span class="chlbl">TikTok Ads</span></label>
+              <label class="chi"><input type="checkbox"/><span class="chbox"></span><span class="chlbl">DV360 / AEM</span></label>
             </div>
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label">Company / Website</label>
-              <input type="text" name="company" class="form-input" placeholder="yourcompany.com">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Monthly Ad Budget</label>
-              <select name="budget" class="form-input form-select">
-                <option value="" disabled selected>Select range</option>
-                <option>Under $1,000/month</option>
-                <option>$1,000 – $5,000/month</option>
-                <option>$5,000 – $20,000/month</option>
-                <option>$20,000 – $100,000/month</option>
-                <option>$100,000+/month</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Which platforms do you need help with?</label>
-            <div class="form-checkboxes">
-              <label class="form-checkbox"><input type="checkbox" name="platform" value="Google Ads"> Google Ads</label>
-              <label class="form-checkbox"><input type="checkbox" name="platform" value="Meta Ads"> Meta Ads</label>
-              <label class="form-checkbox"><input type="checkbox" name="platform" value="LinkedIn Ads"> LinkedIn Ads</label>
-              <label class="form-checkbox"><input type="checkbox" name="platform" value="Amazon Ads"> Amazon Ads</label>
-              <label class="form-checkbox"><input type="checkbox" name="platform" value="TikTok Ads"> TikTok Ads</label>
-              <label class="form-checkbox"><input type="checkbox" name="platform" value="DV360/Programmatic"> DV360</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Tell me about your project *</label>
-            <textarea name="message" class="form-input form-textarea" placeholder="What are you trying to achieve? What's not working right now? Any context helps..." required></textarea>
-          </div>
-          <button type="submit" class="form-submit" id="submitBtn">
-            <span id="submitText">Send Message →</span>
-          </button>
-          <div id="formSuccess" class="form-success" style="display:none">
-            ✅ Message sent! I'll get back to you within 24 hours.
-          </div>
-          <div id="formError" class="form-error" style="display:none">
-            ❌ Something went wrong. Please email me directly.
-          </div>
-        </form>
+          <div class="fg"><label>About Your Project *</label><textarea id="fm" placeholder="Describe your goals, challenges, and what you want to achieve…" required></textarea></div>
+          <button class="fsub" id="fsbtn" onclick="doSubmit()">Send Message →</button>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ FOOTER ══ -->
+<!-- FOOTER -->
 <footer>
-  <p class="footer-copy">© 2026 Rahul Gupta — Paid Media Consultant</p>
-  <div class="footer-links">
-    <a href="mailto:rajgupta55001@gmail.com">rajgupta55001@gmail.com</a>
-    <a href="https://linkedin.com/in/rahul-gupta-9034a422b" target="_blank">LinkedIn</a>
-    <a href="https://wa.me/918756424538" target="_blank">WhatsApp</a>
+  <div class="fleft">© 2026 <strong>Rahul Gupta</strong> — Paid Media &amp; Digital Marketing Consultant &nbsp;·&nbsp; Kanpur, India</div>
+  <div class="fright">
+    <a href="mailto:rajgupta55001@gmail.com" class="flink">Email</a>
+    <a href="https://www.linkedin.com/in/rahul-gupta-9034a422b" class="flink" target="_blank">LinkedIn</a>
+    <a href="https://wa.me/918756424538" class="flink" target="_blank">WhatsApp</a>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-document.addEventListener('DOMContentLoaded', function(){
-  var form = document.getElementById('contactForm');
-  if(!form) return;
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+     AI CHATBOT WIDGET
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<button class="chat-btn" id="chatBtn" onclick="toggleChat()">
+  <svg class="ico-chat" viewBox="0 0 24 24" width="26" height="26" fill="white"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+  <svg class="ico-close" viewBox="0 0 24 24" width="22" height="22" fill="white"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+  <span class="chat-notif" id="cnotif"></span>
+</button>
 
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
+<div class="chat-win" id="chatWin">
+  <div class="ch">
+    <div class="chav">🤖</div>
+    <div><div class="chn">Rahul's AI Assistant</div><div class="chs">Online now</div></div>
+    <button class="chcls" onclick="toggleChat()">✕</button>
+  </div>
+  <div class="msgs" id="msgBox"></div>
+  <div class="qrow" id="qrow">
+    <button class="qbtn" onclick="qSend('What services do you offer?')">Services</button>
+    <button class="qbtn" onclick="qSend('What is your pricing?')">Pricing</button>
+    <button class="qbtn" onclick="qSend('Which countries do you serve?')">Countries</button>
+    <button class="qbtn" onclick="qSend('How do I get started?')">Get Started</button>
+    <button class="qbtn" onclick="qSend('Tell me about your best results')">Top Results</button>
+  </div>
+  <div class="cinput-row">
+    <textarea class="cinput" id="cinp" placeholder="Ask me anything…" rows="1" onkeydown="ckd(event)"></textarea>
+    <button class="csend" onclick="doSend()"><svg viewBox="0 0 24 24" width="16" height="16" fill="white"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
+  </div>
+</div>
 
-    var btn = document.getElementById('submitBtn');
-    var txt = document.getElementById('submitText');
-    var ok  = document.getElementById('formSuccess');
-    var err = document.getElementById('formError');
-
-    ok.style.display  = 'none';
-    err.style.display = 'none';
-    btn.disabled      = true;
-    txt.textContent   = 'Sending...';
-
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://formspree.io/f/xyknnwpk', true);
-    xhr.setRequestHeader('Accept', 'application/json');
-
-    xhr.onreadystatechange = function(){
-      if(xhr.readyState !== 4) return;
-      if(xhr.status === 200){
-        ok.style.display  = 'block';
-        err.style.display = 'none';
-        form.reset();
-        txt.textContent = 'Sent ✓';
-      } else {
-        err.style.display = 'block';
-        btn.disabled      = false;
-        txt.textContent   = 'Send Message →';
-        console.error('Formspree error:', xhr.status, xhr.responseText);
-      }
-    };
-
-    xhr.onerror = function(){
-      err.style.display = 'block';
-      btn.disabled      = false;
-      txt.textContent   = 'Send Message →';
-    };
-
-    xhr.send(new FormData(form));
-  });
+<script>
+// ── CURSOR ──
+const cur=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+document.addEventListener('mousemove',e=>{
+  cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';
+  setTimeout(()=>{ring.style.left=e.clientX+'px';ring.style.top=e.clientY+'px';},60);
 });
-</script><script>
-const form = document.getElementById('contactForm');
-if(form){
-  form.addEventListener('submit', async function(e){
-    e.preventDefault();
-    const btn = document.getEl
+document.querySelectorAll('a,button,.skc,.pcard,.mktc,.tc').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='16px';cur.style.height='16px';ring.style.width='50px';ring.style.height='50px';});
+  el.addEventListener('mouseleave',()=>{cur.style.width='10px';cur.style.height='10px';ring.style.width='36px';ring.style.height='36px';});
+});
+
+// ── NAV ──
+window.addEventListener('scroll',()=>document.getElementById('nb').classList.toggle('scrolled',scrollY>50));
+
+// ── TYPING ──
+const phrases=['Real Revenue.','Measurable Results.','Consistent Growth.','Maximum ROAS.','Your Success.'];
+let pi=0,ci=0,del=false;
+const tel=document.getElementById('typed');
+function type(){
+  const p=phrases[pi];
+  if(!del){tel.textContent=p.slice(0,ci+1);ci++;if(ci===p.length){del=true;setTimeout(type,1900);return;}}
+  else{tel.textContent=p.slice(0,ci-1);ci--;if(ci===0){del=false;pi=(pi+1)%phrases.length;}}
+  setTimeout(type,del?50:88);
+}
+setTimeout(type,2200);
+
+// ── REVEAL ──
+const rObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('vis');
+      e.target.querySelectorAll('.skbf').forEach(b=>b.style.width=b.dataset.width+'%');
+      e.target.querySelectorAll('[data-count]').forEach(c=>countUp(c));
+    }
+  });
+},{threshold:.13});
+document.querySelectorAll('.rv,.rvl,.rvr,.skc').forEach(el=>rObs.observe(el));
+
+// ── COUNT UP ──
+function countUp(el){
+  if(el.dataset.done)return;el.dataset.done='1';
+  const t=parseInt(el.dataset.count),pr=el.dataset.prefix||'',sf=el.dataset.suffix||'';
+  let c=0;const inc=t/60;
+  const tmr=setInterval(()=>{c+=inc;if(c>=t){c=t;clearInterval(tmr);}el.textContent=pr+Math.floor(c)+sf;},20);
+}
+window.addEventListener('load',()=>document.querySelectorAll('#hero [data-count]').forEach(c=>countUp(c)));
+
+// ── FORM ──
+function doSubmit(){
+  if(!document.getElementById('fn').value.trim()||!document.getElementById('fe').value.trim()||!document.getElementById('fm').value.trim()){alert('Please fill in required fields.');return;}
+  const b=document.getElementById('fsbtn');b.textContent='Sending…';b.style.opacity='.7';b.style.pointerEvents='none';
+  setTimeout(()=>{document.getElementById('cform').style.display='none';document.getElementById('fsuc').classList.add('show');},1200);
+}
+
+// ══════════════════════════════════════
+// AI CHATBOT
+// ══════════════════════════════════════
+let isOpen=false,hist=[];
+
+const SYS=`You are Rahul Gupta's friendly AI assistant on his portfolio website. Your goal is to help visitors learn about Rahul and encourage them to hire him.
+
+ABOUT RAHUL GUPTA:
+- Full Name: Rahul Gupta
+- Location: Kanpur, Uttar Pradesh, India
+- Email: rajgupta55001@gmail.com
+- Phone/WhatsApp: +91 8756424538
+- LinkedIn: https://www.linkedin.com/in/rahul-gupta-9034a422b
+- Role: Paid Media & Digital Marketing Consultant (Freelancer + open to retainer)
+- Experience: 4+ years
+
+WORK HISTORY:
+1. Assistant Manager – Digital Marketing | K2 Technologies LLC (Sep 2024–Present): Manages Google, Meta, LinkedIn campaigns + AEM content operations, Power BI reporting, leads a small team.
+2. Sr. Digital Marketing Expert & Campaign Manager | Jovial Digital Services (Aug 2023–Jun 2024): Managed $50K+/month PPC, improved ROAS by 40%, A/B testing, GA4, Power BI.
+3. Sr. Executive – Digital Marketing | IndiaMART InterMESH Ltd. (Oct 2022–Jun 2023): B2B PPC & SEO, GA4, Tag Manager.
+4. Digital Marketing Executive | Digital Rubix (Aug 2019–Aug 2022): SEO, PPC, social campaigns for multiple clients.
+
+SKILLS:
+- Paid Media: Google Ads (Search, Shopping, PMax, Display, YouTube), Meta Ads, LinkedIn Ads, Amazon Ads, TikTok Ads, DV360/Programmatic
+- CMS/Content: Adobe Experience Manager (AEM), CMS, DAM, metadata optimization
+- Analytics: GA4, Adobe Analytics, Power BI, Google Tag Manager
+- Other: SEO, Ad Copywriting, Canva, Workflow Optimization, A/B Testing
+
+CERTIFICATIONS: Google Ads Search & Display, Meta Blueprint, Adobe AEM, Power BI, GA4 Analytics
+
+EDUCATION: BCA – CSJM Kanpur University (2022) | Data Science & AI – Boston Institute of Analytics (2024)
+
+KEY RESULTS:
+- $25M+ total ad spend managed
+- $60M+ client revenue generated
+- 32x ROAS for Wrist Assured Gloves USA ($87,954 from $2,710 spend, 1,274 orders)
+- 40% ROAS improvement at Jovial Digital ($50K+/month budgets)
+- 3,840 leads at $3.91 CPL on Meta
+- 684 B2B MQLs for Godrej Properties at $11.40 CPL on LinkedIn
+- 1.12B impressions, +8.4% brand lift for BMW India via DV360
+- 9.2M video views, 6,840 app installs ($1.53 CPI) on TikTok
+
+TARGET MARKETS: Qatar, UAE/Dubai, Saudi Arabia, Singapore, Australia, Canada, New Zealand, Poland (plus India and globally)
+
+SERVICES: Paid Media/PPC management, Campaign audits, GA4/Power BI setup, AEM/CMS content ops, SEO, Full digital strategy
+
+HOW TO HIRE: Book a free strategy call — WhatsApp +91 8756424538 | Email rajgupta55001@gmail.com | Or fill the contact form on this page.
+
+TONE: Be warm, helpful, and encouraging. Keep responses short (2-4 sentences). Use HTML links for contact info. When visitors seem interested, proactively suggest booking a free call. Never invent facts.`;
+
+function toggleChat(){
+  isOpen=!isOpen;
+  document.getElementById('chatWin').classList.toggle('open',isOpen);
+  document.getElementById('chatBtn').classList.toggle('open',isOpen);
+  document.getElementById('cnotif').style.display='none';
+  if(isOpen&&hist.length===0){
+    setTimeout(()=>addBot("👋 Hey! I'm Rahul's AI assistant. I can answer questions about his services, experience, results, or how to get in touch. What would you like to know?"),350);
+  }
+}
+
+function addBot(txt){
+  const box=document.getElementById('msgBox');
+  const d=document.createElement('div');d.className='msg bot';
+  d.innerHTML=`<div class="mav">R</div><div class="mb">${txt}</div>`;
+  box.appendChild(d);box.scrollTop=box.scrollHeight;
+}
+
+function addUser(txt){
+  const box=document.getElementById('msgBox');
+  const d=document.createElement('div');d.className='msg user';
+  d.innerHTML=`<div class="mb">${txt}</div>`;
+  box.appendChild(d);box.scrollTop=box.scrollHeight;
+}
+
+function showDots(){
+  const box=document.getElementById('msgBox');
+  const d=document.createElement('div');d.className='msg bot';d.id='tdots';
+  d.innerHTML=`<div class="mav">R</div><div class="tdots"><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div></div>`;
+  box.appendChild(d);box.scrollTop=box.scrollHeight;
+}
+function hideDots(){const t=document.getElementById('tdots');if(t)t.remove();}
+
+async function doSend(){
+  const inp=document.getElementById('cinp');
+  const txt=inp.value.trim();if(!txt)return;
+  inp.value='';inp.style.height='auto';
+  addUser(txt);
+  document.getElementById('qrow').style.display='none';
+  hist.push({role:'user',content:txt});
+  showDots();
+  try{
+    const r=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,system:SYS,messages:hist.slice(-12)})
+    });
+    const data=await r.json();
+    hideDots();
+    const reply=(data.content&&data.content[0]&&data.content[0].text)||fallback(txt);
+    hist.push({role:'assistant',content:reply});
+    addBot(reply);
+  }catch{
+    hideDots();
+    const f=fallback(txt);
+    hist.push({role:'assistant',content:f});
+    addBot(f);
+  }
+}
+
+function fallback(q){
+  const ql=q.toLowerCase();
+  if(ql.includes('price')||ql.includes('cost')||ql.includes('rate'))
+    return "Rates vary by scope. Best way to get a quote is a quick free call! 📱 <a href='https://wa.me/918756424538' target='_blank'>WhatsApp +91 8756424538</a> or ✉️ <a href='mailto:rajgupta55001@gmail.com'>rajgupta55001@gmail.com</a>";
+  if(ql.includes('country')||ql.includes('where')||ql.includes('location'))
+    return "Rahul works globally — especially 🇶🇦 Qatar, 🇦🇪 UAE, 🇸🇦 Saudi Arabia, 🇸🇬 Singapore, 🇦🇺 Australia, 🇨🇦 Canada, 🇳🇿 New Zealand &amp; 🇵🇱 Poland!";
+  if(ql.includes('result')||ql.includes('roas')||ql.includes('success'))
+    return "Top result: 32x ROAS for a US eCommerce brand, +40% ROAS improvement managing $50K+/month, 3,840 leads at $3.91 CPL on Meta, and 1.12B impressions for BMW India. Want details?";
+  if(ql.includes('contact')||ql.includes('hire')||ql.includes('start'))
+    return "Let's connect! 🚀 Book a free strategy call — no commitment: 📱 <a href='https://wa.me/918756424538' target='_blank'>WhatsApp +91 8756424538</a> | ✉️ <a href='mailto:rajgupta55001@gmail.com'>rajgupta55001@gmail.com</a>";
+  return "Great question! Reach Rahul directly for the best answer: ✉️ <a href='mailto:rajgupta55001@gmail.com'>rajgupta55001@gmail.com</a> | 📱 <a href='https://wa.me/918756424538' target='_blank'>WhatsApp +91 8756424538</a>";
+}
+
+function qSend(t){document.getElementById('cinp').value=t;doSend();}
+function ckd(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();doSend();}}
+
+document.getElementById('cinp').addEventListener('input',function(){
+  this.style.height='auto';this.style.height=Math.min(this.scrollHeight,100)+'px';
+});
+
+// Show notification dot after 3.5s
+setTimeout(()=>{if(!isOpen)document.getElementById('cnotif').style.display='block';},3500);
+</script>
+</body>
+</html>
