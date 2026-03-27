@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Rahul Gupta — Paid Media & PPC Consultant</title>
+<meta name="description" content="Rahul Gupta — Paid Media & PPC Consultant with 4+ years experience. Google Ads, Meta Ads, LinkedIn, Amazon. Serving Qatar, UAE, Saudi Arabia, Singapore, Australia, Canada & more."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<style>
+:root{
+  --bg:#f8f6f2;--bg2:#f0ede6;--sf:#ffffff;--sf2:#faf8f5;
+  --bd:rgba(60,40,10,.1);--bd2:rgba(60,40,10,.18);
+  --ac:#d4500a;--ac2:#f07830;--gold:#c8920a;
+  --tx:#1c1612;--mt:#5a5248;--gn:#16a34a;
+  --sh:0 2px 20px rgba(60,40,10,.08);
+  --sh2:0 8px 40px rgba(60,40,10,.13);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:'Inter',sans-serif;font-size:16px;line-height:1.65;overflow-x:hidden}
+
+/* ═══════════ ANIMATED BACKGROUND ═══════════ */
+#bg-wrap{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);animation:orbf ease-in-out infinite}
+.o1{width:700px;height:700px;background:radial-gradient(circle,rgba(255,165,60,.38) 0%,rgba(255,120,30,.18) 60%,transparent 100%);top:-200px;right:-150px;animation-duration:13s;opacity:.7}
+.o2{width:520px;height:520px;background:radial-gradient(circle,rgba(255,210,100,.42) 0%,rgba(255,180,50,.2) 60%,transparent 100%);bottom:-120px;left:-140px;animation-duration:10s;animation-delay:-4s;opacity:.65}
+.o3{width:380px;height:380px;background:radial-gradient(circle,rgba(255,190,80,.3) 0%,rgba(240,140,40,.15) 60%,transparent 100%);top:45%;left:30%;animation-duration:16s;animation-delay:-7s;opacity:.5}
+.o4{width:280px;height:280px;background:radial-gradient(circle,rgba(255,240,200,.45) 0%,rgba(255,200,100,.22) 60%,transparent 100%);top:20%;right:25%;animation-duration:11s;animation-delay:-2s;opacity:.6}
+@keyframes orbf{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(25px,-35px) scale(1.07)}66%{transform:translate(-18px,25px) scale(.94)}}
+.bgrid{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(160,80,0,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(160,80,0,.04) 1px,transparent 1px);background-size:65px 65px}
+.spark{position:absolute;width:3px;height:3px;border-radius:50%;background:var(--ac);opacity:0;animation:sparkf linear infinite}
+@keyframes sparkf{0%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:.35}90%{opacity:.25}100%{transform:translateY(-80px) scale(1.2);opacity:0}}
+
+/* CURSOR */
+.cursor{width:10px;height:10px;background:var(--ac);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:.09s}
+.cursor-ring{width:36px;height:36px;border:1.5px solid var(--ac);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:.17s ease;opacity:.45}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:18px 60px;border-bottom:1px solid rgba(160,80,0,.1);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);background:rgba(248,246,242,.92);transition:padding .3s;box-shadow:0 1px 20px rgba(60,40,10,.06)}
+nav.scrolled{padding:11px 60px}
+.nlogo{font-family:'Playfair Display',serif;font-weight:900;font-size:1.2rem;letter-spacing:-.01em;text-decoration:none;color:var(--tx)}
+.nlogo span{color:var(--ac)}
+.nlinks{display:flex;gap:28px;list-style:none}
+.nlinks a{color:var(--mt);text-decoration:none;font-size:.79rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;transition:color .2s;position:relative}
+.nlinks a::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:2px;background:var(--ac);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nlinks a:hover{color:var(--tx)}.nlinks a:hover::after{transform:scaleX(1)}
+.ncta{background:var(--ac);color:#fff;padding:9px 20px;border-radius:6px;text-decoration:none;font-size:.81rem;font-weight:700;transition:background .2s,transform .2s,box-shadow .2s}
+.ncta:hover{background:var(--ac2);transform:translateY(-1px);box-shadow:0 6px 20px rgba(212,80,10,.3)}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:140px 60px 80px;position:relative;overflow:hidden}
+.hglow{position:absolute;width:900px;height:900px;background:radial-gradient(circle,rgba(255,150,60,.2) 0%,transparent 65%);top:-250px;right:-200px;pointer-events:none;animation:gp 6s ease-in-out infinite}
+.hglow2{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(255,210,100,.18) 0%,transparent 65%);bottom:-160px;left:-120px;pointer-events:none;animation:gp 8s ease-in-out infinite reverse}
+@keyframes gp{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+.hbadge{display:inline-flex;align-items:center;gap:8px;border:1.5px solid rgba(22,163,74,.3);background:rgba(22,163,74,.09);padding:7px 17px;border-radius:100px;font-size:.74rem;color:#15803d;font-weight:700;margin-bottom:26px;position:relative;z-index:1;opacity:0;animation:fu .6s .2s ease forwards;letter-spacing:.05em;text-transform:uppercase;box-shadow:0 2px 12px rgba(22,163,74,.1)}
+.dblk{width:7px;height:7px;background:#16a34a;border-radius:50%;animation:blk 1.5s infinite}
+@keyframes blk{0%,100%{opacity:1}50%{opacity:.2}}
+.hname{font-family:'Playfair Display',serif;font-size:clamp(3.6rem,9vw,8.5rem);font-weight:900;line-height:.93;letter-spacing:-.02em;position:relative;z-index:1;opacity:0;animation:fu .9s .35s ease forwards}
+.hname .l1{display:block;color:var(--tx)}
+.hname .l2{display:block;color:var(--ac);position:relative}
+.hname .l2::after{content:'';position:absolute;bottom:6px;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--ac),var(--ac2),transparent);border-radius:2px;opacity:.6}
+.hsub{margin-top:22px;font-size:clamp(.88rem,1.7vw,1.05rem);color:var(--mt);position:relative;z-index:1;opacity:0;animation:fu .8s .55s ease forwards;font-weight:500}
+.hsub strong{color:var(--tx);font-weight:700}
+.htyp{margin-top:28px;font-family:'Playfair Display',serif;font-size:clamp(1.25rem,2.8vw,1.9rem);font-weight:700;line-height:1.3;max-width:680px;position:relative;z-index:1;opacity:0;animation:fu .8s .7s ease forwards;color:var(--tx)}
+.htyp em{color:var(--ac);font-style:italic}
+#typed{border-right:3px solid var(--ac);padding-right:4px;animation:cblink .75s infinite}
+@keyframes cblink{0%,100%{border-color:var(--ac)}50%{border-color:transparent}}
+.hgeo{display:flex;flex-wrap:wrap;gap:7px;margin-top:26px;position:relative;z-index:1;opacity:0;animation:fu .8s .85s ease forwards}
+.gflag{display:flex;align-items:center;gap:5px;background:var(--sf);border:1px solid var(--bd);padding:5px 13px;border-radius:100px;font-size:.71rem;color:var(--mt);font-weight:600;transition:border-color .2s,color .2s,box-shadow .2s;box-shadow:var(--sh)}
+.gflag:hover{border-color:var(--ac);color:var(--tx);box-shadow:0 4px 16px rgba(212,80,10,.14)}
+.hstats{display:flex;gap:42px;margin-top:42px;position:relative;z-index:1;opacity:0;animation:fu .8s 1s ease forwards;flex-wrap:wrap}
+.sitem{display:flex;flex-direction:column}
+.snum{font-family:'Playfair Display',serif;font-size:2.3rem;font-weight:900;color:var(--ac);letter-spacing:-.02em}
+.slbl{font-size:.71rem;color:var(--mt);margin-top:3px;text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.hctas{display:flex;gap:13px;margin-top:38px;position:relative;z-index:1;opacity:0;animation:fu .8s 1.1s ease forwards;flex-wrap:wrap}
+.bp{background:var(--ac);color:#fff;padding:13px 28px;border-radius:7px;text-decoration:none;font-weight:700;font-size:.87rem;letter-spacing:.02em;transition:background .2s,transform .2s,box-shadow .2s;box-shadow:0 6px 22px rgba(212,80,10,.28)}
+.bp:hover{background:var(--ac2);transform:translateY(-2px);box-shadow:0 12px 34px rgba(212,80,10,.38)}
+.bs{background:var(--sf);color:var(--tx);padding:13px 28px;border-radius:7px;text-decoration:none;font-weight:600;font-size:.87rem;border:1.5px solid var(--bd2);transition:border-color .2s,transform .2s,box-shadow .2s;box-shadow:var(--sh)}
+.bs:hover{border-color:var(--ac);transform:translateY(-2px)}
+.bwa{background:rgba(22,163,74,.09);color:#15803d;padding:13px 20px;border-radius:7px;text-decoration:none;font-weight:700;font-size:.87rem;border:1.5px solid rgba(22,163,74,.28);transition:background .2s,transform .2s;display:flex;align-items:center;gap:7px}
+.bwa:hover{background:rgba(22,163,74,.16);transform:translateY(-2px)}
+.scrl{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:7px;z-index:1;opacity:0;animation:fi 1s 1.6s ease forwards}
+.scrl span{font-size:.66rem;color:var(--mt);letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.scrl-line{width:1px;height:44px;background:linear-gradient(var(--ac),transparent);animation:sl 2s ease-in-out infinite}
+@keyframes sl{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}50.01%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@keyframes fu{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+
+/* SECTIONS */
+section{position:relative;z-index:1}
+.si{max-width:1200px;margin:0 auto;padding:0 60px}
+.slabel{font-size:.69rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:var(--ac);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.slabel::before{content:'';display:block;width:20px;height:2px;background:var(--ac);border-radius:1px}
+.sh{font-family:'Playfair Display',serif;font-size:clamp(1.85rem,3.6vw,2.8rem);font-weight:900;letter-spacing:-.02em;line-height:1.12;color:var(--tx)}
+.dvdr{height:1px;background:var(--bd);margin:0 60px}
+
+/* ABOUT */
+#about{padding:116px 0;background:var(--bg)}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-top:50px}
+.atext p{color:var(--mt);line-height:1.9;margin-bottom:16px;font-size:.92rem}
+.atext p strong{color:var(--tx);font-weight:700}
+.etl{margin-top:32px;display:flex;flex-direction:column}
+.ei{display:flex;gap:16px;padding-bottom:26px;position:relative}
+.ei::before{content:'';position:absolute;left:15px;top:34px;bottom:0;width:1px;background:var(--bd)}
+.ei:last-child::before{display:none}
+.edot{width:32px;height:32px;background:var(--sf);border:2px solid var(--bd2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;flex-shrink:0;margin-top:3px;transition:border-color .3s,box-shadow .3s;box-shadow:var(--sh)}
+.ei:hover .edot{border-color:var(--ac);box-shadow:0 4px 14px rgba(212,80,10,.18)}
+.erole{font-weight:700;font-size:.88rem;margin-bottom:2px;color:var(--tx)}
+.eco{color:var(--ac);font-size:.77rem;font-weight:700;margin-bottom:2px}
+.eperiod{color:var(--mt);font-size:.72rem;margin-bottom:5px;letter-spacing:.04em;font-weight:500}
+.edesc{color:var(--mt);font-size:.79rem;line-height:1.65}
+.ar{display:flex;flex-direction:column;gap:16px}
+.mc{background:var(--sf);border:1px solid var(--bd);border-radius:12px;padding:22px 26px;transition:border-color .3s,transform .3s,box-shadow .3s;cursor:default;box-shadow:var(--sh)}
+.mc:hover{border-color:var(--ac);transform:translateX(4px);box-shadow:0 8px 30px rgba(212,80,10,.1)}
+.mc .num{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:900;color:var(--ac);letter-spacing:-.02em}
+.mc .lbl{color:var(--mt);font-size:.77rem;margin-top:3px;font-weight:500}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+.cb{background:var(--sf2);border:1px solid var(--bd);border-radius:7px;padding:9px 12px;font-size:.71rem;color:var(--mt);display:flex;align-items:center;gap:6px;transition:border-color .2s,color .2s;font-weight:500}
+.cb:hover{border-color:var(--ac);color:var(--tx)}
+
+/* SKILLS */
+#skills{padding:108px 0;background:var(--bg2)}
+.skh{text-align:center;margin-bottom:52px}
+.skh .slabel{justify-content:center}
+.skh .slabel::before{display:none}
+.skg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.skc{background:var(--sf);border:1px solid var(--bd);border-radius:13px;padding:26px 22px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s,box-shadow .3s;cursor:default;box-shadow:var(--sh)}
+.skc::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(212,80,10,.06),transparent);opacity:0;transition:opacity .3s}
+.skc:hover{border-color:var(--ac);transform:translateY(-5px);box-shadow:0 14px 44px rgba(212,80,10,.11)}
+.skc:hover::before{opacity:1}
+.skico{font-size:1.75rem;margin-bottom:12px}
+.skname{font-family:'Playfair Display',serif;font-weight:700;font-size:.97rem;margin-bottom:7px;color:var(--tx)}
+.skdesc{font-size:.79rem;color:var(--mt);line-height:1.65;margin-bottom:14px}
+.sktags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{background:rgba(212,80,10,.08);border:1px solid rgba(212,80,10,.16);color:var(--ac);font-size:.66rem;padding:3px 9px;border-radius:100px;font-weight:600}
+.skbar{margin-top:14px;height:3px;background:rgba(0,0,0,.07);border-radius:100px;overflow:hidden}
+.skbf{height:100%;background:linear-gradient(90deg,var(--ac),var(--ac2));border-radius:100px;width:0;transition:width 1.3s ease}
+
+/* PROJECTS */
+#projects{padding:108px 0;background:var(--bg)}
+.pg{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.pcard{background:var(--sf);border:1px solid var(--bd);border-radius:14px;overflow:hidden;transition:border-color .3s,transform .3s,box-shadow .3s;box-shadow:var(--sh)}
+.pcard:hover{border-color:var(--ac);transform:translateY(-5px);box-shadow:0 18px 54px rgba(212,80,10,.11)}
+.ptop{padding:22px 22px 16px;border-bottom:1px solid var(--bd);display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.pplat{font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ac);margin-bottom:5px}
+.ptitle{font-family:'Playfair Display',serif;font-weight:700;font-size:.96rem;color:var(--tx)}
+.pbadge{background:rgba(22,163,74,.09);border:1px solid rgba(22,163,74,.24);color:#15803d;font-size:.65rem;padding:4px 10px;border-radius:100px;white-space:nowrap;flex-shrink:0;margin-top:2px;font-weight:700}
+.pbody{padding:18px 22px}
+.pdesc{font-size:.81rem;color:var(--mt);line-height:1.75;margin-bottom:16px}
+.pmets{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.pmet{text-align:center;background:var(--sf2);border-radius:7px;padding:8px 4px;border:1px solid var(--bd)}
+.pmn{font-family:'Playfair Display',serif;font-weight:700;font-size:.95rem;color:var(--tx)}
+.pml{font-size:.62rem;color:var(--mt);margin-top:2px;text-transform:uppercase;letter-spacing:.04em;font-weight:600}
+
+/* CLIENTS */
+#clients{padding:88px 0;background:var(--bg2)}
+.mwrap{overflow:hidden;position:relative;margin-top:42px}
+.mwrap::before,.mwrap::after{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2}
+.mwrap::before{left:0;background:linear-gradient(90deg,var(--bg2),transparent)}
+.mwrap::after{right:0;background:linear-gradient(-90deg,var(--bg2),transparent)}
+.mtrack{display:flex;gap:14px;width:max-content;animation:mq 26s linear infinite}
+.mtrack:hover{animation-play-state:paused}
+@keyframes mq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.cchip{display:flex;align-items:center;gap:8px;background:var(--sf);border:1px solid var(--bd);padding:11px 20px;border-radius:100px;white-space:nowrap;font-size:.8rem;font-weight:600;color:var(--mt);transition:border-color .3s,color .3s,box-shadow .3s;box-shadow:var(--sh)}
+.cchip:hover{border-color:var(--ac);color:var(--tx)}
+.ccdot{width:6px;height:6px;border-radius:50%;background:var(--ac)}
+
+/* MARKETS */
+#markets{padding:98px 0;background:var(--bg)}
+.mktg{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+.mktc{background:var(--sf);border:1px solid var(--bd);border-radius:12px;padding:22px 16px;text-align:center;transition:border-color .3s,transform .3s,box-shadow .3s;cursor:default;box-shadow:var(--sh)}
+.mktc:hover{border-color:var(--ac);transform:translateY(-4px);box-shadow:0 12px 38px rgba(212,80,10,.11)}
+.mktfl{font-size:2.1rem;margin-bottom:8px}
+.mktn{font-family:'Playfair Display',serif;font-weight:700;font-size:.87rem;margin-bottom:4px;color:var(--tx)}
+.mktd{font-size:.7rem;color:var(--mt);font-weight:500}
+
+/* PROCESS */
+#process{padding:108px 0;background:var(--bg2)}
+.psteps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;margin-top:56px}
+.psteps::before{content:'';position:absolute;top:32px;left:10%;right:10%;height:1px;background:var(--bd);z-index:0}
+.step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 8px;position:relative;z-index:1}
+.stepn{width:64px;height:64px;background:var(--sf);border:2px solid var(--bd2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;font-size:1.1rem;color:var(--mt);margin-bottom:17px;transition:all .3s;box-shadow:var(--sh)}
+.step:hover .stepn{border-color:var(--ac);color:var(--ac);background:rgba(212,80,10,.07);box-shadow:0 6px 22px rgba(212,80,10,.18)}
+.stept{font-weight:700;font-size:.85rem;margin-bottom:6px;color:var(--tx)}
+.stepd{font-size:.74rem;color:var(--mt);line-height:1.65}
+
+/* TESTIMONIALS */
+#testimonials{padding:108px 0;background:var(--bg)}
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:50px}
+.tc{background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:28px 24px;transition:border-color .3s,transform .3s,box-shadow .3s;box-shadow:var(--sh)}
+.tc:hover{border-color:var(--ac);transform:translateY(-4px);box-shadow:0 14px 44px rgba(212,80,10,.1)}
+.tst{color:var(--gold);font-size:.8rem;margin-bottom:9px}
+.tq{font-size:2.6rem;color:var(--ac);line-height:1;margin-bottom:12px;font-family:Georgia,serif;opacity:.45}
+.ttxt{color:var(--mt);font-size:.83rem;line-height:1.8;margin-bottom:22px}
+.tau{display:flex;align-items:center;gap:10px}
+.tav{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--ac),var(--ac2));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;flex-shrink:0;color:#fff}
+.tan{font-weight:700;font-size:.82rem;color:var(--tx)}
+.tar{font-size:.7rem;color:var(--mt);margin-top:1px;font-weight:500}
+
+/* CONTACT */
+#contact{padding:108px 0;background:var(--bg2)}
+.cg{display:grid;grid-template-columns:1fr 1.4fr;gap:66px;margin-top:50px;align-items:start}
+.ci h3{font-family:'Playfair Display',serif;font-weight:700;font-size:1.35rem;margin-bottom:12px;color:var(--tx)}
+.ci p{color:var(--mt);font-size:.85rem;line-height:1.8;margin-bottom:26px}
+.clinks{display:flex;flex-direction:column;gap:10px}
+.clink{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--sf);border:1px solid var(--bd);border-radius:10px;text-decoration:none;color:var(--tx);transition:border-color .2s,transform .2s,box-shadow .2s;box-shadow:var(--sh)}
+.clink:hover{border-color:var(--ac);transform:translateX(4px);box-shadow:0 6px 22px rgba(212,80,10,.11)}
+.clico{width:37px;height:37px;border-radius:7px;background:rgba(212,80,10,.09);display:flex;align-items:center;justify-content:center;font-size:.96rem;flex-shrink:0}
+.cllbl{font-size:.65rem;color:var(--mt);margin-bottom:1px;text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+.clval{font-size:.82rem;font-weight:600;color:var(--tx)}
+.cperks{display:flex;flex-direction:column;gap:8px;margin-top:20px}
+.perk{display:flex;align-items:center;gap:7px;font-size:.79rem;color:var(--mt);font-weight:500}
+.pg{color:var(--gn);font-weight:700}
+.cf{background:var(--sf);border:1px solid var(--bd);border-radius:16px;padding:36px 32px;box-shadow:var(--sh2)}
+.ft{font-family:'Playfair Display',serif;font-weight:700;font-size:1.12rem;margin-bottom:5px;color:var(--tx)}
+.fsb{font-size:.78rem;color:var(--mt);margin-bottom:24px;font-weight:500}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:13px}
+.fg label{font-size:.69rem;font-weight:700;letter-spacing:.05em;color:var(--mt);text-transform:uppercase}
+.fg input,.fg select,.fg textarea{background:var(--sf2);border:1.5px solid var(--bd);border-radius:7px;padding:10px 13px;color:var(--tx);font-family:'Inter',sans-serif;font-size:.86rem;outline:none;transition:border-color .2s,box-shadow .2s;width:100%}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--ac);box-shadow:0 0 0 3px rgba(212,80,10,.09)}
+.fg select option{background:#fff;color:var(--tx)}
+.fg textarea{resize:vertical;min-height:108px}
+.pchk{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:5px}
+.chi{display:flex;align-items:center;gap:7px;cursor:pointer}
+.chi input[type="checkbox"]{display:none}
+.chbox{width:16px;height:16px;border:1.5px solid var(--bd2);border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s;background:var(--sf2)}
+.chi input:checked~.chbox{background:var(--ac);border-color:var(--ac)}
+.chi input:checked~.chbox::after{content:'✓';color:#fff;font-size:.6rem}
+.chlbl{font-size:.79rem;color:var(--mt);font-weight:500}
+.fsub{width:100%;padding:13px;background:var(--ac);color:#fff;border:none;border-radius:7px;cursor:pointer;font-family:'Playfair Display',serif;font-weight:700;font-size:.93rem;letter-spacing:.02em;margin-top:7px;transition:background .2s,transform .2s,box-shadow .2s}
+.fsub:hover{background:var(--ac2);transform:translateY(-2px);box-shadow:0 8px 26px rgba(212,80,10,.34)}
+.fsuc{display:none;text-align:center;padding:20px;color:#15803d;font-weight:600;font-size:.88rem;background:rgba(22,163,74,.07);border-radius:9px;border:1px solid rgba(22,163,74,.18)}
+.fsuc.show{display:block}
+.ferr{display:none;color:#dc2626;font-size:.73rem;margin-top:2px;font-weight:500}
+.ferr.show{display:block}
+input.err,select.err,textarea.err{border-color:#dc2626!important;box-shadow:0 0 0 3px rgba(220,38,38,.09)!important}
+
+/* FOOTER */
+footer{border-top:1px solid var(--bd);padding:36px 60px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1;background:var(--bg)}
+.fleft{color:var(--mt);font-size:.77rem;font-weight:500}
+.fleft strong{color:var(--tx);font-weight:700}
+.fright{display:flex;gap:18px}
+.flink{color:var(--mt);text-decoration:none;font-size:.77rem;transition:color .2s;font-weight:500}
+.flink:hover{color:var(--ac)}
+
+/* REVEAL */
+.rv,.rvl,.rvr{opacity:0;transition:opacity .75s ease,transform .75s ease}
+.rv{transform:translateY(38px)}.rvl{transform:translateX(-38px)}.rvr{transform:translateX(38px)}
+.rv.vis,.rvl.vis,.rvr.vis{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+
+/* ═══════════════════════════════════════
+   ADVANCED AI CHATBOT
+═══════════════════════════════════════ */
+.chat-btn{position:fixed;bottom:26px;right:26px;z-index:1000;width:62px;height:62px;background:linear-gradient(135deg,var(--ac),var(--ac2));border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 8px 28px rgba(212,80,10,.42);transition:transform .3s,box-shadow .3s;border:none}
+.chat-btn:hover{transform:scale(1.08);box-shadow:0 14px 42px rgba(212,80,10,.55)}
+.chat-btn .ico-chat{display:block}.chat-btn .ico-close{display:none}
+.chat-btn.open .ico-chat{display:none}.chat-btn.open .ico-close{display:block}
+.chat-notif{position:absolute;top:-2px;right:-2px;width:16px;height:16px;background:#22c55e;border-radius:50%;border:2px solid var(--bg);animation:blk 2s infinite}
+.chat-win{position:fixed;bottom:104px;right:26px;z-index:999;width:390px;max-height:620px;background:var(--sf);border:1.5px solid var(--bd2);border-radius:20px;box-shadow:0 20px 70px rgba(60,40,10,.18);display:flex;flex-direction:column;overflow:hidden;transform:scale(.9) translateY(18px);opacity:0;pointer-events:none;transition:transform .3s ease,opacity .3s ease;transform-origin:bottom right}
+.chat-win.open{transform:scale(1) translateY(0);opacity:1;pointer-events:all}
+.ch{background:linear-gradient(135deg,rgba(212,80,10,.1),rgba(240,120,48,.05));padding:16px 18px;border-bottom:1px solid var(--bd);display:flex;align-items:center;gap:11px}
+.chav{width:40px;height:40px;background:linear-gradient(135deg,var(--ac),var(--ac2));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.chn{font-family:'Playfair Display',serif;font-weight:700;font-size:.92rem;color:var(--tx)}
+.chs{font-size:.69rem;color:#16a34a;display:flex;align-items:center;gap:4px;font-weight:600}
+.chs::before{content:'';width:6px;height:6px;background:#22c55e;border-radius:50%;display:inline-block;animation:blk 2s infinite}
+.chcls{margin-left:auto;background:none;border:none;color:var(--mt);cursor:pointer;font-size:1.15rem;padding:4px;transition:color .2s}
+.chcls:hover{color:var(--tx)}
+/* Quick-action tabs */
+.qtabs{display:flex;flex-wrap:wrap;gap:5px;padding:9px 12px 7px;border-bottom:1px solid var(--bd);background:var(--sf2)}
+.qtab{background:var(--sf);border:1.5px solid var(--bd);color:var(--mt);font-size:.67rem;padding:5px 11px;border-radius:100px;cursor:pointer;font-family:'Inter',sans-serif;font-weight:600;white-space:nowrap;transition:all .2s}
+.qtab:hover{border-color:var(--ac);color:var(--ac);background:rgba(212,80,10,.06)}
+.msgs{flex:1;overflow-y:auto;padding:13px;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}
+.msgs::-webkit-scrollbar{width:3px}
+.msgs::-webkit-scrollbar-thumb{background:var(--bd2);border-radius:2px}
+.msg{display:flex;gap:8px;align-items:flex-end;max-width:95%}
+.msg.bot{align-self:flex-start}.msg.user{align-self:flex-end;flex-direction:row-reverse}
+.mav{width:27px;height:27px;border-radius:50%;background:linear-gradient(135deg,var(--ac),var(--ac2));display:flex;align-items:center;justify-content:center;font-size:.6rem;flex-shrink:0;font-weight:700;color:#fff}
+.mb{padding:10px 13px;border-radius:13px;font-size:.82rem;line-height:1.58;max-width:268px}
+.msg.bot .mb{background:var(--sf2);border:1px solid var(--bd);border-bottom-left-radius:4px;color:var(--tx)}
+.msg.user .mb{background:var(--ac);color:#fff;border-bottom-right-radius:4px}
+.mb a{color:var(--ac);text-decoration:underline}.msg.user .mb a{color:#ffd9be}
+/* Meet / Form cards inside chat */
+.c-card{background:var(--sf2);border:1.5px solid var(--bd2);border-radius:11px;padding:13px 14px;font-size:.79rem;max-width:268px;margin-top:4px}
+.c-card h5{font-family:'Playfair Display',serif;font-weight:700;font-size:.86rem;margin-bottom:9px;color:var(--tx)}
+.c-card input,.c-card select,.c-card textarea{width:100%;margin-bottom:7px;padding:8px 10px;border:1.5px solid var(--bd);border-radius:6px;font-size:.77rem;font-family:'Inter',sans-serif;background:var(--sf);color:var(--tx);outline:none;transition:border-color .2s}
+.c-card input:focus,.c-card select:focus,.c-card textarea:focus{border-color:var(--ac)}
+.c-card textarea{resize:vertical;min-height:58px}
+.c-card button{width:100%;padding:8px;background:var(--ac);color:#fff;border:none;border-radius:6px;font-weight:700;font-size:.79rem;cursor:pointer;font-family:'Inter',sans-serif;transition:background .2s;margin-top:2px}
+.c-card button:hover{background:var(--ac2)}
+.tdots{display:flex;align-items:center;gap:5px;padding:10px 13px;background:var(--sf2);border:1px solid var(--bd);border-radius:13px;border-bottom-left-radius:4px;width:fit-content}
+.tdot{width:5px;height:5px;background:var(--mt);border-radius:50%;animation:tb .8s ease-in-out infinite}
+.tdot:nth-child(2){animation-delay:.15s}.tdot:nth-child(3){animation-delay:.3s}
+@keyframes tb{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-6px)}}
+.cinput-row{display:flex;gap:8px;padding:10px 13px;border-top:1px solid var(--bd);background:var(--sf)}
+.cinput{flex:1;background:var(--sf2);border:1.5px solid var(--bd);border-radius:9px;padding:9px 12px;color:var(--tx);font-family:'Inter',sans-serif;font-size:.83rem;outline:none;transition:border-color .2s;resize:none;max-height:100px}
+.cinput:focus{border-color:var(--ac)}
+.csend{width:36px;height:36px;background:var(--ac);border:none;border-radius:9px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;flex-shrink:0}
+.csend:hover{background:var(--ac2);transform:scale(1.06)}
+
+@media(max-width:900px){
+  nav{padding:14px 18px}.nlinks{display:none}
+  #hero{padding:106px 18px 64px}
+  .si{padding:0 18px}.dvdr{margin:0 18px}
+  .ag,.cg{grid-template-columns:1fr;gap:32px}
+  .skg{grid-template-columns:1fr 1fr}.pg{grid-template-columns:1fr}
+  .mktg{grid-template-columns:repeat(2,1fr)}
+  .psteps{grid-template-columns:1fr 1fr}.psteps::before{display:none}
+  .tg{grid-template-columns:1fr}.frow{grid-template-columns:1fr}.hstats{gap:20px}
+  footer{flex-direction:column;gap:11px;text-align:center;padding:26px 18px}
+  .chat-win{width:calc(100vw - 18px);right:9px;bottom:86px}
+}
+@media(max-width:600px){
+  .skg,.mktg,.psteps{grid-template-columns:1fr}
+  .cf{padding:20px 15px}.cgrid,.frow{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ANIMATED BG -->
+<div id="bg-wrap">
+  <div class="o1 orb"></div><div class="o2 orb"></div>
+  <div class="o3 orb"></div><div class="o4 orb"></div>
+</div>
+<div class="bgrid"></div>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="nb">
+  <a href="#" class="nlogo">Rahul<span>.</span></a>
+  <ul class="nlinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Work</a></li>
+    <li><a href="#markets">Markets</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="ncta">Hire Me →</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hglow"></div><div class="hglow2"></div>
+  <div class="hbadge"><span class="dblk"></span>Available for Freelance &amp; Retainer — Worldwide</div>
+  <h1 class="hname"><span class="l1">Rahul</span><span class="l2">Gupta.</span></h1>
+  <p class="hsub"><strong>Paid Media &amp; PPC Consultant</strong> &nbsp;·&nbsp; Google · Meta · LinkedIn · Amazon · TikTok · DV360 · AEM · GA4</p>
+  <div class="htyp">I Turn <em>Ad Spend</em> Into <span id="typed"></span></div>
+  <div class="hgeo">
+    <div class="gflag"><span>🇶🇦</span>Qatar</div><div class="gflag"><span>🇦🇪</span>Dubai / UAE</div>
+    <div class="gflag"><span>🇸🇦</span>Saudi Arabia</div><div class="gflag"><span>🇸🇬</span>Singapore</div>
+    <div class="gflag"><span>🇦🇺</span>Australia</div><div class="gflag"><span>🇨🇦</span>Canada</div>
+    <div class="gflag"><span>🇳🇿</span>New Zealand</div><div class="gflag"><span>🇵🇱</span>Poland</div>
+  </div>
+  <div class="hstats">
+    <div class="sitem"><span class="snum" data-count="25" data-prefix="$" data-suffix="M+">$0</span><span class="slbl">Ad Spend Managed</span></div>
+    <div class="sitem"><span class="snum" data-count="60" data-prefix="$" data-suffix="M+">$0</span><span class="slbl">Revenue Generated</span></div>
+    <div class="sitem"><span class="snum" data-count="32" data-suffix="x">0</span><span class="slbl">Best ROAS</span></div>
+    <div class="sitem"><span class="snum" data-count="4" data-suffix="+ yrs">0</span><span class="slbl">Experience</span></div>
+  </div>
+  <div class="hctas">
+    <a href="#contact" class="bp">🚀 Book Free Strategy Call</a>
+    <a href="https://wa.me/918756424538" target="_blank" class="bwa">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp Me
+    </a>
+    <a href="#projects" class="bs">See My Work ↓</a>
+  </div>
+  <div class="scrl"><span>Scroll</span><div class="scrl-line"></div></div>
+</section>
+<div class="dvdr"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="si">
+    <div class="ag">
+      <div class="rvl">
+        <div class="slabel">About Me</div>
+        <h2 class="sh" style="margin-bottom:20px">4+ Years. Real Results.<br/>Global Clients.</h2>
+        <p>I'm <strong>Rahul Gupta</strong>, a results-driven Paid Media &amp; PPC Consultant from Kanpur, India — working with brands across the <strong>Middle East, Asia-Pacific, Europe, and North America</strong>.</p>
+        <p>From managing <strong>$50K+/month PPC budgets</strong> at Jovial Digital Services to running multi-channel paid campaigns at <strong>IndiaMART, K2 Technologies &amp; BMW India</strong>, I bring enterprise-level strategy to every project.</p>
+        <p>My approach is simple: <strong>data first, results always.</strong> I don't just run ads — I build performance systems that generate consistent, scalable revenue.</p>
+        <div class="etl">
+          <div class="ei">
+            <div class="edot">💼</div>
+            <div>
+              <div class="erole">Asst. Manager — Paid Media &amp; Growth</div>
+              <div class="eco">K2 Technologies LLC</div>
+              <div class="eperiod">Sep 2024 – Present</div>
+              <div class="edesc">Leading paid media strategy across Google, Meta &amp; LinkedIn. Overseeing AEM content operations, Power BI reporting, and a small growth team. Driving ROAS improvements across enterprise-level accounts in the Middle East market.</div>
+            </div>
+          </div>
+          <div class="ei">
+            <div class="edot">📈</div>
+            <div>
+              <div class="erole">Sr. PPC Specialist &amp; Campaign Manager</div>
+              <div class="eco">Jovial Digital Services</div>
+              <div class="eperiod">Aug 2023 – Jun 2024</div>
+              <div class="edesc">Managed $50K+/month paid media budgets across multiple accounts. Improved overall ROAS by 40% through structured A/B testing, GA4 attribution modelling, and Power BI performance dashboards for client reporting.</div>
+            </div>
+          </div>
+          <div class="ei">
+            <div class="edot">🏢</div>
+            <div>
+              <div class="erole">Sr. Growth Executive — Paid Media</div>
+              <div class="eco">IndiaMART InterMESH Ltd.</div>
+              <div class="eperiod">Oct 2022 – Jun 2023</div>
+              <div class="edesc">End-to-end PPC &amp; SEO for B2B lead generation at scale. Leveraged GA4 and Google Tag Manager to reduce CPL significantly and grow qualified lead volume for one of India's largest B2B platforms.</div>
+            </div>
+          </div>
+          <div class="ei">
+            <div class="edot">🚀</div>
+            <div>
+              <div class="erole">PPC Specialist &amp; Growth Executive</div>
+              <div class="eco">Digital Rubix</div>
+              <div class="eperiod">Aug 2019 – Aug 2022</div>
+              <div class="edesc">Managed paid search, paid social &amp; SEO campaigns across diverse client verticals. Developed high-converting ad creatives, handled multi-client budget allocation, and delivered monthly performance reports to stakeholders.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ar rvr">
+        <div class="mc"><div class="num" data-count="25" data-prefix="$" data-suffix="M+">$0</div><div class="lbl">Ad Spend Managed Across 6 Platforms</div></div>
+        <div class="mc"><div class="num" data-count="40" data-suffix="%">0</div><div class="lbl">Average ROAS Improvement for Clients</div></div>
+        <div class="mc"><div class="num" data-count="30" data-suffix="+">0</div><div class="lbl">Brands &amp; International Clients Served</div></div>
+        <div>
+          <div class="slabel" style="margin-bottom:12px">Certifications</div>
+          <div class="cgrid">
+            <div class="cb"><span>🔵</span>Google Ads Search</div>
+            <div class="cb"><span>🔵</span>Google Display</div>
+            <div class="cb"><span>🔷</span>Meta Blueprint</div>
+            <div class="cb"><span>📊</span>GA4 Analytics</div>
+            <div class="cb"><span>⚡</span>Adobe AEM</div>
+            <div class="cb"><span>📈</span>Power BI</div>
+          </div>
+        </div>
+        <div style="background:var(--sf);border:1.5px solid rgba(22,163,74,.2);border-radius:11px;padding:17px 20px;box-shadow:var(--sh)">
+          <div style="font-size:.68rem;color:#15803d;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px">Education</div>
+          <div style="font-size:.83rem;font-weight:700;margin-bottom:3px;color:var(--tx)">BCA — CSJM Kanpur University (2022)</div>
+          <div style="font-size:.78rem;color:var(--mt);font-weight:500">Data Science &amp; AI — Boston Institute of Analytics (2024)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="dvdr"></div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="si">
+    <div class="skh rv">
+      <div class="slabel">Expertise</div>
+      <h2 class="sh">Skills &amp; Platforms</h2>
+      <p style="color:var(--mt);margin-top:10px;font-size:.87rem;font-weight:500">Certified. Battle-tested. Results-driven.</p>
+    </div>
+    <div class="skg">
+      <div class="skc rv d1"><div class="skico">🔵</div><div class="skname">Google Ads</div><div class="skdesc">Search, Shopping, Performance Max, Display &amp; YouTube — complete ecosystem coverage.</div><div class="sktags"><span class="tag">Search</span><span class="tag">Shopping</span><span class="tag">PMax</span><span class="tag">YouTube</span><span class="tag">Display</span></div><div class="skbar"><div class="skbf" data-width="97"></div></div></div>
+      <div class="skc rv d2"><div class="skico">🔷</div><div class="skname">Meta Ads</div><div class="skdesc">Facebook &amp; Instagram — prospecting, retargeting funnels, DPA and lead gen at scale.</div><div class="sktags"><span class="tag">Facebook</span><span class="tag">Instagram</span><span class="tag">Retargeting</span><span class="tag">DPA</span></div><div class="skbar"><div class="skbf" data-width="95"></div></div></div>
+      <div class="skc rv d3"><div class="skico">💼</div><div class="skname">LinkedIn Ads</div><div class="skdesc">B2B lead gen — targeting by job title, seniority, company size and ABM strategies.</div><div class="sktags"><span class="tag">Lead Gen</span><span class="tag">ABM</span><span class="tag">Sponsored</span><span class="tag">InMail</span></div><div class="skbar"><div class="skbf" data-width="88"></div></div></div>
+      <div class="skc rv d1"><div class="skico">⚡</div><div class="skname">Adobe AEM &amp; CMS</div><div class="skdesc">Content operations, DAM, metadata optimisation and publishing workflow management.</div><div class="sktags"><span class="tag">AEM</span><span class="tag">CMS</span><span class="tag">DAM</span><span class="tag">Publishing</span></div><div class="skbar"><div class="skbf" data-width="85"></div></div></div>
+      <div class="skc rv d2"><div class="skico">📊</div><div class="skname">Analytics &amp; BI</div><div class="skdesc">GA4, Adobe Analytics, Power BI — building dashboards and actionable campaign insights.</div><div class="sktags"><span class="tag">GA4</span><span class="tag">Power BI</span><span class="tag">Adobe Analytics</span><span class="tag">GTM</span></div><div class="skbar"><div class="skbf" data-width="92"></div></div></div>
+      <div class="skc rv d3"><div class="skico">🔍</div><div class="skname">SEO &amp; Content</div><div class="skdesc">On-page SEO, keyword strategy, ad copywriting and content strategies that convert.</div><div class="sktags"><span class="tag">SEO</span><span class="tag">Copywriting</span><span class="tag">Strategy</span><span class="tag">Canva</span></div><div class="skbar"><div class="skbf" data-width="83"></div></div></div>
+    </div>
+  </div>
+</section>
+<div class="dvdr"></div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="si">
+    <div class="rv" style="margin-bottom:46px">
+      <div class="slabel">Case Studies</div>
+      <h2 class="sh">Featured Projects</h2>
+      <p style="color:var(--mt);margin-top:10px;font-size:.87rem;font-weight:500">Real campaigns. Real numbers. Real impact.</p>
+    </div>
+    <div class="pg">
+      <div class="pcard rv d1"><div class="ptop"><div><div class="pplat">Google Ads</div><div class="ptitle">Wrist Assured Gloves — eCommerce USA</div></div><span class="pbadge">32x ROAS</span></div><div class="pbody"><p class="pdesc">Rebuilt the entire campaign from scratch — Shopping feed segmentation, conversion tracking fix, tiered Smart Bidding. Maintained 32x ROAS consistently over 9 months with $0.69 avg CPC.</p><div class="pmets"><div class="pmet"><div class="pmn">$87,954</div><div class="pml">Revenue</div></div><div class="pmet"><div class="pmn">32x</div><div class="pml">ROAS</div></div><div class="pmet"><div class="pmn">1,274</div><div class="pml">Orders</div></div><div class="pmet"><div class="pmn">$0.69</div><div class="pml">Avg CPC</div></div></div></div></div>
+      <div class="pcard rv d2"><div class="ptop"><div><div class="pplat">Meta Ads</div><div class="ptitle">Full-Funnel Lead Gen — Real Estate</div></div><span class="pbadge">–55% CPL</span></div><div class="pbody"><p class="pdesc">Full-funnel Facebook &amp; Instagram campaign. Lookalike audiences drove 58% of leads. Shifted to Reels cutting CPM 42%. Managed $50K+/month, improved ROAS by 40% at Jovial Digital.</p><div class="pmets"><div class="pmet"><div class="pmn">3,840</div><div class="pml">Leads</div></div><div class="pmet"><div class="pmn">$3.91</div><div class="pml">CPL</div></div><div class="pmet"><div class="pmn">4.8M</div><div class="pml">Impressions</div></div><div class="pmet"><div class="pmn">2.97%</div><div class="pml">CTR</div></div></div></div></div>
+      <div class="pcard rv d1"><div class="ptop"><div><div class="pplat">LinkedIn Ads</div><div class="ptitle">Godrej Properties — B2B Lead Gen</div></div><span class="pbadge">+28% MQLs</span></div><div class="pbody"><p class="pdesc">LinkedIn strategy combining brand awareness, thought leadership video and lead gen forms targeting C-suite decision makers. Lead gen forms converted 3.2x better than landing pages.</p><div class="pmets"><div class="pmet"><div class="pmn">684</div><div class="pml">MQLs</div></div><div class="pmet"><div class="pmn">$11.40</div><div class="pml">CPL</div></div><div class="pmet"><div class="pmn">1.24M</div><div class="pml">Impressions</div></div><div class="pmet"><div class="pmn">1.5%</div><div class="pml">CTR</div></div></div></div></div>
+      <div class="pcard rv d2"><div class="ptop"><div><div class="pplat">DV360 + Programmatic</div><div class="ptitle">BMW India — Full-Funnel Programmatic</div></div><span class="pbadge">+8.4% Brand Lift</span></div><div class="pbody"><p class="pdesc">Full-funnel DV360 strategy with YouTube TrueView, Display, CTV and programmatic. PMP deals cut eCPM 31%. First-party CRM audiences drove 3.8x conversion vs affinity targeting.</p><div class="pmets"><div class="pmet"><div class="pmn">1.12B</div><div class="pml">Impressions</div></div><div class="pmet"><div class="pmn">12,480</div><div class="pml">Conversions</div></div><div class="pmet"><div class="pmn">$0.21</div><div class="pml">Avg CPM</div></div><div class="pmet"><div class="pmn">89%</div><div class="pml">Viewability</div></div></div></div></div>
+    </div>
+  </div>
+</section>
+<div class="dvdr"></div>
+
+<!-- CLIENTS -->
+<section id="clients">
+  <div class="si">
+    <div class="rv" style="text-align:center">
+      <div class="slabel" style="justify-content:center">Trusted By</div>
+      <h2 class="sh">Brands I've Worked With</h2>
+    </div>
+  </div>
+  <div class="mwrap"><div class="mtrack">
+    <div class="cchip"><span class="ccdot"></span>BMW India</div><div class="cchip"><span class="ccdot"></span>H&amp;M</div><div class="cchip"><span class="ccdot"></span>Godrej Properties</div><div class="cchip"><span class="ccdot"></span>Wrist Assured Gloves</div><div class="cchip"><span class="ccdot"></span>IndiaMART</div><div class="cchip"><span class="ccdot"></span>Hira Sweets</div><div class="cchip"><span class="ccdot"></span>Dance Academy USA</div><div class="cchip"><span class="ccdot"></span>Rosel School</div><div class="cchip"><span class="ccdot"></span>AL Horn Law</div><div class="cchip"><span class="ccdot"></span>Mosaic Roofing</div><div class="cchip"><span class="ccdot"></span>K2 Technologies</div>
+    <div class="cchip"><span class="ccdot"></span>BMW India</div><div class="cchip"><span class="ccdot"></span>H&amp;M</div><div class="cchip"><span class="ccdot"></span>Godrej Properties</div><div class="cchip"><span class="ccdot"></span>Wrist Assured Gloves</div><div class="cchip"><span class="ccdot"></span>IndiaMART</div><div class="cchip"><span class="ccdot"></span>Hira Sweets</div><div class="cchip"><span class="ccdot"></span>Dance Academy USA</div><div class="cchip"><span class="ccdot"></span>Rosel School</div><div class="cchip"><span class="ccdot"></span>AL Horn Law</div><div class="cchip"><span class="ccdot"></span>Mosaic Roofing</div><div class="cchip"><span class="ccdot"></span>K2 Technologies</div>
+  </div></div>
+</section>
+<div class="dvdr"></div>
+
+<!-- MARKETS -->
+<section id="markets">
+  <div class="si">
+    <div class="rv" style="margin-bottom:0">
+      <div class="slabel">Global Reach</div>
+      <h2 class="sh">Markets I Actively Serve</h2>
+      <p style="color:var(--mt);margin-top:10px;font-size:.87rem;font-weight:500">Based in India. Trusted by clients in the Middle East, Asia-Pacific, Europe &amp; beyond.</p>
+    </div>
+    <div class="mktg">
+      <div class="mktc rv d1"><div class="mktfl">🇶🇦</div><div class="mktn">Qatar</div><div class="mktd">Doha · Real Estate · Retail</div></div>
+      <div class="mktc rv d2"><div class="mktfl">🇦🇪</div><div class="mktn">Dubai / UAE</div><div class="mktd">eCommerce · Finance · Tourism</div></div>
+      <div class="mktc rv d3"><div class="mktfl">🇸🇦</div><div class="mktn">Saudi Arabia</div><div class="mktd">B2B · Retail · Vision 2030</div></div>
+      <div class="mktc rv d4"><div class="mktfl">🇸🇬</div><div class="mktn">Singapore</div><div class="mktd">SaaS · Finance · Tech</div></div>
+      <div class="mktc rv d1"><div class="mktfl">🇦🇺</div><div class="mktn">Australia</div><div class="mktd">eCommerce · Services · SMBs</div></div>
+      <div class="mktc rv d2"><div class="mktfl">🇨🇦</div><div class="mktn">Canada</div><div class="mktd">Lead Gen · B2B · Local Biz</div></div>
+      <div class="mktc rv d3"><div class="mktfl">🇳🇿</div><div class="mktn">New Zealand</div><div class="mktd">SMBs · Tourism · Retail</div></div>
+      <div class="mktc rv d4"><div class="mktfl">🇵🇱</div><div class="mktn">Poland</div><div class="mktd">eCommerce · Tech · B2B</div></div>
+    </div>
+  </div>
+</section>
+<div class="dvdr"></div>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="si">
+    <div class="rv" style="margin-bottom:0">
+      <div class="slabel">How I Work</div>
+      <h2 class="sh">My Process, Start to Finish</h2>
+    </div>
+    <div class="psteps">
+      <div class="step rv d1"><div class="stepn">01</div><div class="stept">Discovery Call</div><div class="stepd">I learn your business, goals, setup and what success looks like for you.</div></div>
+      <div class="step rv d2"><div class="stepn">02</div><div class="stept">Audit &amp; Plan</div><div class="stepd">Full account audit + written media strategy and budget allocation before spending.</div></div>
+      <div class="step rv d3"><div class="stepn">03</div><div class="stept">Build &amp; Launch</div><div class="stepd">Campaigns built properly — structure, copy, tracking, audiences — then launched.</div></div>
+      <div class="step rv d4"><div class="stepn">04</div><div class="stept">Optimise Weekly</div><div class="stepd">Bids, audiences, creatives — I review everything weekly and cut what isn't working.</div></div>
+      <div class="step rv d5"><div class="stepn">05</div><div class="stept">Report &amp; Scale</div><div class="stepd">Clear weekly reports. When something works, we scale it hard and fast.</div></div>
+    </div>
+  </div>
+</section>
+<div class="dvdr"></div>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="si">
+    <div class="rv" style="text-align:center;margin-bottom:0">
+      <div class="slabel" style="justify-content:center">Social Proof</div>
+      <h2 class="sh">Clients, In Their Own Words</h2>
+    </div>
+    <div class="tg">
+      <div class="tc rv d1"><div class="tst">★★★★★</div><div class="tq">"</div><p class="ttxt">The Google Ads numbers speak for themselves — but what really impressed us was how Rahul communicated throughout. Always clear, always proactive, never had to chase for updates.</p><div class="tau"><div class="tav">WG</div><div><div class="tan">Wrist Assured Gloves</div><div class="tar">eCommerce — USA</div></div></div></div>
+      <div class="tc rv d2"><div class="tst">★★★★★</div><div class="tq">"</div><p class="ttxt">Our Meta campaigns were bleeding money. Within 30 days of Rahul restructuring everything, our CPL dropped by over 55%. I wish we'd brought him in sooner.</p><div class="tau"><div class="tav">SR</div><div><div class="tan">Sneha R.</div><div class="tar">Marketing Head, Real Estate</div></div></div></div>
+      <div class="tc rv d3"><div class="tst">★★★★★</div><div class="tq">"</div><p class="ttxt">Most consultants know one platform well. Rahul genuinely understands the full paid media ecosystem. The LinkedIn pipeline he built for us was something our in-house team could never crack.</p><div class="tau"><div class="tav">VP</div><div><div class="tan">Vikram P.</div><div class="tar">CEO, SaaS Startup</div></div></div></div>
+    </div>
+  </div>
+</section>
+<div class="dvdr"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="si">
+    <div class="rv">
+      <div class="slabel">Let's Work Together</div>
+      <h2 class="sh">Got a Project In Mind?</h2>
+    </div>
+    <div class="cg">
+      <div class="rvl">
+        <div class="ci">
+          <h3>Available for Freelance &amp; Retainer</h3>
+          <p>Whether you need someone to take over campaigns, run a full audit, or build from scratch — drop me a message and I'll reply within 24 hours.</p>
+        </div>
+        <div class="clinks">
+          <a href="mailto:rajgupta55001@gmail.com" class="clink"><div class="clico">✉️</div><div><div class="cllbl">Email</div><div class="clval">rajgupta55001@gmail.com</div></div></a>
+          <a href="https://www.linkedin.com/in/rahul-gupta-9034a422b" class="clink" target="_blank"><div class="clico">💼</div><div><div class="cllbl">LinkedIn</div><div class="clval">rahul-gupta-9034a422b</div></div></a>
+          <a href="https://wa.me/918756424538" class="clink" target="_blank"><div class="clico">📱</div><div><div class="cllbl">WhatsApp / Call</div><div class="clval">+91 87564 24538</div></div></a>
+        </div>
+        <div class="cperks">
+          <div class="perk"><span class="pg">✓</span>Free strategy call — no commitment</div>
+          <div class="perk"><span class="pg">✓</span>Reply guaranteed within 24 hours</div>
+          <div class="perk"><span class="pg">✓</span>Middle East, APAC, Europe, Americas</div>
+          <div class="perk"><span class="pg">✓</span>Freelance &amp; long-term retainer available</div>
+          <div class="perk"><span class="pg">✓</span>Transparent reporting &amp; weekly updates</div>
+        </div>
+      </div>
+      <div class="cf rvr">
+        <div class="ft">Send Me a Message</div>
+        <div class="fsb">All fields are required. I'll respond within 24 hours.</div>
+        <div id="fsuc" class="fsuc">✅ Message sent successfully! I'll be in touch within 24 hours.</div>
+        <div id="cform">
+          <div class="frow">
+            <div class="fg"><label>Your Name *</label><input type="text" id="fn" placeholder="John Smith"/><span class="ferr" id="ferr-fn"></span></div>
+            <div class="fg"><label>Email *</label><input type="email" id="fe" placeholder="you@company.com"/><span class="ferr" id="ferr-fe"></span></div>
+          </div>
+          <div class="frow">
+            <div class="fg"><label>Company / Website *</label><input type="text" id="fc" placeholder="yourcompany.com"/><span class="ferr" id="ferr-fc"></span></div>
+            <div class="fg"><label>Monthly Budget *</label><select id="fb"><option value="">Select range</option><option>Under $1,000/mo</option><option>$1,000–$5,000/mo</option><option>$5,000–$20,000/mo</option><option>$20,000–$100,000/mo</option><option>$100,000+/mo</option></select><span class="ferr" id="ferr-fb"></span></div>
+          </div>
+          <div class="frow">
+            <div class="fg"><label>Country / Region *</label><select id="fcc"><option value="">Select</option><option>Qatar</option><option>UAE / Dubai</option><option>Saudi Arabia</option><option>Singapore</option><option>Australia</option><option>Canada</option><option>New Zealand</option><option>Poland</option><option>India</option><option>Other</option></select><span class="ferr" id="ferr-fcc"></span></div>
+            <div class="fg"><label>Service Needed *</label><select id="fsv"><option value="">Select</option><option>Paid Media / PPC</option><option>SEO</option><option>AEM / Content Ops</option><option>Analytics / BI</option><option>Full Digital Strategy</option><option>Account Audit</option></select><span class="ferr" id="ferr-fsv"></span></div>
+          </div>
+          <div class="fg"><label>Platforms</label>
+            <div class="pchk">
+              <label class="chi"><input type="checkbox" class="pchkbox" value="Google Ads"/><span class="chbox"></span><span class="chlbl">Google Ads</span></label>
+              <label class="chi"><input type="checkbox" class="pchkbox" value="Meta Ads"/><span class="chbox"></span><span class="chlbl">Meta Ads</span></label>
+              <label class="chi"><input type="checkbox" class="pchkbox" value="LinkedIn Ads"/><span class="chbox"></span><span class="chlbl">LinkedIn Ads</span></label>
+              <label class="chi"><input type="checkbox" class="pchkbox" value="Amazon Ads"/><span class="chbox"></span><span class="chlbl">Amazon Ads</span></label>
+              <label class="chi"><input type="checkbox" class="pchkbox" value="TikTok Ads"/><span class="chbox"></span><span class="chlbl">TikTok Ads</span></label>
+              <label class="chi"><input type="checkbox" class="pchkbox" value="DV360 / AEM"/><span class="chbox"></span><span class="chlbl">DV360 / AEM</span></label>
+              <label class="chi"><input type="checkbox" class="pchkbox" value="Want to Discuss"/><span class="chbox"></span><span class="chlbl">Want to Discuss</span></label>
+            </div>
+          </div>
+          <div class="fg"><label>About Your Project *</label><textarea id="fm" placeholder="Describe your goals, challenges, and what you want to achieve…"></textarea><span class="ferr" id="ferr-fm"></span></div>
+          <button class="fsub" id="fsbtn" onclick="doSubmit()">Send Message →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fleft">© 2026 <strong>Rahul Gupta</strong> — Paid Media &amp; PPC Consultant &nbsp;·&nbsp; Kanpur, India</div>
+  <div class="fright">
+    <a href="mailto:rajgupta55001@gmail.com" class="flink">Email</a>
+    <a href="https://www.linkedin.com/in/rahul-gupta-9034a422b" class="flink" target="_blank">LinkedIn</a>
+    <a href="https://wa.me/918756424538" class="flink" target="_blank">WhatsApp</a>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════
+     ADVANCED AI CHATBOT
+═══════════════════════════════════════ -->
+<button class="chat-btn" id="chatBtn" onclick="toggleChat()">
+  <svg class="ico-chat" viewBox="0 0 24 24" width="26" height="26" fill="white"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+  <svg class="ico-close" viewBox="0 0 24 24" width="22" height="22" fill="white"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+  <span class="chat-notif" id="cnotif"></span>
+</button>
+
+<div class="chat-win" id="chatWin">
+  <div class="ch">
+    <div class="chav">🤖</div>
+    <div><div class="chn">Rahul's AI Assistant</div><div class="chs">Online now</div></div>
+    <button class="chcls" onclick="toggleChat()">✕</button>
+  </div>
+  <div class="qtabs" id="qtabs">
+    <button class="qtab" onclick="tabClick('What services do you offer?')">🎯 Services</button>
+    <button class="qtab" onclick="tabClick('What is your pricing?')">💰 Pricing</button>
+    <button class="qtab" onclick="tabClick('Show me your best results')">📈 Results</button>
+    <button class="qtab" onclick="tabClick('Which countries do you serve?')">🌍 Countries</button>
+    <button class="qtab" onclick="showMeetCard()">📅 Schedule Meet</button>
+    <button class="qtab" onclick="tabClick('How do I call Rahul?')">📞 Call</button>
+    <button class="qtab" onclick="showFormCard()">✉️ Fill Form</button>
+    <button class="qtab" onclick="tabClick('Which platform is best for my business?')">🤔 Which Platform?</button>
+  </div>
+  <div class="msgs" id="msgBox"></div>
+  <div class="cinput-row">
+    <textarea class="cinput" id="cinp" placeholder="Ask anything about Rahul's services…" rows="1" onkeydown="ckd(event)" oninput="autoGrow(this)"></textarea>
+    <button class="csend" onclick="doSend()"><svg viewBox="0 0 24 24" width="15" height="15" fill="white"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
+  </div>
+</div>
+
+<script>
+// ─── EMAILJS SETUP ─────────────────────────────────────────────
+// IMPORTANT FOR RAHUL: To make the contact form actually email you:
+// 1. Sign up FREE at https://emailjs.com
+// 2. Create an Email Service (connect your Gmail rajgupta55001@gmail.com)
+// 3. Create an Email Template – use these template variables:
+//    {{from_name}}, {{reply_to}}, {{company}}, {{budget}},
+//    {{country}}, {{service}}, {{platforms}}, {{message}}
+// 4. Get your Public Key from Account > API Keys
+// 5. Replace the three placeholder strings below with your real IDs
+const EJS_PUBLIC_KEY   = 'YOUR_EMAILJS_PUBLIC_KEY';   // e.g. 'abc123XYZ'
+const EJS_SERVICE_ID   = 'YOUR_SERVICE_ID';            // e.g. 'service_xxxxxxx'
+const EJS_TEMPLATE_ID  = 'YOUR_TEMPLATE_ID';           // e.g. 'template_xxxxxxx'
+const EJS_MEET_TMPL    = 'YOUR_MEET_TEMPLATE_ID';      // can reuse same template
+emailjs.init(EJS_PUBLIC_KEY);
+
+// ─── ANIMATED BG PARTICLES ─────────────────────────────────────
+(function(){
+  const wrap = document.getElementById('bg-wrap');
+  for(let i=0;i<22;i++){
+    const p=document.createElement('div');
+    p.className='spark';
+    p.style.cssText=`left:${Math.random()*100}%;width:${2+Math.random()*3}px;height:${2+Math.random()*3}px;animation-duration:${8+Math.random()*14}s;animation-delay:${Math.random()*16}s`;
+    wrap.appendChild(p);
+  }
+})();
+
+// ─── CURSOR ────────────────────────────────────────────────────
+const cur=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+document.addEventListener('mousemove',e=>{
+  cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';
+  setTimeout(()=>{ring.style.left=e.clientX+'px';ring.style.top=e.clientY+'px';},65);
+});
+document.querySelectorAll('a,button,.skc,.pcard,.mktc,.tc').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='15px';cur.style.height='15px';ring.style.width='48px';ring.style.height='48px';});
+  el.addEventListener('mouseleave',()=>{cur.style.width='10px';cur.style.height='10px';ring.style.width='36px';ring.style.height='36px';});
+});
+
+// ─── NAV SCROLL ────────────────────────────────────────────────
+window.addEventListener('scroll',()=>document.getElementById('nb').classList.toggle('scrolled',scrollY>50));
+
+// ─── TYPING EFFECT ─────────────────────────────────────────────
+const phrases=['Real Revenue.','Measurable Results.','Consistent Growth.','Maximum ROAS.','Your Success.'];
+let pi=0,ci=0,del=false;
+const tel=document.getElementById('typed');
+function type(){
+  const p=phrases[pi];
+  if(!del){tel.textContent=p.slice(0,ci+1);ci++;if(ci===p.length){del=true;setTimeout(type,2000);return;}}
+  else{tel.textContent=p.slice(0,ci-1);ci--;if(ci===0){del=false;pi=(pi+1)%phrases.length;}}
+  setTimeout(type,del?48:86);
+}
+setTimeout(type,2400);
+
+// ─── SCROLL REVEAL ─────────────────────────────────────────────
+const rObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('vis');
+      e.target.querySelectorAll('.skbf').forEach(b=>b.style.width=b.dataset.width+'%');
+      e.target.querySelectorAll('[data-count]').forEach(c=>countUp(c));
+    }
+  });
+},{threshold:.12});
+document.querySelectorAll('.rv,.rvl,.rvr,.skc').forEach(el=>rObs.observe(el));
+
+// ─── COUNT UP ──────────────────────────────────────────────────
+function countUp(el){
+  if(el.dataset.done)return;el.dataset.done='1';
+  const t=parseInt(el.dataset.count),pr=el.dataset.prefix||'',sf=el.dataset.suffix||'';
+  let c=0;const inc=t/60;
+  const tmr=setInterval(()=>{c+=inc;if(c>=t){c=t;clearInterval(tmr);}el.textContent=pr+Math.floor(c)+sf;},20);
+}
+window.addEventListener('load',()=>document.querySelectorAll('#hero [data-count]').forEach(c=>countUp(c)));
+
+// ─── CONTACT FORM ──────────────────────────────────────────────
+function showErr(id,msg){
+  const el=document.getElementById('ferr-'+id);
+  const inp=document.getElementById(id);
+  if(el){el.textContent=msg;el.classList.add('show');}
+  if(inp)inp.classList.add('err');
+}
+function clearErrs(){
+  document.querySelectorAll('.ferr').forEach(e=>{e.classList.remove('show');e.textContent='';});
+  document.querySelectorAll('.err').forEach(e=>e.classList.remove('err'));
+}
+function doSubmit(){
+  clearErrs();
+  const name=document.getElementById('fn').value.trim();
+  const email=document.getElementById('fe').value.trim();
+  const company=document.getElementById('fc').value.trim();
+  const budget=document.getElementById('fb').value;
+  const country=document.getElementById('fcc').value;
+  const service=document.getElementById('fsv').value;
+  const msg=document.getElementById('fm').value.trim();
+  const platforms=[...document.querySelectorAll('.pchkbox:checked')].map(c=>c.value).join(', ')||'(none selected)';
+  let ok=true;
+  if(!name){showErr('fn','Please enter your name.');ok=false;}
+  if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){showErr('fe','Please enter a valid email.');ok=false;}
+  if(!company){showErr('fc','Please enter your company or website.');ok=false;}
+  if(!budget){showErr('fb','Please select a budget range.');ok=false;}
+  if(!country){showErr('fcc','Please select your country.');ok=false;}
+  if(!service){showErr('fsv','Please select a service.');ok=false;}
+  if(!msg){showErr('fm','Please describe your project.');ok=false;}
+  if(!ok)return;
+  const btn=document.getElementById('fsbtn');
+  btn.textContent='Sending…';btn.style.opacity='.65';btn.style.pointerEvents='none';
+  emailjs.send(EJS_SERVICE_ID, EJS_TEMPLATE_ID, {
+    from_name:name, reply_to:email, company, budget, country, service, platforms, message:msg
+  }).then(()=>{
+    document.getElementById('cform').style.display='none';
+    document.getElementById('fsuc').classList.add('show');
+  }).catch(err=>{
+    console.error('EmailJS error:',err);
+    btn.textContent='Send Message →';btn.style.opacity='1';btn.style.pointerEvents='auto';
+    alert('There was an error sending your message. Please WhatsApp Rahul directly at +91 8756424538');
+  });
+}
+
+// ══════════════════════════════════════════════════
+// ADVANCED AI CHATBOT
+// ══════════════════════════════════════════════════
+let isOpen=false, hist=[];
+
+const SYS=`You are Rahul Gupta's advanced AI assistant on his portfolio website. Your mission: help every visitor understand Rahul's services and convert them into clients. Be warm, knowledgeable, and proactive.
+
+ABOUT RAHUL:
+- Full Name: Rahul Gupta | Location: Kanpur, Uttar Pradesh, India
+- Email: rajgupta55001@gmail.com | WhatsApp/Phone: +91 8756424538
+- LinkedIn: https://www.linkedin.com/in/rahul-gupta-9034a422b
+- Role: Paid Media & PPC Consultant (Freelance + open to retainer) | Experience: 4+ years
+
+WORK HISTORY:
+1. Asst. Manager – Paid Media & Growth | K2 Technologies LLC (Sep 2024–Present)
+2. Sr. PPC Specialist & Campaign Manager | Jovial Digital Services (Aug 2023–Jun 2024): $50K+/month PPC, 40% ROAS improvement
+3. Sr. Growth Executive – Paid Media | IndiaMART InterMESH Ltd. (Oct 2022–Jun 2023): B2B PPC & SEO
+4. PPC Specialist & Growth Executive | Digital Rubix (Aug 2019–Aug 2022): SEO, PPC, social
+
+SKILLS: Google Ads (Search, Shopping, PMax, Display, YouTube), Meta Ads, LinkedIn Ads, Amazon Ads, TikTok Ads, DV360/Programmatic, Adobe AEM, CMS, DAM, GA4, Adobe Analytics, Power BI, Google Tag Manager, SEO, Ad Copywriting, Canva, A/B Testing
+
+CERTIFICATIONS: Google Ads Search & Display, Meta Blueprint, Adobe AEM, Power BI, GA4 Analytics
+EDUCATION: BCA – CSJM Kanpur University (2022) | Data Science & AI – Boston Institute of Analytics (2024)
+
+KEY RESULTS:
+- $25M+ total ad spend managed | $60M+ client revenue generated
+- 32x ROAS for Wrist Assured Gloves USA ($87,954 from $2,710 spend, 1,274 orders)
+- 40% ROAS improvement at Jovial Digital ($50K+/month budgets)
+- 3,840 leads at $3.91 CPL on Meta | 684 B2B MQLs for Godrej Properties at $11.40 CPL on LinkedIn
+- 1.12B impressions, +8.4% brand lift for BMW India via DV360
+- 9.2M video views, 6,840 app installs at $1.53 CPI on TikTok
+
+SERVICES & PRICING: Paid Media/PPC management, Campaign audits, GA4/Power BI setup, AEM/CMS content ops, SEO, Full digital strategy. Pricing varies by scope — always recommend the free strategy call.
+
+PLATFORM GUIDANCE (when asked which platform is best):
+- Google Ads: Best for high purchase intent, search-driven leads, eCommerce
+- Meta Ads: Best for B2C, brand awareness, retargeting, lower-budget lead gen
+- LinkedIn Ads: Best for B2B, SaaS, high-ticket services, C-suite targeting
+- Amazon Ads: Best for product sellers on Amazon marketplace
+- TikTok Ads: Best for younger demographics, app installs, viral reach
+- DV360/Programmatic: Best for enterprise brand campaigns, CTV, brand lift
+- "Want to Discuss": Ideal if unsure — Rahul will advise after learning your goals
+
+TARGET MARKETS: Qatar, UAE/Dubai, Saudi Arabia, Singapore, Australia, Canada, New Zealand, Poland, India and globally.
+
+CONTACT OPTIONS available in this chat:
+- 📅 Schedule Google Meet: Use the "Schedule Meet" button in chat tabs above
+- 📞 Call/WhatsApp directly: +91 8756424538
+- ✉️ Fill quick contact form: Use "Fill Form" button in chat tabs above
+- Or scroll to the Contact section on this page
+
+INSTRUCTIONS:
+- Keep replies to 2–4 sentences. Use HTML links for all contact references.
+- Be consultative: ask about their business/goals to recommend the right platform.
+- If someone seems ready to hire, proactively suggest the free strategy call or Google Meet.
+- You CAN collect their name, email, project details and guide them through the form in chat.
+- Never invent facts. If unsure, direct to Rahul directly.`;
+
+function toggleChat(){
+  isOpen=!isOpen;
+  document.getElementById('chatWin').classList.toggle('open',isOpen);
+  document.getElementById('chatBtn').classList.toggle('open',isOpen);
+  document.getElementById('cnotif').style.display='none';
+  if(isOpen && hist.length===0){
+    setTimeout(()=>addBot("👋 Hi! I'm Rahul's AI assistant. I can help you learn about his <b>paid media services</b>, find the <b>best platform for your goals</b>, share <b>campaign results</b>, or connect you with Rahul. What brings you here today?"),360);
+  }
+}
+
+function addBot(html){
+  const box=document.getElementById('msgBox');
+  const d=document.createElement('div');d.className='msg bot';
+  d.innerHTML=`<div class="mav">R</div><div class="mb">${html}</div>`;
+  box.appendChild(d);box.scrollTop=box.scrollHeight;
+}
+function addUser(txt){
+  const box=document.getElementById('msgBox');
+  const d=document.createElement('div');d.className='msg user';
+  d.innerHTML=`<div class="mb">${txt}</div>`;
+  box.appendChild(d);box.scrollTop=box.scrollHeight;
+}
+function addCard(cardEl){
+  const box=document.getElementById('msgBox');
+  const wrap=document.createElement('div');wrap.className='msg bot';
+  wrap.innerHTML='<div class="mav">R</div>';
+  wrap.appendChild(cardEl);
+  box.appendChild(wrap);box.scrollTop=box.scrollHeight;
+}
+function showDots(){
+  const box=document.getElementById('msgBox');
+  const d=document.createElement('div');d.className='msg bot';d.id='tdots';
+  d.innerHTML='<div class="mav">R</div><div class="tdots"><div class="tdot"></div><div class="tdot"></div><div class="tdot"></div></div>';
+  box.appendChild(d);box.scrollTop=box.scrollHeight;
+}
+function hideDots(){const t=document.getElementById('tdots');if(t)t.remove();}
+
+// ── Schedule Google Meet card ───────────────────────────────────
+function showMeetCard(){
+  if(!isOpen)toggleChat();
+  addBot("Great! Fill in your details below and Rahul will send a Google Meet invitation to your email right away. You'll also get an instant WhatsApp notification so there's no delay. 📅");
+  const now=new Date();now.setMinutes(now.getMinutes()-now.getTimezoneOffset());
+  const minDT=now.toISOString().slice(0,16);
+  const card=document.createElement('div');card.className='c-card';
+  card.innerHTML=`<h5>📅 Schedule Google Meet</h5>
+    <input type="text" id="mt-name" placeholder="Your Full Name *"/>
+    <input type="email" id="mt-email" placeholder="Your Email *"/>
+    <input type="text" id="mt-proj" placeholder="Project / Website Name *"/>
+    <input type="datetime-local" id="mt-dt" min="${minDT}"/>
+    <button onclick="submitMeet(this)">Request Google Meet →</button>`;
+  addCard(card);
+}
+
+function submitMeet(btn){
+  const name=(document.getElementById('mt-name')||{value:''}).value.trim();
+  const email=(document.getElementById('mt-email')||{value:''}).value.trim();
+  const proj=(document.getElementById('mt-proj')||{value:''}).value.trim();
+  const dt=(document.getElementById('mt-dt')||{value:''}).value;
+  if(!name||!email||!proj||!dt){addBot('Please fill in all fields to request the meeting. 🙏');return;}
+  const fdt=new Date(dt).toLocaleString('en-IN',{dateStyle:'full',timeStyle:'short'});
+  btn.textContent='Sending…';btn.disabled=true;
+  // Email notification
+  emailjs.send(EJS_SERVICE_ID, EJS_MEET_TMPL||EJS_TEMPLATE_ID,{
+    from_name:name, reply_to:email, company:proj, budget:'Google Meet Request',
+    country:'–', service:'Google Meet Scheduling', platforms:'–',
+    message:`GOOGLE MEET REQUEST\nName: ${name}\nEmail: ${email}\nProject: ${proj}\nRequested Time: ${fdt}\n\nPlease send Google Meet invite ASAP.`
+  }).catch(e=>console.warn('Meet email warn:',e));
+  // WhatsApp instant notification
+  const waMsg=encodeURIComponent(`🗓 *NEW GOOGLE MEET REQUEST*\n\nName: ${name}\nEmail: ${email}\nProject: ${proj}\nTime: ${fdt}\n\nPlease send the Google Meet invite!`);
+  setTimeout(()=>window.open(`https://wa.me/918756424538?text=${waMsg}`,'_blank'),400);
+  hist.push({role:'user',content:`[Meet request submitted: ${name} | ${email} | ${proj} | ${fdt}]`});
+  hist.push({role:'assistant',content:'Meeting request sent via email and WhatsApp.'});
+  addBot(`✅ Done, <b>${name}!</b> Your Google Meet request for <b>${fdt}</b> has been sent to Rahul. He'll email the invite to <b>${email}</b> within a few hours. A WhatsApp alert was also triggered for instant notification! 🚀`);
+}
+
+// ── Quick contact form card ─────────────────────────────────────
+function showFormCard(){
+  if(!isOpen)toggleChat();
+  addBot("Sure! Fill in your details below and I'll send them directly to Rahul — he'll follow up within 24 hours. 💬");
+  const card=document.createElement('div');card.className='c-card';
+  card.innerHTML=`<h5>✉️ Quick Contact</h5>
+    <input type="text" id="cf-name" placeholder="Your Name *"/>
+    <input type="email" id="cf-email" placeholder="Your Email *"/>
+    <input type="text" id="cf-co" placeholder="Company / Website"/>
+    <textarea id="cf-msg" placeholder="Tell Rahul about your project *" rows="3"></textarea>
+    <button onclick="submitChatForm(this)">Send to Rahul →</button>`;
+  addCard(card);
+}
+
+function submitChatForm(btn){
+  const name=(document.getElementById('cf-name')||{value:''}).value.trim();
+  const email=(document.getElementById('cf-email')||{value:''}).value.trim();
+  const co=(document.getElementById('cf-co')||{value:''}).value.trim();
+  const msg=(document.getElementById('cf-msg')||{value:''}).value.trim();
+  if(!name||!email||!msg){addBot('Please fill in your name, email, and project details. 🙏');return;}
+  btn.textContent='Sending…';btn.disabled=true;
+  emailjs.send(EJS_SERVICE_ID, EJS_TEMPLATE_ID,{
+    from_name:name, reply_to:email, company:co||'(not provided)',
+    budget:'Via chatbot', country:'Via chatbot', service:'Via chatbot',
+    platforms:'Via chatbot', message:msg
+  }).catch(e=>console.warn('Chat form warn:',e));
+  const waMsg=encodeURIComponent(`📩 *NEW LEAD via Chatbot*\n\nName: ${name}\nEmail: ${email}\nCompany: ${co||'N/A'}\nMessage: ${msg}`);
+  setTimeout(()=>window.open(`https://wa.me/918756424538?text=${waMsg}`,'_blank'),400);
+  hist.push({role:'user',content:`[Chat form: ${name} | ${email} | ${msg}]`});
+  hist.push({role:'assistant',content:'Contact form submitted.'});
+  addBot(`✅ Got it, <b>${name}!</b> Your message has been sent to Rahul. He'll reply to <b>${email}</b> within 24 hours. You can also reach him instantly on <a href='https://wa.me/918756424538' target='_blank'>WhatsApp</a>! 😊`);
+}
+
+// ── Main chat send ──────────────────────────────────────────────
+async function doSend(){
+  const inp=document.getElementById('cinp');
+  const txt=inp.value.trim();if(!txt)return;
+  inp.value='';inp.style.height='auto';
+  addUser(txt);
+  hist.push({role:'user',content:txt});
+  showDots();
+  try{
+    const r=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:800,system:SYS,messages:hist.slice(-14)})
+    });
+    const data=await r.json();
+    hideDots();
+    const reply=(data.content&&data.content[0]&&data.content[0].text)||fallback(txt);
+    hist.push({role:'assistant',content:reply});
+    addBot(reply);
+  }catch(e){
+    hideDots();
+    const f=fallback(txt);
+    hist.push({role:'assistant',content:f});
+    addBot(f);
+  }
+}
+
+function fallback(q){
+  const ql=q.toLowerCase();
+  if(ql.includes('meet')||ql.includes('schedule')||ql.includes('calendar'))
+    return "I can schedule a Google Meet for you! Click the <b>📅 Schedule Meet</b> tab above and Rahul will get a notification instantly.";
+  if(ql.includes('call')||ql.includes('phone'))
+    return "You can call or WhatsApp Rahul directly: 📱 <a href='tel:+918756424538'>+91 8756424538</a> | <a href='https://wa.me/918756424538' target='_blank'>WhatsApp</a>. He usually responds within a few hours!";
+  if(ql.includes('form')||ql.includes('contact'))
+    return "Click the <b>✉️ Fill Form</b> tab above to send your details quickly, or scroll down to the full Contact section on this page.";
+  if(ql.includes('platform')||ql.includes('which')||ql.includes('best'))
+    return "It depends on your goals! 🎯 Google Ads for search intent & eCommerce, Meta for B2C & retargeting, LinkedIn for B2B & SaaS, TikTok for younger audiences. Not sure? Use <b>📅 Schedule Meet</b> — Rahul will advise for free!";
+  if(ql.includes('price')||ql.includes('cost')||ql.includes('rate'))
+    return "Pricing varies by scope and platforms. Best discussed on a free strategy call! 📱 <a href='https://wa.me/918756424538' target='_blank'>WhatsApp</a> | ✉️ <a href='mailto:rajgupta55001@gmail.com'>Email</a>";
+  if(ql.includes('result')||ql.includes('roas')||ql.includes('case'))
+    return "Highlights: 🏆 32x ROAS (US eCommerce), 40% ROAS improvement on $50K+/month, 3,840 leads at $3.91 CPL on Meta, 1.12B impressions for BMW India. Want a full breakdown?";
+  return "For the best answer, reach Rahul directly: ✉️ <a href='mailto:rajgupta55001@gmail.com'>Email</a> | 📱 <a href='https://wa.me/918756424538' target='_blank'>WhatsApp +91 8756424538</a> — or use the quick tabs above!";
+}
+
+function tabClick(t){
+  if(!isOpen)toggleChat();
+  const inp=document.getElementById('cinp');
+  // Small delay if chat just opened
+  setTimeout(()=>{inp.value=t;doSend();},isOpen?0:380);
+}
+
+function autoGrow(el){
+  el.style.height='auto';el.style.height=Math.min(el.scrollHeight,100)+'px';
+}
+function ckd(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();doSend();}}
+
+// Show notification dot after 5s
+setTimeout(()=>{ if(!isOpen) document.getElementById('cnotif').style.display='block'; },5000);
+</script>
+</body>
+</html>
