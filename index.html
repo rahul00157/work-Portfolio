@@ -587,38 +587,99 @@ footer{border-top:1px solid var(--bd);padding:36px 60px;display:flex;align-items
         </div>
       </div>
       <div class="cf rvr">
-        <div class="ft">Send Me a Message</div>
-        <div class="fsb">All fields are required. I'll respond within 24 hours.</div>
-        <div id="fsuc" class="fsuc">✅ Message sent successfully! I'll be in touch within 24 hours.</div>
-        <form id="cform" action="https://formspree.io/f/xyknnwpk" method="POST">
-          <div class="frow">
-            <div class="fg"><label>Your Name *</label><input type="text" id="fn" placeholder="John Smith"/><span class="ferr" id="ferr-fn"></span></div>
-            <div class="fg"><label>Email *</label><input type="email" id="fe" placeholder="you@company.com"/><span class="ferr" id="ferr-fe"></span></div>
-          </div>
-          <div class="frow">
-            <div class="fg"><label>Company / Website *</label><input type="text" id="fc" placeholder="yourcompany.com"/><span class="ferr" id="ferr-fc"></span></div>
-            <div class="fg"><label>Monthly Budget *</label><select id="fb"><option value="">Select range</option><option>Under $1,000/mo</option><option>$1,000–$5,000/mo</option><option>$5,000–$20,000/mo</option><option>$20,000–$100,000/mo</option><option>$100,000+/mo</option></select><span class="ferr" id="ferr-fb"></span></div>
-          </div>
-          <div class="frow">
-            <div class="fg"><label>Country / Region *</label><select id="fcc"><option value="">Select</option><option>Qatar</option><option>UAE / Dubai</option><option>Saudi Arabia</option><option>Singapore</option><option>Australia</option><option>Canada</option><option>New Zealand</option><option>Poland</option><option>India</option><option>Other</option></select><span class="ferr" id="ferr-fcc"></span></div>
-            <div class="fg"><label>Service Needed *</label><select id="fsv"><option value="">Select</option><option>Paid Media / PPC</option><option>AEM / Content Ops</option><option>Analytics / BI</option><option>Full Digital Strategy</option><option>Account Audit</option></select><span class="ferr" id="ferr-fsv"></span></div>
-          </div>
-          <div class="fg"><label>Platforms</label>
-            <div class="pchk">
-              <label class="chi"><input type="checkbox" class="pchkbox" value="Google Ads"/><span class="chbox"></span><span class="chlbl">Google Ads</span></label>
-              <label class="chi"><input type="checkbox" class="pchkbox" value="Meta Ads"/><span class="chbox"></span><span class="chlbl">Meta Ads</span></label>
-              <label class="chi"><input type="checkbox" class="pchkbox" value="LinkedIn Ads"/><span class="chbox"></span><span class="chlbl">LinkedIn Ads</span></label>
-              <label class="chi"><input type="checkbox" class="pchkbox" value="Amazon Ads"/><span class="chbox"></span><span class="chlbl">Amazon Ads</span></label>
-              <label class="chi"><input type="checkbox" class="pchkbox" value="TikTok Ads"/><span class="chbox"></span><span class="chlbl">TikTok Ads</span></label>
-              <label class="chi"><input type="checkbox" class="pchkbox" value="DV360 / AEM"/><span class="chbox"></span><span class="chlbl">DV360 / AEM</span></label>
-              <label class="chi"><input type="checkbox" class="pchkbox" value="Want to Discuss"/><span class="chbox"></span><span class="chlbl">Want to Discuss</span></label>
-            </div>
-          </div>
-          <div class="fg"><label>About Your Project *</label><textarea id="fm" placeholder="Describe your goals, challenges, and what you want to achieve…"></textarea><span class="ferr" id="ferr-fm"></span></div>
-          <button class="fsub" id="fsbtn" type="submit" form="cform">Send Message →</button>
-        </form>
+  <div class="ft">Send Me a Message</div>
+  <div class="fsb">All fields are required. I'll respond within 24 hours.</div>
+  <div id="fsuc" class="fsuc" style="display:none;">✅ Message sent successfully! I'll be in touch within 24 hours.</div>
+
+  <form id="cform" action="https://formspree.io/f/xyknnwpk" method="POST">
+
+    <div class="frow">
+      <div class="fg">
+        <label>Your Name *</label>
+        <input type="text" id="fn" name="name" placeholder="John Smith"/>
+      </div>
+
+      <div class="fg">
+        <label>Email *</label>
+        <input type="email" id="fe" name="email" placeholder="you@company.com"/>
       </div>
     </div>
+
+    <div class="frow">
+      <div class="fg">
+        <label>Company / Website *</label>
+        <input type="text" id="fc" name="company" placeholder="yourcompany.com"/>
+      </div>
+
+      <div class="fg">
+        <label>Monthly Budget *</label>
+        <select id="fb" name="budget">
+          <option value="">Select range</option>
+          <option>Under $1,000/mo</option>
+          <option>$1,000–$5,000/mo</option>
+          <option>$5,000–$20,000/mo</option>
+          <option>$20,000–$100,000/mo</option>
+          <option>$100,000+/mo</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="frow">
+      <div class="fg">
+        <label>Country / Region *</label>
+        <select id="fcc" name="country">
+          <option value="">Select</option>
+          <option>Qatar</option>
+          <option>UAE / Dubai</option>
+          <option>Saudi Arabia</option>
+          <option>Singapore</option>
+          <option>Australia</option>
+          <option>Canada</option>
+          <option>New Zealand</option>
+          <option>Poland</option>
+          <option>India</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="fg">
+        <label>Service Needed *</label>
+        <select id="fsv" name="service">
+          <option value="">Select</option>
+          <option>Paid Media / PPC</option>
+          <option>AEM / Content Ops</option>
+          <option>Analytics / BI</option>
+          <option>Full Digital Strategy</option>
+          <option>Account Audit</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="fg">
+      <label>Platforms</label>
+      <div class="pchk">
+        <label class="chi"><input type="checkbox" name="platforms[]" value="Google Ads"/><span class="chbox"></span><span class="chlbl">Google Ads</span></label>
+        <label class="chi"><input type="checkbox" name="platforms[]" value="Meta Ads"/><span class="chbox"></span><span class="chlbl">Meta Ads</span></label>
+        <label class="chi"><input type="checkbox" name="platforms[]" value="LinkedIn Ads"/><span class="chbox"></span><span class="chlbl">LinkedIn Ads</span></label>
+        <label class="chi"><input type="checkbox" name="platforms[]" value="Amazon Ads"/><span class="chbox"></span><span class="chlbl">Amazon Ads</span></label>
+        <label class="chi"><input type="checkbox" name="platforms[]" value="TikTok Ads"/><span class="chbox"></span><span class="chlbl">TikTok Ads</span></label>
+        <label class="chi"><input type="checkbox" name="platforms[]" value="DV360 / AEM"/><span class="chbox"></span><span class="chlbl">DV360 / AEM</span></label>
+        <label class="chi"><input type="checkbox" name="platforms[]" value="Want to Discuss"/><span class="chbox"></span><span class="chlbl">Want to Discuss</span></label>
+      </div>
+    </div>
+
+    <div class="fg">
+      <label>About Your Project *</label>
+      <textarea id="fm" name="message" placeholder="Describe your goals, challenges, and what you want to achieve…"></textarea>
+    </div>
+
+    <!-- Hidden subject (pro touch) -->
+    <input type="hidden" name="_subject" value="New Lead from Portfolio 🚀">
+
+    <button class="fsub" id="fsbtn" type="submit">Send Message →</button>
+
+  </form>
+  </div>
   </div>
 </section>
 
