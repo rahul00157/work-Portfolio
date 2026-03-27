@@ -590,7 +590,7 @@ footer{border-top:1px solid var(--bd);padding:36px 60px;display:flex;align-items
         <div class="ft">Send Me a Message</div>
         <div class="fsb">All fields are required. I'll respond within 24 hours.</div>
         <div id="fsuc" class="fsuc">✅ Message sent successfully! I'll be in touch within 24 hours.</div>
-        <div id="cform">
+        <form id="cform" action="https://formspree.io/f/xyknnwpk" method="POST">
           <div class="frow">
             <div class="fg"><label>Your Name *</label><input type="text" id="fn" placeholder="John Smith"/><span class="ferr" id="ferr-fn"></span></div>
             <div class="fg"><label>Email *</label><input type="email" id="fe" placeholder="you@company.com"/><span class="ferr" id="ferr-fe"></span></div>
@@ -615,7 +615,7 @@ footer{border-top:1px solid var(--bd);padding:36px 60px;display:flex;align-items
             </div>
           </div>
           <div class="fg"><label>About Your Project *</label><textarea id="fm" placeholder="Describe your goals, challenges, and what you want to achieve…"></textarea><span class="ferr" id="ferr-fm"></span></div>
-          <button class="fsub" id="fsbtn" onclick="doSubmit()">Send Message →</button>
+          <button class="fsub" id="fsbtn" type="submit" form="cform">Send Message →</button>
         </div>
       </div>
     </div>
